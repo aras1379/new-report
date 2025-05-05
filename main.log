@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  5 MAY 2025 17:24
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  5 MAY 2025 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/ljung/thesis/main.tex
-(/Users/ljung/thesis/main.tex
+**/Users/ljung/new-report/main.tex
+(/Users/ljung/new-report/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/report.cls
@@ -1055,15 +1055,15 @@ File: png/subdomains AI.png Graphic file (type bmp)
 ]
 
 [6]
-File: png/blockDiagram SER.png Graphic file (type bmp)
-<png/blockDiagram SER.png>
+File: png/background/block-diagram.pdf Graphic file (type pdf)
+<use png/background/block-diagram.pdf>
 
 
 [7]
 
 [8]
-File: png/datasets percentage.png Graphic file (type bmp)
-<png/datasets percentage.png>
+File: png/background/datasets-diagram.pdf Graphic file (type pdf)
+<use png/background/datasets-diagram.pdf>
 
 
 [9]
@@ -1385,12 +1385,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36980 strings out of 473832
- 754240 string characters out of 5729481
+ 36981 strings out of 473832
+ 754421 string characters out of 5729481
  1980104 words of memory out of 5000000
  59456 multiletter control sequences out of 15000+600000
  564146 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,10n,93p,2383b,5961s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,93p,2387b,5961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (75 pages).
