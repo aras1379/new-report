@@ -10,9 +10,11 @@
 *.toc
 *.lof
 *.lot
+*.log 
+*.out 
+*.latexmkrc 
 
-# PDF output
-*.pdf
+
 
 # Editor / OS
 .vscode/

@@ -56,7 +56,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{4}
-      \field{journaltitle}{Sensors (Basel, Switzerland}
+      \field{journaltitle}{Sensors Basel, Switzerland}
       \field{title}{Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models}
       \field{volume}{21}
       \field{year}{2021}
@@ -418,7 +418,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{10th IEEE International Conference on Communication Systems and Network Technologies (CSNT}
+      \field{journaltitle}{10th IEEE International Conference on Communication Systems and Network Technologies CSNT}
       \field{title}{Speech Emotion Recognition System With Librosa}
       \field{year}{2021}
       \field{pages}{421\bibrangedash 424}
@@ -493,7 +493,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{10th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos (ACIIW}
+      \field{journaltitle}{10th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos ACIIW}
       \field{title}{The ACII 2022 Affective Vocal Bursts Workshop \& Competition}
       \field{year}{2022}
       \field{pages}{1\bibrangedash 5}
@@ -688,6 +688,42 @@
       \verb https://doi.org/10.1038/s41562-022-01489-2
       \endverb
     \endentry
+    \entry{Bruce2017}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=aa6bf7f6a1aee258ae8d689fd7dab6c0}{%
+           family={Bruce},
+           familyi={B\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=44cba7f8920f923f49b5d2a7d730e5c0}{%
+           family={Bruce},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly}%
+      }
+      \strng{namehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{fullhash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{fullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{bibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authorbibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authornamehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authorfullhash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authorfullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Practical Statistics for Data Scientists}
+      \field{year}{2017}
+    \endentry
     \entry{Bryman2022}{book}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=515d9dbf4ec02046bfc61b6d854209c9}{%
@@ -812,6 +848,36 @@
       \verb{url}
       \verb https://nlpcloud.com/
       \endverb
+    \endentry
+    \entry{Cohen1977}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90e1b93429e0013509f5a2e1f6d38806}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{fullhash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{fullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{bibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorbibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authornamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorfullhash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorfullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Statistical power analysis for the behavioral sciences (Revised edition)}
+      \field{year}{1977}
     \endentry
     \entry{Cowen2019}{article}{}{}
       \name{author}{5}{}{%
@@ -1518,7 +1584,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{1}
-      \field{journaltitle}{Bioacoustics (Berkhamsted}
+      \field{journaltitle}{Bioacoustics Berkhamsted}
       \field{title}{Parselmouth for bioacoustics: automated acoustic analysis in Python}
       \field{volume}{33}
       \field{year}{2024}
@@ -2115,7 +2181,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{RAVDESS Emotional speech audio [dataset]}
+      \field{title}{RAVDESS Emotional speech audio dataset}
       \field{year}{2019}
       \verb{doi}
       \verb 10.34740/KAGGLE/DSV/256618
@@ -2274,7 +2340,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Automatic Speech Recognition and Understanding Workshop (ASRU}
+      \field{booktitle}{IEEE Automatic Speech Recognition and Understanding Workshop ASRU}
       \field{title}{A Cross-Corpus Study on Speech Emotion Recognition}
       \field{year}{2019}
       \field{pages}{304\bibrangedash 311}
@@ -2747,7 +2813,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2024 6th International Conference on Electrical Engineering and Information \& Communication Technology (ICEEICT}
+      \field{journaltitle}{2024 6th International Conference on Electrical Engineering and Information \& Communication Technology ICEEICT}
       \field{title}{EmotionNet: Pioneering Deep Learning Fusion for Real-Time Speech Emotion Recognition with Convolutional Neural Networks}
       \field{year}{2024}
       \field{pages}{592\bibrangedash 597}
@@ -3013,7 +3079,7 @@
       \field{title}{Acoustic Patterning of Emotion Vocalizations}
       \field{year}{2018}
       \verb{doi}
-      \verb 10.1093/oxfordhb/9780198743187.013.4).
+      \verb 10.1093/oxfordhb/9780198743187.013.4
       \endverb
     \endentry
     \entry{Shelke2022}{article}{}{}
@@ -3264,7 +3330,7 @@
       \field{labeltitlesource}{title}
       \field{issue}{22}
       \field{journaltitle}{Intelligent systems with applications}
-      \field{title}{In-depth investigation of speech emotion recognition studies from past to present –The importance of emotion recognition from speech signal for AI}
+      \field{title}{In-depth investigation of speech emotion recognition studies from past to present. The importance of emotion recognition from speech signal for AI}
       \field{year}{2024}
       \field{pages}{200351\bibrangedash}
       \range{pages}{-1}
@@ -3609,7 +3675,7 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the 2024 7th International Conference on Machine Learning and Machine Intelligence (MLMI}
+      \field{journaltitle}{Proceedings of the 2024 7th International Conference on Machine Learning and Machine Intelligence MLMI}
       \field{title}{Is LLaMA 3 Good at Identifying Emotion? A Comprehensive Study}
       \field{year}{2024}
       \field{pages}{128\bibrangedash 132}
@@ -3800,7 +3866,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{4}
-      \field{journaltitle}{Sensors (Basel, Switzerland}
+      \field{journaltitle}{Sensors Basel, Switzerland}
       \field{title}{Deep Learning Techniques for Speech Emotion Recognition, from Databases to Models}
       \field{volume}{21}
       \field{year}{2021}
@@ -4162,7 +4228,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{10th IEEE International Conference on Communication Systems and Network Technologies (CSNT}
+      \field{journaltitle}{10th IEEE International Conference on Communication Systems and Network Technologies CSNT}
       \field{title}{Speech Emotion Recognition System With Librosa}
       \field{year}{2021}
       \field{pages}{421\bibrangedash 424}
@@ -4237,7 +4303,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{10th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos (ACIIW}
+      \field{journaltitle}{10th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos ACIIW}
       \field{title}{The ACII 2022 Affective Vocal Bursts Workshop \& Competition}
       \field{year}{2022}
       \field{pages}{1\bibrangedash 5}
@@ -4432,6 +4498,42 @@
       \verb https://doi.org/10.1038/s41562-022-01489-2
       \endverb
     \endentry
+    \entry{Bruce2017}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=aa6bf7f6a1aee258ae8d689fd7dab6c0}{%
+           family={Bruce},
+           familyi={B\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=44cba7f8920f923f49b5d2a7d730e5c0}{%
+           family={Bruce},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly}%
+      }
+      \strng{namehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{fullhash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{fullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{bibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authorbibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authornamehash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authorfullhash}{c9cd5bfea152c6a71beda2a937f633b1}
+      \strng{authorfullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Practical Statistics for Data Scientists}
+      \field{year}{2017}
+    \endentry
     \entry{Bryman2022}{book}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=515d9dbf4ec02046bfc61b6d854209c9}{%
@@ -4556,6 +4658,36 @@
       \verb{url}
       \verb https://nlpcloud.com/
       \endverb
+    \endentry
+    \entry{Cohen1977}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90e1b93429e0013509f5a2e1f6d38806}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{fullhash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{fullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{bibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorbibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authornamehash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorfullhash}{90e1b93429e0013509f5a2e1f6d38806}
+      \strng{authorfullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Statistical power analysis for the behavioral sciences (Revised edition)}
+      \field{year}{1977}
     \endentry
     \entry{Cowen2019}{article}{}{}
       \name{author}{5}{}{%
@@ -5213,7 +5345,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{1}
-      \field{journaltitle}{Bioacoustics (Berkhamsted}
+      \field{journaltitle}{Bioacoustics Berkhamsted}
       \field{title}{Parselmouth for bioacoustics: automated acoustic analysis in Python}
       \field{volume}{33}
       \field{year}{2024}
@@ -5859,7 +5991,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{RAVDESS Emotional speech audio [dataset]}
+      \field{title}{RAVDESS Emotional speech audio dataset}
       \field{year}{2019}
       \verb{doi}
       \verb 10.34740/KAGGLE/DSV/256618
@@ -6018,7 +6150,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Automatic Speech Recognition and Understanding Workshop (ASRU}
+      \field{booktitle}{IEEE Automatic Speech Recognition and Understanding Workshop ASRU}
       \field{title}{A Cross-Corpus Study on Speech Emotion Recognition}
       \field{year}{2019}
       \field{pages}{304\bibrangedash 311}
@@ -6491,7 +6623,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2024 6th International Conference on Electrical Engineering and Information \& Communication Technology (ICEEICT}
+      \field{journaltitle}{2024 6th International Conference on Electrical Engineering and Information \& Communication Technology ICEEICT}
       \field{title}{EmotionNet: Pioneering Deep Learning Fusion for Real-Time Speech Emotion Recognition with Convolutional Neural Networks}
       \field{year}{2024}
       \field{pages}{592\bibrangedash 597}
@@ -6757,7 +6889,7 @@
       \field{title}{Acoustic Patterning of Emotion Vocalizations}
       \field{year}{2018}
       \verb{doi}
-      \verb 10.1093/oxfordhb/9780198743187.013.4).
+      \verb 10.1093/oxfordhb/9780198743187.013.4
       \endverb
     \endentry
     \entry{Shelke2022}{article}{}{}
@@ -7008,7 +7140,7 @@
       \field{labeltitlesource}{title}
       \field{issue}{22}
       \field{journaltitle}{Intelligent systems with applications}
-      \field{title}{In-depth investigation of speech emotion recognition studies from past to present –The importance of emotion recognition from speech signal for AI}
+      \field{title}{In-depth investigation of speech emotion recognition studies from past to present. The importance of emotion recognition from speech signal for AI}
       \field{year}{2024}
       \field{pages}{200351\bibrangedash}
       \range{pages}{-1}
@@ -7353,7 +7485,7 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the 2024 7th International Conference on Machine Learning and Machine Intelligence (MLMI}
+      \field{journaltitle}{Proceedings of the 2024 7th International Conference on Machine Learning and Machine Intelligence MLMI}
       \field{title}{Is LLaMA 3 Good at Identifying Emotion? A Comprehensive Study}
       \field{year}{2024}
       \field{pages}{128\bibrangedash 132}
