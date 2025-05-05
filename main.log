@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  30 APR 2025 08:40
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  5 MAY 2025 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,7 +1348,7 @@ Chapter 5.
 
  (./conclusions.tex
 Chapter 6.
-)
+(./con-findings.tex) (./con-answer.tex) (./con-contribution.tex) (./con-limitations.tex) (./con-future.tex) (./con-closing.tex))
 
 [69
 
@@ -1379,16 +1379,16 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 783755AF01B2C49DF899271535C5F08B;16078.
+(rerunfilecheck)             Checksum: F5ACB8E1DC541071542FFCB040415356;16750.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36926 strings out of 473832
- 753090 string characters out of 5729481
- 1979092 words of memory out of 5000000
- 59420 multiletter control sequences out of 15000+600000
+ 36980 strings out of 473832
+ 754240 string characters out of 5729481
+ 1980104 words of memory out of 5000000
+ 59456 multiletter control sequences out of 15000+600000
  564146 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,10n,93p,2383b,5961s stack positions out of 10000i,1000n,20000p,200000b,200000s
