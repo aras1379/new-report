@@ -4,7 +4,7 @@
 
 \section{Presentation of Collected Data}
 \subsection{Overview of Interviews}
-We conducted semi-structured interviews with 16 native Swedish speakers (10 M/6F, age 23-78), each lasting 1-3 minutes. Each participant was interviewed for two different scenarios, resulting in 30 different recordings. All interviews were audio-recorded in a quiet room and elicited two target emotions – anger and happiness – via open-ended prompts (e.g. “Is there anything in society that makes you upset? What? How does that make you feel?”; “Can you remember one time you felt really proud of yourself?”). The participants rated their perceived emotions on a 1-6 scale immediately after each scenario. The rated emotions covered the basic 5 emotions mentioned in this report: anger, joy, sadness, fear, and surprise. 
+We conducted semi-structured interviews with 16 native Swedish speakers (10 M/6F, age 23-78), each lasting 1-3 minutes. Each participant was interviewed for two different scenarios, resulting in 32 different recordings. All interviews were audio-recorded in a quiet room and elicited two target emotions – anger and happiness – via open-ended prompts (e.g. “Is there anything in society that makes you upset? What? How does that make you feel?”; “Can you remember one time you felt really proud of yourself?”). The participants rated their perceived emotions on a 1-6 scale immediately after each scenario. The rated emotions covered the basic 5 emotions mentioned in this report: anger, joy, sadness, fear, and surprise. 
 
 Table~\ref{tab:interview_table} presents the participants ID, gender, age, and self-assessed scores for their perceived emotions for respective interview scenario.
 \begin{table}[H]
@@ -210,106 +210,240 @@ The goal with this analysis was to explore if these vocal markers could explain 
 semi-structured, spontaneous speech in an interview setting. 
 
 \subsection{Correlation Between Vocal Features and AI Emotion Scores (Hume AI)}
+Figure \ref{fig:rq1-heatmaps} demonstrates heatmaps of the Pearson correlation coefficients between selected vocal features and Hume AI emotion labels across positive clips in Figure \ref{fig:hume_vocal_positive} and negative clips in Figure \ref{fig:hume_vocal_negative}. The results show generally weak correlations, with slightly stronger correlations for the negative recordings.  
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{png/results/rq1/vocal_features_vs_hume_correlations.pdf}
-    \caption{Heatmap of correlation between vocal markers and Hume labels.}
-    \label{fig:heatmap-voc-hume}
+\begin{figure}[!h]
+    \centering 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{png/results/rq1_new/vocal_vs_hume_correlations_positive.pdf}
+        \caption{Hume vs vocal features positive}
+        \label{fig:hume_vocal_positive}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{png/results/rq1_new/vocal_vs_hume_correlations_negative.pdf}
+        \caption{Hume vs vocal features negative}        
+        \label{fig:hume_vocal_negative}
+    \end{subfigure}   
+    \caption{Correlation Heatmaps between Hume AI and vocal features.}
+    \label{fig:rq1-heatmaps}     
 \end{figure}
+Correlation values for positive interviews in Figure \ref{fig:hume_vocal_positive} ranging roughly between -0.7 and 0.5, most values suggest generally weaker correlations than the highest values. 
+Mean intensity stands out from other vocal features with a moderate positive correlation with Hume Joy (r = 0.47), a moderate negative correlation with Hume Anger (r = -0.41), and a strong negative correlation with Hume Surprise (r = -0.66). 
+Mean pitch shows strongest effect on Hume Fear (r = 0.30) and a moderate negative link with Hume Sadness (r = -0.26). 
+Mean HNR has a moderate negative correlation with Hume Sadness (r = -0.33) as well it is moderately positively correlated with Hume Fear (r = 0.26). 
+Jitter and shimmer remain near zero for most emotions in the positive clips, with none exceeding |r| = 0.13. This suggests that, in more positively oriented interviews, 
+variation in pitch, intensity, and HNR capture the core emotion-related cues moderately, while jitter and shimmer have small predictive influence in semi-spontaneous speech during interview conversations. 
 
-Figure~\ref{fig:heatmap-voc-hume} demonstrates a heatmap of the Pearson correlation coefficients between selected vocal features and Hume AI emotion labels across all clips in the dataset. The results show generally weak correlations, with most values in the range of -0.4 and 0.3. 
+Figure \ref{fig:hume_vocal_negative} illustrates Pearson correlation values for negative clips in the dataset, again presenting generally weak effects even if slightly stronger correlations occur, ranging between -0.6 to 0.5. 
+The strongest relationship appears for sadness, where mean HNR shows a strong negative correlation (r = -0.54) and pitch has a moderate negative correlation (r = -0.48). The most even distribution of correlation values appear for Hume Anger, 
+where all features except intensity shows moderate correlations, most distinct are a positive link with HNR (r = 0.44) and a negative link for shimmer (r = -0.45). Intensity shows overall weak correlations with all emotions, exclusive of Hume Surprise where a moderate negative correlation (r = -0.27) occurs. 
+Jitter and shimmer show similar relationships to Hume Fear (r ≈ 0.2). Shimmer has strongest correlation with Hume Anger, and a moderate relationship with Hume Joy. Jitter is moderately correlated with Anger as well and have a moderate correlation with Sadness where shimmer has almost no correlation. 
+Pitch and HNR shows the strongest indicators for signalling negative expressed emotions, while intensity measures remain subtle. The slightly strong, but moderate negative correlation between pitch and sadness indicates that the sadder the recording is judged by Hume AI, the lower the average pitch tends to be. 
+Both Joy and Surprise has generally weak correlations for all vocal features in the negative oriented clips, which is expected due to these emotions being more positively related. 
 
 \medskip
-Key findings: 
-\begin{itemize}
-    \item Mean pitch (Hz) shows a moderate correlation with sadness (r = -0.37). 
-    \item Mean Intensity (dB) has a moderate positive correlation with joy (r = 0.34) and a moderate negative correlation with surprise(r = -0.39). These results align with the referred research indicating that vocal intensity tends to increase with positive arousal states \autocite{Ekberg2023}. 
-    \item Mean HNR has a moderate negative correlation with sadness (r = -0.44), but shows weak correlations across all other emotions.
-    \item Shimmer shows a moderate negative correlation with anger (-0.33).
-    \item Jitter and shimmer showed overall weak correlations, which may reflect that these features are subtle in spontaneous speech contexts compared to controlled or acted settings.  
-\end{itemize}
-Overall, the correlations with Hume suggest minor tendencies that reflect known vocal-emotion relationships, especially regarding pitch and intensity. The low degree of these correlations indicates that selected acoustic features alone did not strongly predict AI-detected emotions. 
+Overall, the negative and positive diversion suggests that pitch and harmonicity (HNR) consistently reflect Hume AI’s sadness and anger ratings, while intensity mostly marks joy and surprise in positive interviews. Jitter and shimmer remain minor indicators for both interview conditions, except for Anger in the negative clips. 
 
 \subsection{Correlation with Praat-Based Emotion Scores}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{png/results/rq1/vocal_features_vs_praat_correlations.pdf}
-    \caption{Heatmap of correlation between vocal markers and custom emotion categorization.}
-    \label{fig:heatmap-voc-praat}
+    \centering 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{png/results/rq1_new/vocal_vs_custom_categorization_correlations_positive.pdf}
+        \caption{Hume vs custom features positive}
+        \label{fig:custom_vocal_positive}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{png/results/rq1_new/vocal_vs_custom_categorization_correlations_negative.pdf}
+        \caption{Hume vs custom features negative}        
+        \label{fig:custom_vocal_negative}
+    \end{subfigure} 
+    \caption{Correlation heatmaps between the custom emotion categorization function and vocal features.}
+    \label{fig:rq1_heatmaps_custom}       
 \end{figure}
-Figure~\ref{fig:heatmap-voc-praat} illustrates correlation between vocal features and the emotion scores obtained from the custom Praat-based categorization function. In contrast to the results for Hume, these correlations are notably higher. However, it shows patterns that are inconsistent with theoretical expectations. 
+Figure~\ref{fig:rq1_heatmaps_custom} presents heatmaps of Pearson’s correlation r between selected vocal features and the emotion scores obtained from the custom emotion categorization 
+function for Figure \ref{fig:custom_vocal_positive} positive oriented clips and Figure \ref{fig:custom_vocal_negative} negative clips. Correlations are notably stronger than those observed with the Hume AI labels for both subsets, ranging from -0.9 to 0.95. 
+In contrast to the correlation results between Hume AI and vocal markers, these heatmaps presents similar values and orientations for both negative and positive recordings. Pitch and HNR correlations are strongly related for both sentiments, especially between 
+pitch and custom categorisations Anger (r = -0.85 and r = -0.88), Fear (r = 0.91 and r = 0.94), and Surprise (r = -0.89 and r = -0.91), the correlation values for HNR is almost identical. Both pitch and HNR shows strong positive correlation for Fear, and strong negative relationship with Anger and Surprise. The almost identical value for these vocal features implies that harmonic clarity is weighted almost identically to pitch in the categorization function, both with a dominant impact on the outcomes of the emotion categorisation. Intensity has a smaller impact, with slightly higher correlations for the negative clips. 
+Intensity has weak to moderate relationships across all emotions in the positive recordings, while being strongly correlated with sadness in the negative interviews. The opposite is implied for joy in these interviews, where joy is associated with lower intensity values. 
+Jitter and shimmer have slightly stronger correlations across all emotions in the negative oriented clips, yet the values follow the same pattern regarding direction and scale. 
+
 \medskip
-Key findings: 
-\begin{itemize}
-    \item Mean pitch (Hz) shows very strong correlations (r = -0.87) with anger and fear (r = 0.93), which suggests that pitch strongly impacted the outcomes of the categorization. 
-    \item Mean HNR (dB) revealed similar strong correlations as pitch, with high values for anger (r = -0.85) and fear (r = 0.92). 
-    \item Jitter and shimmer display moderate to strong correlations as well, with varying directions for different emotions. 
-\end{itemize}
-The results suggest that the Praat-based function weighted some vocal features very heavily, especially pitch and HNR, resulting in inflated correlations that may be misleading. The absence of varying differences across the emotions suggest that the rule-based approach did not capture some expressions in spontaneous, interviewed, speech. 
+These results show that the custom categorization function disproportionately weighted certain vocal features, particularly pitch and HNR, distributing inflating and potentially misleading correlation coefficients. Intensity, shimmer, and jitter has secondary roles with general moderate correlations, although strong correlations appear these features are overwhelmed by pitch and HNR. The almost identical patterns across the sentiment subsets implies overreliance on acoustic features, probably suppressing more subtle cues that are necessary for identifying emotions in semi-spontaneous, conversational speech. 
+
 
 \subsection{Limitations of the Custom Vocal Emotion Categorization Method}
-To evaluate the performance of our custom emotion categorization function, which was developed based on vocal markers reported in the Swedish study \autocite{Ekberg2023}, we compared the emotion labels to the labels generated by Hume AI’s speech-based emotion recognition model. This comparison included both individual clip level and across the full dataset. 
+To evaluate the performance of our custom emotion categorization function, which was developed based on vocal markers reported in the Swedish study \autocite{Ekberg2023}, we compared the emotion labels to the labels generated by Hume AI’s speech-based emotion recognition model. This comparison included both individual clip level and across the full dataset, seperated by sentiment. 
 
 However, the results revealed significant limitations in our approach. Regardless of the vocal input from our dataset, the categorization function consistently rendered near homogeneous emotion scores across all five emotions. This indicates that the function failed to capture emotional distinctions within spontaneous, conversational speech during interviews, regardless of theoretical relevance. 
 
-Figure~\ref{fig:scatter_hume_praat} illustrates this issue across the full dataset, where the average scores assigned by our Praat-based categorization remain clustered around 0.2 across all emotions. Opposed to Hume that had greater variation through its labeling and reflects a more dynamic emotional detection.
+Figure~\ref{fig:rq1_scatter_hume_praat_pos}, positive, and Figure~\ref{fig:rq1_scatter_hume_praat_neg}, negative, illustrates this issue across the full dataset, where the average scores assigned by our Praat-based categorization remain clustered around 0.2 across all emotions. Opposed to Hume that had greater variation through its labeling and reflects a more dynamic emotional detection.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{png/results/rq1/praat_hume_all_clips_scatter.pdf}
-    \caption{Average Score of vocal features-categorization and Hume labeling across all clips.}
-    \label{fig:scatter_hume_praat}
+    \includegraphics[width=0.75\textwidth]{png/results/rq1_new/praat_hume_positive_scatter.pdf}
+    \caption{Average score of custom emotion categorisation function and Hume labeling across positive clips.}
+    \label{fig:rq1_scatter_hume_praat_pos}
 \end{figure}
 
-This is presented similarly in Figure~\ref{fig:praat_hume_008}, which presents a comparison for a single negative directed interview \texttt{id\_008\_neg}. In the same way as in Figure~\ref{fig:scatter_hume_praat}, the Praat-based scores are distributed very evenly across all emotions, while Hume assigns a higher probability to anger and lower for surprise,
-with joy, sadness, and fear clustered more closely. Despite the fact that the score diversity between the Hume-labeled emotions are relatively moderate - approximately 0.10 between anger and sadness/joy, and around 0.15 between surprise and sadness/joy - the probabilities are still more diverse and provide a more interpretable output. The variability could be considered more reflective of potential emotional nuances in the interview. 
 
-These findings demonstrate that our vocal feature-based categorization lacked sensitivity and adaptability when applied to our interview-based Swedish speech data. As a result, subsequent analyses focused on direct comparisons between raw vocal features and AI-predicted emotions, instead of relying on this flawed categorization method. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{png/results/rq1/id_008_neg_praat_hume_comparison.pdf}
-    \caption{Vocal feature-categorization vs. Hume for single clip.}
-    \label{fig:praat_hume_008}
+    \includegraphics[width=0.75\textwidth]{png/results/rq1_new/praat_hume_negative_scatter.pdf}
+    \caption{Average score of custom emotion categorisation function and Hume labeling across negative clips.}
+    \label{fig:rq1_scatter_hume_praat_neg}
 \end{figure}
 
-\subsection{ANOVA Summery of Vocal Features Across Emotions}
-An ANOVA was implemented to further examine whether essential vocal features varied across AI-labeled emotions. This was conducted on pitch, intensity, HNR, jitter, and shimmer. The results are summarised in Table~\ref{tab:anova-rq1} and showed that none of the features showed statistically significant differences between the five Hume emotion categories (all p-values > 0.23). To confirm these findings, Tukey HSD tests were conducted and resulted in no pairwise comparisons between emotion labels with significant difference. 
+    
+This is presented similarly in Figure~\ref{fig:praat_hume_006_comb}, which presents a comparison for a single negative 
+directed interview \texttt{id\_008\_neg}. In the same way as in Figure~\ref{fig:rq1_scatter_hume_praat_pos} and \ref{fig:rq1_scatter_hume_praat_neg}, 
+the Praat-based scores are distributed very evenly across all emotions, while Hume assigns a higher probability to anger and lower for surprise for negative recordings and significantly higher joy scores for positive clips.
+Despite the fact that the score diversity between the Hume-labeled emotions are relatively 
+moderate, as presented in Figure~\ref{fig:praat_hume_006_comb} comparing one participant's two interviews - approximately 0.05 between anger and fear for the positive clip \ref{fig:praat_hume_006_pos}, yet a differentiation of roughly 0.2 between the highest (fear) and the lowest (surprise) rated emotions. 
+The negative interview in Figure~\ref{fig:praat_hume_006_neg} illustrates similar tendencies, with highest probability for anger ($\approx 0.30$) and lowest for surprise (>0.10). 
+As both figures in \ref{fig:praat_hume_006_comb} depicts, some alignment occur, yet the probabilities are still more diverse and provide a more interpretable output than yielded from the custom emotion categorisation function. 
+The variability could be considered more reflective of potential emotional nuances in the recorded speech. 
+
+These findings demonstrate that our vocal feature-based categorization lacked sensitivity and adaptability when applied to our interview-based Swedish speech data. 
+As a result, subsequent analyses focused on direct comparisons between raw vocal features and AI-predicted emotions. 
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{png/results/rq1_new/id_006_pos_praat_hume_comparison.pdf}
+        \caption{Comparison bar single positive clip.}
+        \label{fig:praat_hume_006_pos}
+    \end{subfigure} 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{png/results/rq1_new/id_006_neg_praat_hume_comparison.pdf}
+        \caption{Comparison bar single negative clip.}
+        \label{fig:praat_hume_006_neg}
+    \end{subfigure} 
+    \caption{Custom emotion categorization vs. Hume for a single clip (id 006).}
+    \label{fig:praat_hume_006_comb}
+\end{figure}
+
+\subsection{ANOVA Tables of Vocal Features Across Emotions}
+An ANOVA was implemented to further examine whether essential vocal features varied across AI-labeled emotions. This was conducted on pitch, intensity, HNR, jitter, and shimmer. 
+The results are summarised in Table~\ref{tab:rq1_anova_pos} for positive recordings and \ref{tab:rq1_anova_neg} for negative recordings, 
+showing that none of the features showed statistically significant differences between the five Hume emotion categories (all p-values > 0.30). To confirm these findings, Tukey HSD tests were conducted and resulted in no pairwise comparisons between emotion labels with significant difference. 
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{l|r|rrr}
-    \multicolumn{1}{c|}{\textbf{Feature}} & \multicolumn{1}{c|}{\textbf{ANOVA p-value}} & \multicolumn{1}{c}{\textbf{Significant Differences}} &  &  \\ \cline{1-3}
-   
-    mean\_pitch\_hz                      & 0,4435                                     & No                                                   &  &  \\
-    mean\_intensity\_db                  & 0,5793                                     & No                                                   &  &  \\
-    mean\_hnr\_db                        & 0,2327                                     & No                                                   &  &  \\
-    jitter\_local                        & 0,7797                                     & No                                                   &  &  \\
-    shimmer\_local                       & 0,385                                      & No                                                   &  & 
-    \end{tabular}
-    \caption{ANOVA table for vocal features variance across emotions}
-    \label{tab:anova-rq1}
-\end{table}
-These results imply that within our dataset of spontaneous speech during interviews, the average values of the acoustic features did not systematically vary according to AI-labeled emotions. This could indicate that emotional expression in conversations during interview circumstances is either: 
-\begin{itemize}
-    \item More subtle than in controlled studies.
-    \item Features like pitch and intensity fluctuate instead of differing consistently at the audio clip level. 
-    \item A deficient set of vocal features were extracted for these analyses. 
-\end{itemize}
-The lack of variance in these results does not align with findings in controlled settings \autocite{Ekberg2023}, where clear differences in vocal features were found between different emotional states. 
+    \centering 
+    \begin{subtable}[b]{0.48\textwidth}
+        \centering
+        \caption*{\textbf{Positive recordings}}
+        \begin{tabular}{lrr}
+        \toprule
+        \multicolumn{1}{c}{\textbf{Feature}} & \textbf{P-value} & \textbf{Significant} \\
+        \midrule
+        Pitch      & 0,726 & No \\
+        Intensity  & 0,812 & No \\
+        HNR        & 0,607 & No \\
+        Jitter     & 0,954 & No \\
+        Shimmer    & 0,731 & No \\
+        \bottomrule
+        \end{tabular}
+        \caption{ANOVA: Positive recordings.}
+        \label{tab:rq1_anova_pos}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[b]{0.48\textwidth}
+        \centering
+        \caption*{\textbf{Negative recordings}}
+        \begin{tabular}{lrr}
+        \toprule
+        \multicolumn{1}{c}{\textbf{Feature}} & \textbf{P-value} & \textbf{Significant} \\
+        \midrule
+        Pitch      & 0,470 & No \\
+        Intensity  & 0,640 & No \\
+        HNR        & 0,300 & No \\
+        Jitter     & 0,780 & No \\
+        Shimmer    & 0,567 & No \\
+        \bottomrule
+        \end{tabular}
+        \caption{ANOVA: Negative recordings.}
+        \label{tab:rq1_anova_neg}
+    \end{subtable}
+    \caption{ANOVA for vocal features across emotions.}
+    \label{tab:rq1_anova_all}
+\end{table}  
+  
+These results imply that within our dataset of spontaneous speech during interviews, the average values of the acoustic features did not systematically vary according to AI-labeled emotions. 
+
+OBS! Lägg till medelvärde osv i detta för varje feature (medel och standardavvikelse! )
 
 \subsection{Correlation Between Vocal Features and Hume AI Emotion Scores}
 Considering the limitations that had been identified in our vocal feature-based emotion categorization function, subsequent analyses shifted focus towards examining direct correlation between raw acoustic features and AI-predicted emotions. Instead of applying predefined vocal emotion mappings to rely on, essential vocal markers have been investigated to obtain an understanding of how these correlate with Hume AI’s emotion scores across our dataset. 
 
 \subsubsection{Composite Correlation Overview}
-Figure~\ref{fig:composite} illustrates a composite correlation analysis, including Pearson correlation coefficients (r) between two acoustic features - pitch and intensity - and the given emotion categories that are filtered from Hume AI. Even if the correlations are generally moderate, certain patterns appear which aligns with previous findings in vocal emotion research. 
+Figure~\ref{fig:rq1_composite} illustrates a composite correlation analysis, including Pearson correlation coefficients (r) between two acoustic features, pitch and intensity, and the emotion probabilities from Hume AI. 
+
 \begin{figure}[H]
     \centering 
-    \includegraphics[width=0.6\textwidth]{png/results/rq1/composite_correlations.pdf}
-    \caption{Composite correlation analysis}
-    \label{fig:composite}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+    \includegraphics[width=\textwidth]{png/results/rq1_new/composite_correlations_positive.pdf}
+    \caption{Positive Recordings}
+    \label{fig:rq1_composite_pos}
+    \end{subfigure}
+    \hfill 
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{png/results/rq1_new/composite_correlations_negative.pdf}
+    \caption{Negative Recordings}
+    \label{fig:rq1_composite_neg}
+    \end{subfigure}
+    \caption{Composite Correlation diagrams.}
+    \label{fig:rq1_composite}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+      \toprule
+      \textbf{Hume Emotion} & \textbf{Pitch\_r} & \textbf{Pitch\_p} & \textbf{Intensity\_r} & \textbf{Intensity\_p} \\
+      \midrule
+      Anger    & 0,218 & 0,000 & –0,012 & 0,762 \\
+      Joy      & 0,042 & 0,282 &  0,227 & 0,000 \\
+      Fear     & –0,055 & 0,159 & –0,180 & 0,000 \\
+      Sadness  & –0,312 & 0,000 & –0,160 & 0,000 \\
+      Surprise & 0,011 & 0,788 & –0,132 & 0,001 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Correlation coefficients (r) and p-values for pitch and intensity, negative recordings. }
+    \label{tab:cor_neg}
+  \end{table}
+  
+Pitch in negative recordings shows a positive correlation with Hume anger (r = 0.218, p < 0.001) and a negative correlation with Hume sadness (r = -0.312, p < 0.001), both showing statistical significance. 
+Other emotions presents no significant correlation, where pitch and surprise has the weakest correlation across emotions. Intensity correlates positively with Hume joy (r = 0.227) and had a negative relationship with fear (r = -0.180), sadness (r = -1.60), and surprise (r = -0.132), all statistical significant correlations (p < 0.01). 
+Anger was the single emotion showing weak correlation with intensity (r = -0.012, p = 0.762) across the negative interviews. 
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrr}
+      \toprule
+      \textbf{Hume Emotion} & \textbf{Pitch\_r} & \textbf{Pitch\_p} & \textbf{Intensity\_r} & \textbf{Intensity\_p} \\
+      \midrule
+      Anger    & 0,041 & 0,362 & –0,045 & 0,320 \\
+      Joy      & –0,004 & 0,936 &  0,279 & 0,000 \\
+      Fear     & 0,209 & 0,000 & –0,173 & 0,000 \\
+      Sadness  & –0,225 & 0,000 & –0,213 & 0,000 \\
+      Surprise & 0,005 & 0,916 & –0,173 & 0,000 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Correlation coefficients (r) and p-values for pitch and intensity, positive recordings. }
+    \label{tab:cor_pos}
+  \end{table}
+
+Both fear and sadness predicted by Hume AI showed weak correlations with statistical significance with pitch for positive recordings (r = 0.209 and r = -0.225, both p < 0.001). All other pitch correlations were non-significant. 
+Intensity correlated most strongly with joy (r = 0.279, p < 0.001), and strongest negatively with sadness (r = -0.213, p < 0.001). Weak correlations with statistical significance were also prevelant between intensity and fear (r = -0.173, p < 0.001) and surprise (r = -0.173, p < 0.001).
+
+
+\subsubsection{OBS!!! DELETE!!! should be in discussion!!!! }
+
 
 Particularly intensity shows a positive correlation with joy, and suggests that higher vocal intensity tends to co-occur with AI detected happiness. In contrast, intensity shows a negative correlation with emotions such as sadness and fear, which is aligned with the expectations that these emotions are generally expressed with lower vocal energy. 
 
@@ -317,10 +451,162 @@ For pitch, a minor positive correlation is found in correlation with anger and f
 
 However, the correlation strength is weak across all emotions, without values that indicate a strong linear association. This indicates, as our previous results, that single acoustic features like pitch and intensity alone are insufficient markers of emotional states when detected by speech emotion recognition systems, in the context of conversational, but interviewed, speech. 
 
-\subsubsection{Supporting observations from individual clips}
+\subsection{Time-to-Time Analysis}
 
-For a more concrete illustration of the prior tendencies stated, two interview recordings were analyzed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
+For a more concrete illustration of the prior tendencies , two interview recordings were analyzed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
 
+\medskip
+
+\begin{figure}[H]
+    \centering
+    
+    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/006_pos_use_anger-joy.pdf}
+    \caption{Pitch and Intensity vs. Hume Anger and Joy. Single positive clip.}
+    \label{fig:006_pos-anger-joy}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/006_pos_use-sadn-surp.pdf} 
+    \caption{Jitter and Shimmer vs. Hume Sadness and Surprise. Single positive clip.}
+    \label{fig:006_pos-surp-sadn}
+\end{figure}
+    
+\begin{table}[H]
+    \centering
+    %\caption*{\textbf{Significant Correlations}}
+    \begin{tabular}{llrr}
+        \toprule
+        \textbf{Feature}         & \textbf{Emotion} & \textbf{Pearson r} & \textbf{p-value} \\
+        \midrule
+        mean\_pitch\_st          & surprise         & 0.257              & 0.016            \\
+        mean\_pitch\_hz          & surprise         & 0.258              & 0.016            \\
+        mean\_intensity\_db      & joy              & 0.271              & 0.011            \\
+        mean\_intensity\_db      & fear             & $-0.338$           & 0.001            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Segment-wise Significant Correlations clip 006pos}
+    \label{tab:segcorr_significant}
+\end{table}
+
+For \ref{tab:segcorr_significant} number of unsignificant: 25 
+
+
+
+\begin{table}[H]
+    \centering
+   % \caption*{\textbf{High vs Low T-tests Statistics}}
+    \begin{tabular}{llrr}
+        \toprule
+        \textbf{Feature}         & \textbf{Emotion} & \textbf{t-statistic} & \textbf{p-value} \\
+        \midrule
+        mean\_pitch\_st          & surprise         & 2.373                & 0.020            \\
+        mean\_pitch\_hz          & surprise         & 2.412                & 0.018            \\
+        mean\_intensity\_db      & joy              & 2.399                & 0.019            \\
+        \bottomrule
+    \end{tabular}
+    \caption{High vs Low T-test Statistics (Significant Results) clip 006pos}
+    \label{tab:seghighlow_ttest}
+\end{table}
+  
+for \ref{tab:seghighlow_ttest} number unsignificant: 26 
+
+\begin{table}[H]
+    \centering
+    %caption*{\textbf{Segment wise Slopes for vocal features}}
+    \begin{tabular}{lrrl}
+        \toprule
+        \textbf{Feature}         & \textbf{Slope}  & \textbf{p-value} & \textbf{Significant?} \\
+        \midrule
+        mean\_pitch\_st          & 0.005           & 0.000            & Yes                  \\
+        mean\_pitch\_hz          & 0.007           & 0.000            & Yes                  \\
+        mean\_intensity\_db      & 0.019           & 0.016            & Yes                  \\
+        mean\_hnr\_db            & 0.003           & 0.061            & No                   \\
+        jitter\_local            & 0.015           & 0.033            & Yes                  \\
+        shimmer\_local           & 0.002           & 0.632            & No                   \\
+        \bottomrule
+    \end{tabular}
+    \caption{Segment-wise Slopes for Vocal Features clip 006pos}
+    \label{tab:segslope_significant}
+\end{table}
+
+
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/012_neg_use-anger-joy.pdf}
+    \caption{Z score fluctuation pitch, intensity, anger and joy single clip.}
+    \label{fig:z-score-ang-joy-012}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/012_neg_use-sadn-surp.pdf}
+    \caption{Z score fluct jitter, shimmer, sadness, surprise single clip.}
+    \label{fig:z-score-surp-sadn-012}
+\end{figure}
+
+
+  \begin{table}[H]
+    \centering 
+    %\caption*{\textbf{Segment wise correlations : unsig: 25}}
+    \begin{tabular}{llrr}
+      \toprule
+      \textbf{Feature}         & \textbf{Emotion} & \textbf{Pearson r} & \textbf{p-value} \\
+      \midrule
+      mean\_pitch\_st          & fear             & 0.285              & 0.0063           \\
+      mean\_pitch\_hz          & fear             & 0.269              & 0.0099           \\
+      mean\_intensity\_db      & fear             & $-0.300$           & 0.0035           \\
+      mean\_hnr\_db            & fear             & 0.296              & 0.0040           \\
+      mean\_hnr\_db            & surprise         & 0.212              & 0.0417           \\
+      \bottomrule
+    \end{tabular}
+    \caption{Segment-wise Significant Correlations (Fear and Surprise) unsign: 25. clip 012neg}
+    \label{tab:segcorr_fear_012}
+  \end{table}
+  
+ 
+  \begin{table}[H]
+    \centering
+    \caption*{\textbf{High vs Low T-tests Statistics unsign: 25}}
+    \begin{tabular}{llrrr}
+      \toprule
+      \textbf{Feature}         & \textbf{Emotion} & \textbf{Group}     & \textbf{t-statistic} & \textbf{p-value} \\
+      \midrule
+      mean\_pitch\_st          & sadness          & High vs Low        & $-2.580$             & 0.0115           \\
+      mean\_pitch\_hz          & sadness          & High vs Low        & $-2.343$             & 0.0214           \\
+      mean\_hnr\_db            & sadness          & High vs Low        & $-2.397$             & 0.0186           \\
+      jitter\_local            & surprise         & High vs Low        & 2.494                & 0.0145           \\
+      \bottomrule
+    \end{tabular}
+    \caption{High vs Low T-test Statistics (Significant Results) unsign: 25 clip 012neg}
+    \label{tab:seghighlow_sad_surp_012}
+  \end{table}
+  
+
+  \begin{table}[H]
+    \centering
+    \caption*{\textbf{Slope}}
+ 
+    \begin{tabular}{lrrl}
+      \toprule
+      \textbf{Feature}         & \textbf{Slope}  & \textbf{p-value} & \textbf{Significant?} \\
+      \midrule
+      mean\_pitch\_st          & $-0.005$        & 0.0207           & Yes                   \\
+      mean\_pitch\_hz          & $-0.006$        & 0.0118           & Yes                   \\
+      mean\_intensity\_db      & 0.029           & 0.0018           & Yes                   \\
+      mean\_hnr\_db            & $-0.005$        & 0.0012           & Yes                   \\
+      jitter\_local            & $-0.019$        & 0.0636           & No                    \\
+      shimmer\_local           & 0.005           & 0.2496           & No                    \\
+      \bottomrule
+    \end{tabular}
+    \caption{Segment-wise Slopes for Vocal Features clip 012neg}
+    \label{tab:segslope_012}
+  \end{table}
+
+
+
+\subsubsection{Pitch and Hume emotion over time}
 In Figure~\ref{fig:pitch-4-pos} and \ref{fig:intensity-4-pos}, data is demonstrated from a positively directed interview \texttt{id\_004\_pos}, female, which shows that increases in pitch and intensity considerably often correlate with higher joy probabilities by Hume AI. While the correlation is not consistent throughout the recording, these moment-to-moment variations reflect the general expectation that higher vocal energy is associated with positive emotional expression. 
 
 \begin{figure}[H]
@@ -355,7 +641,7 @@ Similarly, Figure~\ref{fig:pitch-15-neg} and \ref{fig:intensity-15-neg} and \ref
     \end{subfigure}
 \end{figure}
 
-Additionally, Figure C illustrates z-score fluctuations of key vocal features for clip 13-neg. For this interview, several segments exceed +-1 standard deviation from the baseline, especially for pitch, intensity, and shimmer. These flagged moments align frequently with the emotion probabilities of Hume, which strengthens the link between vocal patterns and perceived emotional intensity. 
+Additionally, Figure \ref{fig:z-score-15} illustrates z-score fluctuations of key vocal features for clip 13-neg. For this interview, several segments exceed +-1 standard deviation from the baseline, especially for pitch, intensity, and shimmer. These flagged moments align frequently with the emotion probabilities of Hume, which strengthens the link between vocal patterns and perceived emotional intensity. 
 
 The z-score fluctuation diagram Figure \ref{fig:z-score-15} illustrates the segments further where vocal features significantly deviate from baseline levels, in patterns aligned with associated high-arousal negative emotions such as raised pitch and loudness. 
 
@@ -411,22 +697,60 @@ except for Fear, where Hume showed a prominent higher pattern.
 \subsubsection{Correlation Analysis}
 
 To evaluate how text-based (NLP Cloud) and speech-based (Hume AI) emotion recognition aligns, Pearson correlation coefficients (r) were calculated for each emotion across all interview recordings. 
-Table~\ref{tab:pearson-pval-rq2} presents the correlation values as well as corresponding p-values to examine the statistical significance. 
+Table~\ref{tab:corr_all} presents the correlation values as well as corresponding p-values to examine the statistical significance. 
 
-\begin{table}[!h]
+\begin{table}[H]
     \centering
-    \begin{tabular}{c|ll}
-    \rowcolor[HTML]{C0C0C0} 
-    \textbf{Emotion}  & \multicolumn{1}{c}{\cellcolor[HTML]{C0C0C0}\textbf{Pearson r}} & \multicolumn{1}{c}{\cellcolor[HTML]{C0C0C0}\textbf{p-value}} \\ \hline
-    \textbf{Anger}    & 0,468                                                          & 0,0069                                                       \\
-    \textbf{Joy}      & 0,521                                                          & 0,0022                                                       \\
-    \textbf{Sadness}  & 0,166                                                          & 0,3645                                                       \\
-    \textbf{Fear}     & 0,173                                                          & 0,3439                                                       \\
-    \textbf{Surprise} & 0,193                                                          & 0,2889                                                      
+    \caption{Pearson Correlations Between Vocal Feature and Hume AI Emotion Scores (All Recordings)}
+    \label{tab:corr_all}
+    \begin{tabular}{lrrl}
+      \toprule
+      \textbf{Emotion} & \textbf{Pearson r} & \textbf{p-value} & \textbf{Significant}\\
+      \midrule
+      Anger    & 0.466 & 0.007 & Yes \\
+      Joy      & 0.521 & 0.002 & Yes \\
+      Sadness  & 0.167 & 0.362 & No  \\
+      Fear     & 0.171 & 0.348 & No  \\
+      Surprise & 0.197 & 0.281 & No  \\
+      \bottomrule
     \end{tabular}
-    \caption{Pearson Correlation (r) and p-value for Hume AI and NLP across emotions.}
-    \label{tab:pearson-pval-rq2}
-\end{table}
+  \end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Pearson Correlations Between Vocal Feature and Hume AI Emotion Scores (Negative Recordings)}
+    \label{tab:corr_neg}
+    \begin{tabular}{lrrl}
+      \toprule
+      \textbf{Emotion} & \textbf{Pearson r} & \textbf{p-value} & \textbf{Significant}\\
+      \midrule
+      Anger    & 0.260 & 0.313 & No  \\
+      Joy      & 0.556 & 0.020 & Yes \\
+      Sadness  & 0.028 & 0.914 & No  \\
+      Fear     & 0.270 & 0.294 & No  \\
+      Surprise & 0.209 & 0.422 & No  \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  
+
+  \begin{table}[H]
+    \centering
+    \caption{Pearson Correlations Between Vocal Feature and Hume AI Emotion Scores (Positive Recordings)}
+    \label{tab:corr_pos}
+    \begin{tabular}{lrrl}
+      \toprule
+      \textbf{Emotion} & \textbf{Pearson r} & \textbf{p-value} & \textbf{Significant}\\
+      \midrule
+      Anger    & 0.160  & 0.568 & No  \\
+      Joy      & 0.682  & 0.005 & Yes \\
+      Sadness  & 0.546  & 0.035 & Yes \\
+      Fear     & 0.098  & 0.729 & No  \\
+      Surprise & -0.050 & 0.860 & No  \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
 
 This data demonstrates a reasonable positive correlation for Anger(r = 0.468, p=0.0069) and Joy (r=0.521, p=0.0022), implying that these emotions are relatively consistent identified throughout the AI systems. 
 The p-values (p<0.05) show a statistical significance and highlights a relevant relationship in how Anger and Joy are detected through different processes. 
