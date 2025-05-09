@@ -13,16 +13,29 @@ The study evaluates AI-generated emotion labels from speech compared with existi
 \section{Data Collection}
 The study involves participants for semi-structured interviews where they respond to predefined scenarios to provoke emotions. Ethical considerations, such as informed consent and anonymization, are followed firmly to ensure participant well-being. In the first phase, interviews are collected for analysis. 
 
-Approximately 15 Swedish speakers, primarily acquaintances to the researchers, are recruited via invitations. Interviews take place in a quiet room and last for 5-10 minutes including 2-4 scenarios that have been pilot tested for effectiveness, and breaks between the scenarios. Participants complete a self-assessment after each scenario. To minimize acted behavior, the participants are not pre-informed about the feelings that are aimed to be provoked through the scenarios.
+16 Swedish speakers, primarily acquaintances to the researchers, are recruited via invitations. Interviews include 2 scenarios, 
+each scenario includes 5-7 questions designed to elicit either positive or negative emotions, the participants select one of these questions for each semantic area, to maintain freedom in the speech as well as avoiding asking questions the participant are not comfortable to answer. The participants are not pre-informed about the feeling that are aimed to be provoked during the interviews. 
+The scenarios have been pilot-tested for effectiveness. 
+The interviews are recorded in a quiet room. Each scenario last between 2 and 4 minutes with breaks between them, the order of the scenarios varies to minimize affecting the results because of the possibility of the order influencing the different emotions. Each recording have been edited to delete our questions and any longer silent pauses. 
 
-Participants are asked open-ended questions designed to bring out previously lived through personal experiences of anger and happiness. The questions about anger are focused on previous experiences of unfair treatment and frustration, while the questions related to happiness explore moments of pride and unexpected joy. The semi-structured format allows for follow-up questions based on participant responses, to bring out as much emotion as possible.
-Although there will be a few different predefined scenarios for the participants in the interviews to choose from to maintain freedom in the participants emotional expression, two example questions for both emotions in the interview are:
+Participants are asked open-ended questions designed to bring out previously lived through personal experiences of anger and happiness. The questions about anger are focused on previous experiences of unfair treatment and frustration regarding their everyday lives or society, while the questions related to happiness explore moments of pride and unexpected joy through memories. 
+The semi-structured format allows for follow-up questions based on participant responses, to bring out as much emotion as possible. The follow-up questions include "How did that make you feel?", "Can you evaluate on that specific situation?", and "What feelings did you experience?". 
+ 
+Two example questions that can be selected in each scenario are stated below: 
+\textbf{Negative:}
 \begin{itemize}
-    \item Can you remember a time when you were treated unfairly by someone? What happened and how did you react?
-    \item Tell me about a moment when you were very proud of yourself. What did you do and how did you feel?
+    \item Think about a situation when something did not go as planned. What was it? What feelings did you experience? 
+    \item Is it something about society that makes you upset? What? Can you elaborate? 
 \end{itemize}
+\textbf{Positive: }
+\begin{itemize}
+    \item Describe a situation when something unexpected raised immense happiness in you. How did you feel in that moment? 
+    \item Think about a moment when you were very proud of yourself. What did you do and how did you feel?
+\end{itemize}
+
+
 The study adopts a mixed-method interview approach \autocite{Bryman2022}, where the qualitative data from speech is transformed into quantitative AI-generated emotion labels, to enable comparison in a structured way \autocite{Creswell2023}.
-Audio is recorded and analyzed using two emotion recognition models: Hume.ai to extract speech-based emotional labels, and NLP Cloud to transcribe the speech and extract text-based emotional labels. The recordings are preprocessed to reduce background noise. The same dataset is used for all research questions to ensure consistency and all participants remain anonymous.
+Audio is recorded and pre-processed to reduce background noise. Vocal markers from each recording are extracted using Parselmouth, a Python library for vocal feature extraction, to answer RQ1. The audio is analysed simultaneously using two emotion recognition models: Hume.ai to extract speech-based emotional labels, and NLP Cloud to transcribe the speech and then analyse the textual content in terms of emotion scores. The same dataset is used for all research questions to ensure consistency. 
 
 The diagram in Figure~\ref{fig:pipeline} visualizes the multi-modal pipeline used in this study.  
 The interview audio files are processed through three primary channels: speech-to-text transcription via NLP Cloud,  
@@ -30,8 +43,7 @@ Speech emotion recognition via Hume AI and acoustic feature extraction via Praat
 These channels represent two main pipelines.  
 The entities presented in yellow are prevalent in both pipelines, where the audio recordings are analyzed with Hume AI, the output is filtered to the 6 emotions analyzed in this study.  
 The pipeline illustrated in green represents the analysis to answer research question 1.  
-The vocal markers are extracted using Praat Parselmouth.  
-The features that are chosen are based on previous research, see \ref{sec:vocal-markers}, Theoretical Framework - Vocal Markers, where pitch, intensity/loudness, formant frequencies (F1, F2, F3), HNR,  
+The vocal features extracting utilizing Praat Parselmouth are chosen are based on previous research, see \ref{sec:vocal-markers}, Theoretical Framework - Vocal Markers, where pitch, intensity/loudness, formant frequencies (F1, F2, F3), HNR,  
 jitter and shimmer have distinguished values for certain emotions.  
 To compare the extracted data with Hume AI, these values are clustered into emotion groups.  
 Data from speech analysis and vocal markers are combined to statistically analyze the results for RQ1.  
@@ -42,7 +54,7 @@ Results from speech and text prediction are combined with the self-assessment sc
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{png/flowchart2.png}
+    \includegraphics[width=0.8\textwidth]{png/method/flowchart-thesis.pdf}
     \caption{The multi-modal pipeline used in this study.}
     \label{fig:pipeline}
 \end{figure}
@@ -54,7 +66,7 @@ Results from speech and text prediction are combined with the self-assessment sc
 To answer this question, speech recordings are collected from participants as they describe emotionally charged experiences. AI-based emotion recognition using Hume.ai, are used for AI-based Speech Emotion Recognition. Voice feature extraction from the recordings is made, to compare to AI-labeled emotions with known vocal markers from existing Swedish emotion research \autocite{Ekberg2023}. 
 
 \subsection{Research Question 2}
-\textbf{Can we understand the emotions from textual content of the speech, with the same data as in RQ1? }
+\textbf{What similarities and differences emerge between emotions detected from audio features and from the textual transcripts of the same speech data?}
 
 To answer the second question, the recorded speech is transcribed and analyzed for emotion recognition using NLP Cloud’s emotion recognition to assess the emotional content of speech transcripts. The text-based AI labels are compared with speech-based AI labels to determine whether emotion is preserved in textual content alone. 
 
@@ -165,15 +177,14 @@ Each text input uses the following prompt:
 \begin{center}
     \begin{minipage}{0.7\textwidth} 
     \begin{lstlisting}[language=json, caption={NLP Cloud configuration prompt.}]
-        prompt = (
-            "You are an emotion analysis system. "
-            "Given a Swedish text, respond only with a JSON object using these emotion
-            labels: "
-            "joy, surprise, fear, anger, sadness. Each value must be a float
-            between 0.0 and 1.0. "
-                "Respond with the JSON directly and nothing else.\n\n"
-                f"{text}"
-            )
+prompt = (
+"You are an emotion analysis system.
+Given a Swedish text, respond only with a JSON object using these emotion labels: 
+joy, surprise, fear, anger, sadness.
+Each value must be a float between 0.0 and 1.0.
+Respond with the JSON directly and nothing else.
+f"{transcription}"
+)
     \end{lstlisting}
     \end{minipage}
 \end{center} 
@@ -196,10 +207,12 @@ creates the average of the two to match the format.
 To ensure validity, the interview scenarios are pilot tested to ensure they provoke intended emotions \autocite{Bryman2022}. The use of multiple AI models (speech- and text-based) allows for cross-validation of results. Standardized interview prompts ensure consistency across participants. Participant self-assessment serves as a secondary reference to evaluate AI-labeled emotions. Triangulation across AI, vocal markers, text analysis, and self-assessments enhance convergent validity \autocite{Creswell2023}. 
 
 \subsection{Reliability}
-To ensure reliability, standardized equipment and scenario are used to ensure replicability. Hume.ai, NLP Cloud, and Praat provide consistent measures. The AI models used in the study (Hume.ai and NLP Cloud) are pre-trained and validated emotion recognition systems. Correlation will be determined and are used to quantify the reliability of AI models in detecting emotions. The study has a replicable experimental setup, with documentation supporting replication to allow researchers to reproduce similar evaluations.  
+To ensure reliability, standardized equipment and scenario are used to ensure replicability. Hume.ai, NLP Cloud, and Praat provide consistent measures. The AI models used in the study (Hume.ai and NLP Cloud) are pre-trained and validated emotion recognition systems. Correlation will be determined and are used to quantify the reliability of AI models in detecting emotions. 
+The same data is not analysed multiple times to check if the results are different. The prompt used for NLP Cloud is therefore zero-shot. 
+The study has a replicable experimental setup, with documentation supporting replication to allow researchers to reproduce similar evaluations.  
 
 Triangulation is achieved in the study through comparison of speech AI, text AI, and self-reports which improves creditability. Any discreteness will be analyzed qualitatively to contextualize potential biases rather than assuming errors. 
-Reliability is ensured through standardization in data collection. All interviews are preprocessed to reduce background noise and normalize volume levels. The online tool Auphonic \autocite{Auphonic} is used for this, due to its simple usability for noice reduction, ability to cut out pauses and limit loudness. The same data processing steps are applied consistently for all recordings, ensuring equality in analysis. The study has a replicable experimental setup, with usage of pre-trained, publicly available APIs, and documentation supporting replication to allow researchers to reproduce similar analyses. These measures ensure that our study is generalizable within the scope or automated emotion recognition for stress analysis. 
+Reliability is ensured through standardization in data collection. All interviews are preprocessed to reduce background noise and normalize volume levels. The online tool Auphonic \autocite{Auphonic} is used for this, due to its simple usability for noise reduction, ability to cut out pauses and limit loudness. The same data processing steps are applied consistently for all recordings, ensuring equality in analysis. The study has a replicable experimental setup, with usage of pre-trained, publicly available APIs, and documentation supporting replication to allow researchers to reproduce similar analyses. These measures ensure that our study is generalizable within the scope or automated emotion recognition for stress analysis. 
 
 \section{Considerations}
 To consider the implications of this study, several factors must be recognized. To address ethical and privacy concerns, all participant data is anonymized and securely stored to ensure privacy. The participants provide informed consent before engaging in this study. The emotion-provoking scenarios are designed to minimize distress, focusing on natural, everyday emotions rather than triggering events. The participants will have scenarios to choose from, see 2.2 Data Collection. 

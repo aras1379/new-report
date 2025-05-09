@@ -502,53 +502,6 @@
       \verb https://doi.org/10.1109/ACIIW57231.2022.10086002
       \endverb
     \endentry
-    \entry{Bnziger2014}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=2b232dbd87d2ca44b1b166cd9323c246}{%
-           family={Bänziger},
-           familyi={B\bibinitperiod},
-           given={T},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bc9abbd956354f2690bbd958ce304fd4}{%
-           family={Patel},
-           familyi={P\bibinitperiod},
-           given={S},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=15b2d14ccfd53ab0519e80accc47c4f7}{%
-           family={Scherer},
-           familyi={S\bibinitperiod},
-           given={K.\bibnamedelimi R.},
-           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{c6b4c807a0ecd7b6829c89b15fe6f09f}
-      \strng{fullhash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{fullhashraw}{ac10285beb4be9c941a8606daa694b98}
-      \strng{bibnamehash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{authorbibnamehash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{authornamehash}{c6b4c807a0ecd7b6829c89b15fe6f09f}
-      \strng{authorfullhash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{authorfullhashraw}{ac10285beb4be9c941a8606daa694b98}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issue}{1}
-      \field{journaltitle}{Journal of nonverbal behavior}
-      \field{title}{The Role of Perceived Voice and Speech Characteristics in Vocal Emotion Communication}
-      \field{volume}{38}
-      \field{year}{2014}
-      \field{pages}{31\bibrangedash 52}
-      \range{pages}{22}
-      \verb{doi}
-      \verb https://doi.org/10.1007/s10919-013-0165-x
-      \endverb
-    \endentry
     \entry{SilvaBarbon2022}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=041eff4a48886f4ce48923e60ea3eb2e}{%
@@ -1594,69 +1547,6 @@
       \verb https://doi.org/10.1080/09524622.2023.2259327
       \endverb
     \endentry
-    \entry{Jahangir2022}{article}{}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=8c77bb7a6876497a77e36608cda2da07}{%
-           family={Jahangir},
-           familyi={J\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9bdcbfa6faa81e6039b66e6cdbfc7201}{%
-           family={Teh},
-           familyi={T\bibinitperiod},
-           given={Y.\bibnamedelimi W},
-           giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8125d3604cfaf235065a91363c743fa4}{%
-           family={Mujtaba},
-           familyi={M\bibinitperiod},
-           given={G},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=110b6a883fd45d5714bba6d9b1d01daf}{%
-           family={Alroobaea},
-           familyi={A\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9591b5860aee2e93d34629c4b9ca551b}{%
-           family={Shaikh},
-           familyi={S\bibinitperiod},
-           given={Z.\bibnamedelimi H},
-           giveni={Z\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1903bcfc47f48e6552aff4567bcd747c}{%
-           family={Ali},
-           familyi={A\bibinitperiod},
-           given={I},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a78ca1ac042a74546995c580cd91ca8a}
-      \strng{fullhash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{fullhashraw}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{bibnamehash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{authorbibnamehash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{authornamehash}{a78ca1ac042a74546995c580cd91ca8a}
-      \strng{authorfullhash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{authorfullhashraw}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issue}{3}
-      \field{journaltitle}{Machine vision and applications}
-      \field{title}{Convolutional neural network-based cross-corpus speech emotion recognition with data augmentation and features fusion}
-      \field{volume}{33}
-      \field{year}{2022}
-      \verb{doi}
-      \verb 10.1007/s00138-022-01294-x.
-      \endverb
-    \endentry
     \entry{Juslin2018}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=0b1e508dfb426aeecf9f39e05e650752}{%
@@ -2148,51 +2038,6 @@
       \verb https://doi.org/10.3390/e25101440
       \endverb
     \endentry
-    \entry{StevenRLivingstone2019}{misc}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=37b03d95f8b7b7fa467e8266a9155ee7}{%
-           family={Livingstone},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima R.},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=226c4f8440b42f6bfd589824de248fd8}{%
-           family={Russo.},
-           familyi={R\bibinitperiod},
-           given={Frank\bibnamedelima A.},
-           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {KAGGLE}%
-      }
-      \strng{namehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{fullhash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{fullhashraw}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{bibnamehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authorbibnamehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authornamehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authorfullhash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authorfullhashraw}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{RAVDESS Emotional speech audio dataset}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.34740/KAGGLE/DSV/256618
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.34740/KAGGLE/DSV/256618
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.34740/KAGGLE/DSV/256618
-      \endverb
-    \endentry
     \entry{Madhuri2021}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=cd90a16d7db5d6611942bce9189f8a91}{%
@@ -2293,60 +2138,6 @@
       \range{pages}{35}
       \verb{doi}
       \verb https://doi.org/10.1109/ACCESS.2024.3356357
-      \endverb
-    \endentry
-    \entry{Milner2019}{inbook}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=c68145a48b16df1bf26c2013062f47f3}{%
-           family={Milner},
-           familyi={M\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b8c3eb0d9ff4d1f0f01812107a5f1344}{%
-           family={Jalal},
-           familyi={J\bibinitperiod},
-           given={M.\bibnamedelimi A},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=968144d91f13e1d6a24cec1991ae956c}{%
-           family={Ng},
-           familyi={N\bibinitperiod},
-           given={R.\bibnamedelimi W.\bibnamedelimi M},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ced717051ed33339683129239c56459f}{%
-           family={Hain},
-           familyi={H\bibinitperiod},
-           given={T},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{c71a332ce9d6dff24352eb72c6f742ea}
-      \strng{fullhash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{fullhashraw}{e4135298e6744b8d16a796df3d681adb}
-      \strng{bibnamehash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{authorbibnamehash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{authornamehash}{c71a332ce9d6dff24352eb72c6f742ea}
-      \strng{authorfullhash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{authorfullhashraw}{e4135298e6744b8d16a796df3d681adb}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Automatic Speech Recognition and Understanding Workshop ASRU}
-      \field{title}{A Cross-Corpus Study on Speech Emotion Recognition}
-      \field{year}{2019}
-      \field{pages}{304\bibrangedash 311}
-      \range{pages}{8}
-      \verb{doi}
-      \verb https://doi.org/10.1109/ASRU46091.2019.9003838
       \endverb
     \endentry
     \entry{Montasem2013}{article}{}{}
@@ -2502,42 +2293,6 @@
       \field{title}{Understanding emotions Fourth Edition}
       \field{year}{2019}
     \endentry
-    \entry{kaggle-savee}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a37e69ac6a18888e9d223ea151f34306}{%
-           family={Surrey},
-           familyi={S\bibinitperiod},
-           given={University},
-           giveni={U\bibinitperiod},
-           givenun=0,
-           prefix={of},
-           prefixi={o\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {KAGGLE}%
-      }
-      \strng{namehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{fullhash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{fullhashraw}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{bibnamehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authorbibnamehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authornamehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authorfullhash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authorfullhashraw}{a37e69ac6a18888e9d223ea151f34306}
-      \field{sortinit}{o}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{labeldatesource}{nodate}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Surrey Audio-Visual Expressed Emotion (SAVEE)}
-      \verb{urlraw}
-      \verb https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-savee
-      \endverb
-      \verb{url}
-      \verb https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-savee
-      \endverb
-    \endentry
     \entry{OpenAI2022}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
@@ -2567,91 +2322,6 @@
       \endverb
       \verb{url}
       \verb https://openai.com/index/whisper/
-      \endverb
-    \endentry
-    \entry{Pandey2023}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=1350df17816c6cc44ec9ead1c26f09b6}{%
-           family={Pandey},
-           familyi={P\bibinitperiod},
-           given={S.\bibnamedelimi K},
-           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=11636983f5147a743c217263f684f5a9}{%
-           family={Shekhawat},
-           familyi={S\bibinitperiod},
-           given={H.\bibnamedelimi S},
-           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7497a0b1d796d4da8c9b9830878d9f1d}{%
-           family={Prasanna},
-           familyi={P\bibinitperiod},
-           given={S.\bibnamedelimi R.\bibnamedelimi M},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5d1930efb2e51c4cbf208e957d540cba}
-      \strng{fullhash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{fullhashraw}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{bibnamehash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{authorbibnamehash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{authornamehash}{5d1930efb2e51c4cbf208e957d540cba}
-      \strng{authorfullhash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{authorfullhashraw}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biomedical signal processing and control}
-      \field{title}{Multi-cultural speech emotion recognition using language and speaker cues}
-      \field{volume}{83}
-      \field{year}{2023}
-      \field{pages}{104679\bibrangedash}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.bspc.2023.104679
-      \endverb
-    \endentry
-    \entry{Pichora-Fuller2020}{misc}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=0398e67727c846ab564861269c5cda5f}{%
-           family={Pichora-Fuller},
-           familyi={P\bibinithyphendelim F\bibinitperiod},
-           given={M.\bibnamedelimi Kathleen},
-           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fd57ea37e5023f469d4ae617a540bddc}{%
-           family={Dupuis},
-           familyi={D\bibinitperiod},
-           given={Kate},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Borealis}%
-      }
-      \strng{namehash}{ca615318144a437f465563a87ea85750}
-      \strng{fullhash}{ca615318144a437f465563a87ea85750}
-      \strng{fullhashraw}{ca615318144a437f465563a87ea85750}
-      \strng{bibnamehash}{ca615318144a437f465563a87ea85750}
-      \strng{authorbibnamehash}{ca615318144a437f465563a87ea85750}
-      \strng{authornamehash}{ca615318144a437f465563a87ea85750}
-      \strng{authorfullhash}{ca615318144a437f465563a87ea85750}
-      \strng{authorfullhashraw}{ca615318144a437f465563a87ea85750}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Toronto emotional speech set (TESS)}
-      \field{year}{2020}
-      \verb{doi}
-      \verb https://doi.org/10.5683/SP2/E8H2MF
       \endverb
     \endentry
     \entry{Praseetha2022}{article}{}{}
@@ -3338,79 +3008,6 @@
       \verb https://doi.org/10.1016/j.iswa.2024.200351
       \endverb
     \endentry
-    \entry{Thaler2024}{inbook}{}{}
-      \name{author}{7}{}{%
-        {{un=0,uniquepart=base,hash=e9fe96253a4c7f64182b8cf9d47f28c8}{%
-           family={Thaler},
-           familyi={T\bibinitperiod},
-           given={F},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b9c408ada2cee64a232e2cc06245de34}{%
-           family={Haug},
-           familyi={H\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fe5b0cb1cb17fd63dacffabc0e3224aa}{%
-           family={Gewald},
-           familyi={G\bibinitperiod},
-           given={H},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=767348f1e0eee4bda038ba470eec8bf2}{%
-           family={Brune},
-           familyi={B\bibinitperiod},
-           given={P},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2c6ca1f164668a5b9d2603b0788ce979}{%
-           family={Pennarola},
-           familyi={P\bibinitperiod},
-           given={F},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=337117fe4c13b2f07569f92595d18c63}{%
-           family={Pallud},
-           familyi={P\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ae150a7c7b1f6bdcb32429d191e19034}{%
-           family={Braccini},
-           familyi={B\bibinitperiod},
-           given={A.\bibnamedelimi M},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Springer Nature Switzerland}%
-      }
-      \strng{namehash}{ac557c4632983ff45c66753a0060e507}
-      \strng{fullhash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{fullhashraw}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{bibnamehash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{authorbibnamehash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{authornamehash}{ac557c4632983ff45c66753a0060e507}
-      \strng{authorfullhash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{authorfullhashraw}{36918fd0d7f3707f00df89bfbdfee651}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Technologies for Digital Transformation}
-      \field{title}{The Context Sets the Tone: A Literature Review on Emotion Recognition from Speech Using AI}
-      \field{volume}{64}
-      \field{year}{2024}
-      \field{pages}{129\bibrangedash 143}
-      \range{pages}{15}
-      \verb{doi}
-      \verb https://doi.org/10.1007/978-3-031-52120-1_8
-      \endverb
-    \endentry
     \entry{Thompson2004}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=80fa63e57a361dc673ebc1e3677277c5}{%
@@ -3779,52 +3376,6 @@
       \range{pages}{9}
       \verb{doi}
       \verb https://doi.org/10.1016/j.specom.2020.12.009
-      \endverb
-    \endentry
-    \entry{Zhao2019}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
-           family={Zhao},
-           familyi={Z\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dee42732112bfa77a2dad3811ca0b39c}{%
-           family={Mao},
-           familyi={M\bibinitperiod},
-           given={X},
-           giveni={X\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5ecc04ab7cd8350e63b66dc42451fa3e}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b61c2a35e46354fd1be77b3a4cdbecd5}
-      \strng{fullhash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{fullhashraw}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{bibnamehash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{authorbibnamehash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{authornamehash}{b61c2a35e46354fd1be77b3a4cdbecd5}
-      \strng{authorfullhash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{authorfullhashraw}{ed3232371e90e5f9160a3fe4133c6322}
-      \field{sortinit}{Z}
-      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biomedical signal processing and control}
-      \field{title}{Speech emotion recognition using deep 1D \& 2D CNN LSTM networks}
-      \field{volume}{47}
-      \field{year}{2019}
-      \field{pages}{312\bibrangedash 323}
-      \range{pages}{12}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.bspc.2018.08.035
       \endverb
     \endentry
   \enddatalist
@@ -4312,53 +3863,6 @@
       \verb https://doi.org/10.1109/ACIIW57231.2022.10086002
       \endverb
     \endentry
-    \entry{Bnziger2014}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=2b232dbd87d2ca44b1b166cd9323c246}{%
-           family={Bänziger},
-           familyi={B\bibinitperiod},
-           given={T},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bc9abbd956354f2690bbd958ce304fd4}{%
-           family={Patel},
-           familyi={P\bibinitperiod},
-           given={S},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=15b2d14ccfd53ab0519e80accc47c4f7}{%
-           family={Scherer},
-           familyi={S\bibinitperiod},
-           given={K.\bibnamedelimi R.},
-           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{c6b4c807a0ecd7b6829c89b15fe6f09f}
-      \strng{fullhash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{fullhashraw}{ac10285beb4be9c941a8606daa694b98}
-      \strng{bibnamehash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{authorbibnamehash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{authornamehash}{c6b4c807a0ecd7b6829c89b15fe6f09f}
-      \strng{authorfullhash}{ac10285beb4be9c941a8606daa694b98}
-      \strng{authorfullhashraw}{ac10285beb4be9c941a8606daa694b98}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issue}{1}
-      \field{journaltitle}{Journal of nonverbal behavior}
-      \field{title}{The Role of Perceived Voice and Speech Characteristics in Vocal Emotion Communication}
-      \field{volume}{38}
-      \field{year}{2014}
-      \field{pages}{31\bibrangedash 52}
-      \range{pages}{22}
-      \verb{doi}
-      \verb https://doi.org/10.1007/s10919-013-0165-x
-      \endverb
-    \endentry
     \entry{SilvaBarbon2022}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=041eff4a48886f4ce48923e60ea3eb2e}{%
@@ -5404,69 +4908,6 @@
       \verb https://doi.org/10.1016/j.wocn.2018.07.001
       \endverb
     \endentry
-    \entry{Jahangir2022}{article}{}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=8c77bb7a6876497a77e36608cda2da07}{%
-           family={Jahangir},
-           familyi={J\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9bdcbfa6faa81e6039b66e6cdbfc7201}{%
-           family={Teh},
-           familyi={T\bibinitperiod},
-           given={Y.\bibnamedelimi W},
-           giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8125d3604cfaf235065a91363c743fa4}{%
-           family={Mujtaba},
-           familyi={M\bibinitperiod},
-           given={G},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=110b6a883fd45d5714bba6d9b1d01daf}{%
-           family={Alroobaea},
-           familyi={A\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9591b5860aee2e93d34629c4b9ca551b}{%
-           family={Shaikh},
-           familyi={S\bibinitperiod},
-           given={Z.\bibnamedelimi H},
-           giveni={Z\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1903bcfc47f48e6552aff4567bcd747c}{%
-           family={Ali},
-           familyi={A\bibinitperiod},
-           given={I},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a78ca1ac042a74546995c580cd91ca8a}
-      \strng{fullhash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{fullhashraw}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{bibnamehash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{authorbibnamehash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{authornamehash}{a78ca1ac042a74546995c580cd91ca8a}
-      \strng{authorfullhash}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \strng{authorfullhashraw}{8af0e4f20c29595ce51eddb6ded1c7d7}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issue}{3}
-      \field{journaltitle}{Machine vision and applications}
-      \field{title}{Convolutional neural network-based cross-corpus speech emotion recognition with data augmentation and features fusion}
-      \field{volume}{33}
-      \field{year}{2022}
-      \verb{doi}
-      \verb 10.1007/s00138-022-01294-x.
-      \endverb
-    \endentry
     \entry{Juslin2018}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=0b1e508dfb426aeecf9f39e05e650752}{%
@@ -5958,51 +5399,6 @@
       \verb https://doi.org/10.3390/e25101440
       \endverb
     \endentry
-    \entry{StevenRLivingstone2019}{misc}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=37b03d95f8b7b7fa467e8266a9155ee7}{%
-           family={Livingstone},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima R.},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=226c4f8440b42f6bfd589824de248fd8}{%
-           family={Russo.},
-           familyi={R\bibinitperiod},
-           given={Frank\bibnamedelima A.},
-           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {KAGGLE}%
-      }
-      \strng{namehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{fullhash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{fullhashraw}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{bibnamehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authorbibnamehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authornamehash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authorfullhash}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \strng{authorfullhashraw}{c2f43da36a4d2c6eb148c4b72eea7c36}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{RAVDESS Emotional speech audio dataset}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.34740/KAGGLE/DSV/256618
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.34740/KAGGLE/DSV/256618
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.34740/KAGGLE/DSV/256618
-      \endverb
-    \endentry
     \entry{Madhuri2021}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=cd90a16d7db5d6611942bce9189f8a91}{%
@@ -6103,60 +5499,6 @@
       \range{pages}{35}
       \verb{doi}
       \verb https://doi.org/10.1109/ACCESS.2024.3356357
-      \endverb
-    \endentry
-    \entry{Milner2019}{inbook}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=c68145a48b16df1bf26c2013062f47f3}{%
-           family={Milner},
-           familyi={M\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b8c3eb0d9ff4d1f0f01812107a5f1344}{%
-           family={Jalal},
-           familyi={J\bibinitperiod},
-           given={M.\bibnamedelimi A},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=968144d91f13e1d6a24cec1991ae956c}{%
-           family={Ng},
-           familyi={N\bibinitperiod},
-           given={R.\bibnamedelimi W.\bibnamedelimi M},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ced717051ed33339683129239c56459f}{%
-           family={Hain},
-           familyi={H\bibinitperiod},
-           given={T},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{c71a332ce9d6dff24352eb72c6f742ea}
-      \strng{fullhash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{fullhashraw}{e4135298e6744b8d16a796df3d681adb}
-      \strng{bibnamehash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{authorbibnamehash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{authornamehash}{c71a332ce9d6dff24352eb72c6f742ea}
-      \strng{authorfullhash}{e4135298e6744b8d16a796df3d681adb}
-      \strng{authorfullhashraw}{e4135298e6744b8d16a796df3d681adb}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Automatic Speech Recognition and Understanding Workshop ASRU}
-      \field{title}{A Cross-Corpus Study on Speech Emotion Recognition}
-      \field{year}{2019}
-      \field{pages}{304\bibrangedash 311}
-      \range{pages}{8}
-      \verb{doi}
-      \verb https://doi.org/10.1109/ASRU46091.2019.9003838
       \endverb
     \endentry
     \entry{Montasem2013}{article}{}{}
@@ -6312,42 +5654,6 @@
       \field{title}{Understanding emotions Fourth Edition}
       \field{year}{2019}
     \endentry
-    \entry{kaggle-savee}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a37e69ac6a18888e9d223ea151f34306}{%
-           family={Surrey},
-           familyi={S\bibinitperiod},
-           given={University},
-           giveni={U\bibinitperiod},
-           givenun=0,
-           prefix={of},
-           prefixi={o\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {KAGGLE}%
-      }
-      \strng{namehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{fullhash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{fullhashraw}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{bibnamehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authorbibnamehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authornamehash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authorfullhash}{a37e69ac6a18888e9d223ea151f34306}
-      \strng{authorfullhashraw}{a37e69ac6a18888e9d223ea151f34306}
-      \field{sortinit}{o}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{labeldatesource}{nodate}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Surrey Audio-Visual Expressed Emotion (SAVEE)}
-      \verb{urlraw}
-      \verb https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-savee
-      \endverb
-      \verb{url}
-      \verb https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-savee
-      \endverb
-    \endentry
     \entry{OpenAI2022}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
@@ -6377,91 +5683,6 @@
       \endverb
       \verb{url}
       \verb https://openai.com/index/whisper/
-      \endverb
-    \endentry
-    \entry{Pandey2023}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=1350df17816c6cc44ec9ead1c26f09b6}{%
-           family={Pandey},
-           familyi={P\bibinitperiod},
-           given={S.\bibnamedelimi K},
-           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=11636983f5147a743c217263f684f5a9}{%
-           family={Shekhawat},
-           familyi={S\bibinitperiod},
-           given={H.\bibnamedelimi S},
-           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7497a0b1d796d4da8c9b9830878d9f1d}{%
-           family={Prasanna},
-           familyi={P\bibinitperiod},
-           given={S.\bibnamedelimi R.\bibnamedelimi M},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5d1930efb2e51c4cbf208e957d540cba}
-      \strng{fullhash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{fullhashraw}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{bibnamehash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{authorbibnamehash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{authornamehash}{5d1930efb2e51c4cbf208e957d540cba}
-      \strng{authorfullhash}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \strng{authorfullhashraw}{d0a8e58a17de0e65f8e7b96a10e671f8}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biomedical signal processing and control}
-      \field{title}{Multi-cultural speech emotion recognition using language and speaker cues}
-      \field{volume}{83}
-      \field{year}{2023}
-      \field{pages}{104679\bibrangedash}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.bspc.2023.104679
-      \endverb
-    \endentry
-    \entry{Pichora-Fuller2020}{misc}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=0398e67727c846ab564861269c5cda5f}{%
-           family={Pichora-Fuller},
-           familyi={P\bibinithyphendelim F\bibinitperiod},
-           given={M.\bibnamedelimi Kathleen},
-           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fd57ea37e5023f469d4ae617a540bddc}{%
-           family={Dupuis},
-           familyi={D\bibinitperiod},
-           given={Kate},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Borealis}%
-      }
-      \strng{namehash}{ca615318144a437f465563a87ea85750}
-      \strng{fullhash}{ca615318144a437f465563a87ea85750}
-      \strng{fullhashraw}{ca615318144a437f465563a87ea85750}
-      \strng{bibnamehash}{ca615318144a437f465563a87ea85750}
-      \strng{authorbibnamehash}{ca615318144a437f465563a87ea85750}
-      \strng{authornamehash}{ca615318144a437f465563a87ea85750}
-      \strng{authorfullhash}{ca615318144a437f465563a87ea85750}
-      \strng{authorfullhashraw}{ca615318144a437f465563a87ea85750}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Toronto emotional speech set (TESS)}
-      \field{year}{2020}
-      \verb{doi}
-      \verb https://doi.org/10.5683/SP2/E8H2MF
       \endverb
     \endentry
     \entry{Praseetha2022}{article}{}{}
@@ -7148,79 +6369,6 @@
       \verb https://doi.org/10.1016/j.iswa.2024.200351
       \endverb
     \endentry
-    \entry{Thaler2024}{inbook}{}{}
-      \name{author}{7}{}{%
-        {{un=0,uniquepart=base,hash=e9fe96253a4c7f64182b8cf9d47f28c8}{%
-           family={Thaler},
-           familyi={T\bibinitperiod},
-           given={F},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b9c408ada2cee64a232e2cc06245de34}{%
-           family={Haug},
-           familyi={H\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fe5b0cb1cb17fd63dacffabc0e3224aa}{%
-           family={Gewald},
-           familyi={G\bibinitperiod},
-           given={H},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=767348f1e0eee4bda038ba470eec8bf2}{%
-           family={Brune},
-           familyi={B\bibinitperiod},
-           given={P},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2c6ca1f164668a5b9d2603b0788ce979}{%
-           family={Pennarola},
-           familyi={P\bibinitperiod},
-           given={F},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=337117fe4c13b2f07569f92595d18c63}{%
-           family={Pallud},
-           familyi={P\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ae150a7c7b1f6bdcb32429d191e19034}{%
-           family={Braccini},
-           familyi={B\bibinitperiod},
-           given={A.\bibnamedelimi M},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Springer Nature Switzerland}%
-      }
-      \strng{namehash}{ac557c4632983ff45c66753a0060e507}
-      \strng{fullhash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{fullhashraw}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{bibnamehash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{authorbibnamehash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{authornamehash}{ac557c4632983ff45c66753a0060e507}
-      \strng{authorfullhash}{36918fd0d7f3707f00df89bfbdfee651}
-      \strng{authorfullhashraw}{36918fd0d7f3707f00df89bfbdfee651}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Technologies for Digital Transformation}
-      \field{title}{The Context Sets the Tone: A Literature Review on Emotion Recognition from Speech Using AI}
-      \field{volume}{64}
-      \field{year}{2024}
-      \field{pages}{129\bibrangedash 143}
-      \range{pages}{15}
-      \verb{doi}
-      \verb https://doi.org/10.1007/978-3-031-52120-1_8
-      \endverb
-    \endentry
     \entry{Thompson2004}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=80fa63e57a361dc673ebc1e3677277c5}{%
@@ -7589,52 +6737,6 @@
       \range{pages}{9}
       \verb{doi}
       \verb https://doi.org/10.1016/j.specom.2020.12.009
-      \endverb
-    \endentry
-    \entry{Zhao2019}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
-           family={Zhao},
-           familyi={Z\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dee42732112bfa77a2dad3811ca0b39c}{%
-           family={Mao},
-           familyi={M\bibinitperiod},
-           given={X},
-           giveni={X\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5ecc04ab7cd8350e63b66dc42451fa3e}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b61c2a35e46354fd1be77b3a4cdbecd5}
-      \strng{fullhash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{fullhashraw}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{bibnamehash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{authorbibnamehash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{authornamehash}{b61c2a35e46354fd1be77b3a4cdbecd5}
-      \strng{authorfullhash}{ed3232371e90e5f9160a3fe4133c6322}
-      \strng{authorfullhashraw}{ed3232371e90e5f9160a3fe4133c6322}
-      \field{sortinit}{Z}
-      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biomedical signal processing and control}
-      \field{title}{Speech emotion recognition using deep 1D \& 2D CNN LSTM networks}
-      \field{volume}{47}
-      \field{year}{2019}
-      \field{pages}{312\bibrangedash 323}
-      \range{pages}{12}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.bspc.2018.08.035
       \endverb
     \endentry
   \enddatalist
