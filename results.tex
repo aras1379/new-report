@@ -61,47 +61,81 @@ The results were normalized according to ADD THAT PART INTO METHOD FROM PDF REFE
 
 \subsubsection{Data Structure}
 The extracted vocal features, Praat-based emotion categorizations, and Hume AI outputs were matched and stored in JSON format, to enable direct comparison and further analysis. 
-The Listening \ref{lst:json-rq1} presents the structured data. 
-\begin{center}
-\begin{minipage}{0.7\textwidth} 
-\begin{lstlisting}[language=json, caption={Example of stored JSON structure for vocal features vs. Hume}, label={lst:json-rq1}]
-    {
-    "entry_id": "id_005_neg",
-    "vocal_features": {
-        "mean_pitch_st": -4.12,
-        "mean_pitch_hz": 118.24,
-        "mean_intensity_db": 58.15,
-        "mean_hnr_db": -0.5,
-        "jitter_local": 0.0261,
-        "shimmer_local": 0.1096,
-        "formants_hz": {
-            "F1": 1118.56,
-            "F2": 2623.03,
-            "F3": 3611.26
-        }
-    },
-    "praat_scores": {
-        "anger": 0.208,
-        "joy": 0.205,
-        "fear": 0.199,
-        "sadness": 0.19,
-        "surprise": 0.198
-    },
-    "praat_label": "anger",
-    "hume_probs": {
-        "anger": 0.21,
-        "fear": 0.16,
-        "joy": 0.15,
-        "sadness": 0.34,
-        "surprise": 0.14
-    },
-    "hume_label": "sadness"
-}
-\end{lstlisting}
-\end{minipage}
-\end{center} 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lrr}
+      \toprule
+      \textbf{Feature}          & \textbf{Mean}   & \textbf{Std}    \\
+      \midrule
+      mean\_pitch\_hz           & 155,1215        & 53,1089         \\
+      mean\_intensity\_db       & 63,3200         & 2,6828          \\
+      mean\_hnr\_db             & 5,5712          & 5,7352          \\
+      jitter\_local             & 0,0249          & 0,0039          \\
+      shimmer\_local            & 0,1251          & 0,0244          \\
+      \bottomrule
+    \end{tabular}
+    \caption{Summary Statistics: Vocal Features (All Clips)}
+    \label{tab:summary_vocal_features}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    
+    \begin{tabular}{lrr}
+      \toprule
+      \textbf{Metric}         & \textbf{Mean}   & \textbf{Std}    \\
+      \midrule
+      hume\_anger             & 0,2564          & 0,0727          \\
+      hume\_fear              & 0,1505          & 0,0437          \\
+      hume\_joy               & 0,3021          & 0,1136          \\
+      hume\_sadness           & 0,1724          & 0,0661          \\
+      hume\_surprise          & 0,1186          & 0,0217          \\
+      hume\_time (s)          & 57,776          & ---             \\
+      \bottomrule
+    \end{tabular}
+    \caption{Summary Statistics: Hume AI Probabilities (All Clips)}
+    \label{tab:summary_hume_probabilities}
+  \end{table}
+  
+  
+  \begin{table}[H]
+    \centering
+    \caption{Summary Statistics: Praat Emotion Scores (All Clips)}
+    \label{tab:summary_praat_scores}
+    \begin{tabular}{lrr}
+      \toprule
+      \textbf{Metric}           & \textbf{Mean}   & \textbf{Std}    \\
+      \midrule
+      custom\_anger              & 0,2065          & 0,0032          \\
+      custom\_joy                & 0,2040          & 0,0040          \\
+      custom\_fear               & 0,2035          & 0,0082          \\
+      custom\_sadness            & 0,1909          & 0,0029          \\
+      custom\_surprise           & 0,1951          & 0,0062          \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  
+
 \subsubsection{Segment-Level Data}
-text
+\begin{table}[H]
+    \centering
+    
+    \begin{tabular}{rrrrrrl}
+      \toprule
+      \textbf{time (s)} & \textbf{anger} & \textbf{fear} & \textbf{joy} & \textbf{sadness} & \textbf{surprise} \\
+      \midrule
+      1,47    & 0,2332  & 0,1590 & 0,4244 & 0,1214 & 0,0620 \\
+      5,15    & 0,1469  & 0,0342 & 0,6693 & 0,0110 & 0,1387 \\
+      8,27    & 0,0993  & 0,0259 & 0,7804 & 0,0184 & 0,0759 \\
+      \dots   & \dots   & \dots  & \dots  & \dots  & \dots  \\
+      43,2342 & 0,1216  & 0,0837 & 0,5861 & 0,0500 & 0,1586 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Segment‐Level Hume Probabilities (Example Clip: id\_001\_neg)}
+    \label{tab:segments_hume_example}
+  \end{table}
+  
 
 \subsection{Data Collection for RQ2 and RQ3: Text, Speech and Self-Assessment}
 \label{sec:datacoll_rq2_rq3}
@@ -464,118 +498,6 @@ However, the correlation strength is weak across all emotions, without values th
 
 \subsection{Time-to-Time Analysis}
 
-For a more concrete illustration of the prior tendencies , two interview recordings were analyzed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
-
-\medskip
-
-\begin{figure}[H]
-    \centering
-    
-    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/006_pos_use_anger-joy.pdf}
-    \caption{Pitch and Intensity vs. Hume Anger and Joy. Single positive clip.}
-    \label{fig:006_pos-anger-joy}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/006_pos_use-sadn-surp.pdf} 
-    \caption{Jitter and Shimmer vs. Hume Sadness and Surprise. Single positive clip.}
-    \label{fig:006_pos-surp-sadn}
-\end{figure}
-    
-\begin{table}[H]
-    \centering
-    %\caption*{\textbf{Significant Correlations}}
-    \begin{tabular}{llrr}
-        \toprule
-        \textbf{Feature}         & \textbf{Emotion} & \textbf{Pearson r} & \textbf{p-value} \\
-        \midrule
-        mean\_pitch\_st          & surprise         & 0.257              & 0.016            \\
-        mean\_pitch\_hz          & surprise         & 0.258              & 0.016            \\
-        mean\_intensity\_db      & joy              & 0.271              & 0.011            \\
-        mean\_intensity\_db      & fear             & $-0.338$           & 0.001            \\
-        \bottomrule
-    \end{tabular}
-    \caption{Segment-wise Significant Correlations clip 006pos}
-    \label{tab:segcorr_significant}
-\end{table}
-
-For \ref{tab:segcorr_significant} number of unsignificant: 25 
-
-
-
-\begin{table}[H]
-    \centering
-   % \caption*{\textbf{High vs Low T-tests Statistics}}
-    \begin{tabular}{llrr}
-        \toprule
-        \textbf{Feature}         & \textbf{Emotion} & \textbf{t-statistic} & \textbf{p-value} \\
-        \midrule
-        mean\_pitch\_st          & surprise         & 2.373                & 0.020            \\
-        mean\_pitch\_hz          & surprise         & 2.412                & 0.018            \\
-        mean\_intensity\_db      & joy              & 2.399                & 0.019            \\
-        \bottomrule
-    \end{tabular}
-    \caption{High vs Low T-test Statistics (Significant Results) clip 006pos}
-    \label{tab:seghighlow_ttest}
-\end{table}
-  
-for \ref{tab:seghighlow_ttest} number unsignificant: 26 
-
-
-\begin{figure}[H]
-    \centering 
-    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/012_neg_use-anger-joy.pdf}
-    \caption{Z score fluctuation pitch, intensity, anger and joy single clip.}
-    \label{fig:z-score-ang-joy-012}
-\end{figure}
-
-\begin{figure}[H]
-    \centering 
-    \includegraphics[width=0.85\textwidth]{png/results/rq1_new/012_neg_use-sadn-surp.pdf}
-    \caption{Z score fluct jitter, shimmer, sadness, surprise single clip.}
-    \label{fig:z-score-surp-sadn-012}
-\end{figure}
-
-
-  \begin{table}[H]
-    \centering 
-    %\caption*{\textbf{Segment wise correlations : unsig: 25}}
-    \begin{tabular}{llrr}
-      \toprule
-      \textbf{Feature}         & \textbf{Emotion} & \textbf{Pearson r} & \textbf{p-value} \\
-      \midrule
-      mean\_pitch\_st          & fear             & 0.285              & 0.0063           \\
-      mean\_pitch\_hz          & fear             & 0.269              & 0.0099           \\
-      mean\_intensity\_db      & fear             & $-0.300$           & 0.0035           \\
-      mean\_hnr\_db            & fear             & 0.296              & 0.0040           \\
-      mean\_hnr\_db            & surprise         & 0.212              & 0.0417           \\
-      \bottomrule
-    \end{tabular}
-    \caption{Segment-wise Significant Correlations (Fear and Surprise) unsign: 25. clip 012neg}
-    \label{tab:segcorr_fear_012}
-  \end{table}
-  
- 
-  \begin{table}[H]
-    \centering
-    \caption*{\textbf{High vs Low T-tests Statistics unsign: 25}}
-    \begin{tabular}{llrrr}
-      \toprule
-      \textbf{Feature}         & \textbf{Emotion} & \textbf{Group}     & \textbf{t-statistic} & \textbf{p-value} \\
-      \midrule
-      mean\_pitch\_st          & sadness          & High vs Low        & $-2.580$             & 0.0115           \\
-      mean\_pitch\_hz          & sadness          & High vs Low        & $-2.343$             & 0.0214           \\
-      mean\_hnr\_db            & sadness          & High vs Low        & $-2.397$             & 0.0186           \\
-      jitter\_local            & surprise         & High vs Low        & 2.494                & 0.0145           \\
-      \bottomrule
-    \end{tabular}
-    \caption{High vs Low T-test Statistics (Significant Results) unsign: 25 clip 012neg}
-    \label{tab:seghighlow_sad_surp_012}
-  \end{table}
-  
-
-
 
 \subsubsection{Time-to-Time Analysis: Full Dataset}
 To understand both if acoustic cues correlates with emotion probability by Hume and when they produce clear categorical shifts, two analyses were conducted at time segmened level. 
@@ -638,6 +560,103 @@ A large t-statistic value indicate a reliable shift in that feature when Hume ra
   Joy segments have higher intensity (t = 5.02), while fear segments have lower intensity (t = -4.04) and increased HNR (t = 3.84). 
   Segments with high surprise predictions has the moderately low intensity (t = -3.646). 
   
+
+\subsubsection{Case Examples}
+For a more concrete illustration of the prior tendencies , two interview recordings were analyzed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
+
+\medskip
+
+\begin{figure}[H]
+    \centering
+    
+    \includegraphics[width=0.85\textwidth]{png/results/rq3_2/combined_zscore_hume_id_006_pos_4.pdf}
+    \caption{Pitch and Intensity vs. Hume Joy for single positive clip.}
+    \label{fig:006_pos-anger-joy}
+\end{figure}
+% ----------------- Clip ID 006 -----------------
+\begin{table}[H]
+    \centering
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{Correlation (ID 006)}\label{tab:id006_corr}
+      \begin{tabular}{l r r r}
+        \toprule
+        \textbf{Feature} & \textbf{Emotion} & \textbf{\(r\)} & \textbf{Sign.} \\
+        \midrule
+        pitch     & surprise &  0.365 & Yes \\
+        intensity & anger    &  0.333 & Yes \\
+        intensity & fear     & –0.415 & Yes \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{High vs Low T-Test (ID 006)}\label{tab:id006_ttest}
+      \begin{tabular}{l l r r r}
+        \toprule
+        \textbf{Feature} & \textbf{Emotion} & \textbf{t} & \textbf{p} & \textbf{Sign.} \\
+        \midrule
+        pitch     & surprise &  2.622 & 0.0121 & Yes \\
+        intensity & anger    &  2.333 & 0.0245 & Yes \\
+        intensity & fear     & –1.629 & 0.1109 & No  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+  
+    \caption{ID 006: Pearson correlations and high-vs-low t-tests for key features.}
+    \label{tab:id006_summary}
+  \end{table}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{png/results/rq3_2/combined_zscore_hume_id_012_neg_6.pdf} 
+    \caption{Pitch and HNR vs. Hume Anger for single negative clip.}
+    \label{fig:006_pos-surp-sadn}
+\end{figure}
+    
+
+
+
+% ----------------- Clip ID 012 -----------------
+\begin{table}[H]
+    \centering
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{Correlation (ID 012)}\label{tab:id012_corr}
+      \begin{tabular}{l r r r}
+        \toprule
+        \textbf{Feature} & \textbf{Emotion} & \textbf{\(r\)} & \textbf{Sign.} \\
+        \midrule
+        pitch     & fear        &  0.310 & Yes \\
+        intensity & fear        & –0.320 & Yes \\
+        hnr       & fear        &  0.401 & Yes \\
+        shimmer      & anger       &  0.374 & Yes \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{High vs Low T-Test (ID 012)}\label{tab:id012_ttest}
+      \begin{tabular}{l l r r r}
+        \toprule
+        \textbf{Feature} & \textbf{Emotion} & \textbf{t} & \textbf{p} & \textbf{Sign.} \\
+        \midrule
+        pitch     & fear      &  1.193 & 0.239  & No  \\
+        pitch     & sadness   & –2.209 & 0.032  & Yes \\
+        intensity & fear      & –1.602 & 0.116  & No  \\
+        intensity & surprise  & –2.116 & 0.040  & Yes \\
+        hnr       & fear      &  1.479 & 0.146  & No  \\
+        jitter       & surprise  &  2.746 & 0.009  & Yes \\
+        shimmer      & anger     &  2.452 & 0.018  & Yes \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+  
+    \caption{ID 012: Pearson correlations and high-vs-low t-tests for key features.}
+    \label{tab:id012_summary}
+  \end{table}
+
   \subsubsection{Time-to-Time Analysis by Sentiment}
   \begin{table}[H]
     \centering
@@ -791,55 +810,6 @@ A large t-statistic value indicate a reliable shift in that feature when Hume ra
 Table \ref{tab:rq1_intensity_joy_side_by_side} demonstrates the correlation between intensity and joy, showing stronger associations compared to joy and pitch. 
 All contexts show a positive relationship, strongest for positive clips (r = 0.192, p < 0.001) with significant mean differences where the full dataset has highest significance (t = 5.02, p < 0.001). 
 These results suggests that intensity is a stable cue to joy regardless of the overall sentiment context, even if higher correlation occurs for the full and positive sets than the negative subset (r = 0.149, p < 0.001 and t = 2.701, p = 0.007). 
-
-\subsubsection{Pitch and Hume emotion over time}
-In Figure~\ref{fig:pitch-4-pos} and \ref{fig:intensity-4-pos}, data is demonstrated from a positively directed interview \texttt{id\_004\_pos}, female, which shows that increases in pitch and intensity considerably often correlate with higher joy probabilities by Hume AI. While the correlation is not consistent throughout the recording, these moment-to-moment variations reflect the general expectation that higher vocal energy is associated with positive emotional expression. 
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.47\textwidth}
-        \includegraphics[width=\linewidth]{png/results/rq1/pitch_joy_4-pos.pdf}
-        \caption{Pitch(Hz) and Hume label joy over time. Clip 4-pos}
-        \label{fig:pitch-4-pos}
-    \end{subfigure}
-    \hspace{0.04\textwidth}
-    \begin{subfigure}[b]{0.47\textwidth}
-        \includegraphics[width=\linewidth]{png/results/rq1/intensity_joy_4-pos.pdf}
-        \caption{Intensity(dB) and Hume label joy over time. Clip 4-pos}
-        \label{fig:intensity-4-pos}
-    \end{subfigure}
-\end{figure}
-
-Similarly, Figure~\ref{fig:pitch-15-neg} and \ref{fig:intensity-15-neg} and \ref{fig:z-score-15} present data from a negatively directed interview \texttt{id\_015\_neg}, male. Here, clear peaks in pitch and intensity correspond with increased anger probabilities. These results are partly aligned with prior research on vocal markers of high-arousal negative emotions, such as raised pitch and loudness during expressed anger. 
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.47\textwidth}
-        \includegraphics[width=\linewidth]{png/results/rq1/pitch_anger_15-neg.pdf}
-        \caption{Pitch(Hz) and Hume label joy over time. Clip 15-neg}
-        \label{fig:pitch-15-neg}
-    \end{subfigure}
-    \hspace{0.04\textwidth}
-    \begin{subfigure}[b]{0.47\textwidth}
-        \includegraphics[width=\linewidth]{png/results/rq1/intensity_anger_15-neg.pdf}
-        \caption{Intensity(dB) and Hume label joy over time. Clip 15-neg}
-        \label{fig:intensity-15-neg}
-    \end{subfigure}
-\end{figure}
-
-Additionally, Figure \ref{fig:z-score-15} illustrates z-score fluctuations of key vocal features for clip 13-neg. For this interview, several segments exceed +-1 standard deviation from the baseline, especially for pitch, intensity, and shimmer. These flagged moments align frequently with the emotion probabilities of Hume, which strengthens the link between vocal patterns and perceived emotional intensity. 
-
-The z-score fluctuation diagram Figure \ref{fig:z-score-15} illustrates the segments further where vocal features significantly deviate from baseline levels, in patterns aligned with associated high-arousal negative emotions such as raised pitch and loudness. 
-
-\begin{figure}[H]
-    \centering 
-    \includegraphics[width=0.7\textwidth]{png/results/rq1/zscore_fluctuations_id_015_neg.pdf}
-    \caption{Z-score}
-    \label{fig:z-score-15}
-\end{figure}
-
-\subsubsection{Summery}
-This supports the idea that analyzing how vocal features change over time  can provide more meaningful insights into emotional expression in conversational, partly spontaneous speech during interviews compared to only using overall clip-level statistics.
 
 \subsection{Conclusion RQ1 Data Analysis}
 The results revealed only weak to moderate correlations for the analysis between individual vocal features and how Hume AI predicted emotions, where intensity and pitch showed most patterns consistently. 
@@ -1071,11 +1041,7 @@ with their own strenghts to capture different aspects of emotion expression, and
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data Analysis for RQ3: AI and self-assessed emotion labels}
 
-The third research question explores how AI-generated emotion labels - from both speech-based (Hume AI) and text-based (NLP Cloud) 
-analyses - aligns with self-assessed emotions. It is of importance to understand how these AI systems reflect humans perception of 
-their own emotions and explore how the systems align with the participants own emotional viewpoint.  
-To answer this question, participants own assessments are compared with AI-labels to gain an understanding if these systems are aligned with human self-perception of their emotions and how the modality affects the results. 
-To explore alignment and divergence, the analysis include comparisons of average scoring, correlations, statistical analysis, and sentiment separation.  
+The third research question explores how AI-generated emotion labels - from both speech-based (Hume AI) and text-based (NLP Cloud) – aligns with participants’ own emotion ratings, to evaluate the agreement and divergence in different interview sentiments (positive and negative). This section includes average emotion scores from self-reports, Hume AI, and NLP Cloud across all recordings and for each sentiment category. Linear agreements are quantified with Pearson correlations and mean-level differences are analysed with paired t-tests and Cohen’s d for assess effect sizes. This approach allows to see the overall alignment between AI-models and participants own assessment as well as how it depends on the sentiment context. 
 \subsection{Model Emotion Score and Self-Reports Comparison}
 
 An initial overview is summarised in Table~\ref{tab:rq3_emotion-stats-combined}, Table~\ref{tab:rq3_emotion-stats-pos}, and Table~\ref{tab:rq3_emotion-stats_neg} (\ref{sec:datacoll_rq2_rq3} Data Collection),
@@ -1136,52 +1102,55 @@ The correlation results for Hume AI predictions on all recordings in the dataset
 Anger is the only emotion showing a statistic significant correlation (r = 0.359, p = 0.043), which indicates a moderate alignment between Hume AI's speech based emotion 
 detection and participants own perception for this emotion. Joy shows a moderate correlation but without statistical significance (r = 0.334, p = 0.062), other emotions, such as Fear (r = 0.007, p = 0.969), presents no relevant correlation. 
 
-  \begin{table}[H]
+\begin{table}[H]
     \centering
-    \caption*{\textbf{Positive Recordings (Hume)}}
-    \begin{tabular}{lrrl}
-      \toprule
-      \textbf{Emotion} & \textbf{Pearson’s \(r\)} & \textbf{\(p\)-value} & \textbf{Significant} \\
-      \midrule
-      Anger    & 0,404 & 0,136 & No  \\
-      Joy      & 0,401 & 0,138 & No  \\
-      Sadness  & 0,320 & 0,244 & No  \\
-      Fear     & \(-\)0,027 & 0,924 & No  \\
-      Surprise & 0,091 & 0,748 & No  \\
-      \bottomrule
-    \end{tabular}
-    \caption{Pearson’s \(r\), \(p\)-values, and significance for positive recordings.}
-    \label{tab:rq3_corr-hume-pos}
+  
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{\textbf{Positive Recordings (Hume)}}
+      \label{tab:rq3_corr-hume-pos}
+      \begin{tabular}{l r r r}
+        \toprule
+        \textbf{Emotion} & \(\mathbf{r}\) & \(\mathbf{p}\) & \textbf{Sign.} \\
+        \midrule
+        Anger    &  0.404 & 0.136 & No  \\
+        Joy      &  0.401 & 0.138 & No  \\
+        Sadness  &  0.320 & 0.244 & No  \\
+        Fear     & –0.027 & 0.924 & No  \\
+        Surprise &  0.091 & 0.748 & No  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{\textbf{Negative Recordings (Hume)}}\label{tab:rq3_corr-hume-neg}
+      \begin{tabular}{l r r r}
+        \toprule
+        \textbf{Emotion} & \(\mathbf{r}\) & \(\mathbf{p}\) & \textbf{Sign.} \\
+        \midrule
+        Anger    & –0.105 & 0.690 & No  \\
+        Joy      &  0.127 & 0.627 & No  \\
+        Sadness  & –0.146 & 0.576 & No  \\
+        Fear     & –0.036 & 0.891 & No  \\
+        Surprise & –0.143 & 0.585 & No  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+  
+    \caption{Pearson’s \emph{r}, p-values, and significance for Hume AI vs.\ self (positive and negative).}
+    \label{tab:rq3_corr-hume-pos-neg}
   \end{table}
 
-  Table \ref{tab:rq3_corr-hume-pos} presents correlation coefficients for positive recordings with no significant agreement occurs between Hume predictions and self-reported emotions. Anger, sadness, and sadness show moderate correlations (r = 0.320-0.404) with no statistical significance (p = 0.136-0.244). Weak correlation appears for both fear and surprise with high p-values suggesting no convincing evidence for these correlations. 
+Table \ref{tab:rq3_corr-hume-pos} presents correlation coefficients for positive recordings with no significant agreement occurs between Hume predictions and self-reported emotions. Anger, sadness, and sadness show moderate correlations (r = 0.320-0.404) with no statistical significance (p = 0.136-0.244). Weak correlation appears for both fear and surprise with high p-values suggesting no convincing evidence for these correlations. 
 
-  \begin{table}[H]
-    \centering
-    \caption*{\textbf{Negative Recordings (Hume)}}
-    \begin{tabular}{lrrl}
-      \toprule
-      \textbf{Emotion} & \textbf{Pearson’s \(r\)} & \textbf{\(p\)-value} & \textbf{Significant} \\
-      \midrule
-      Anger    & \(-\)0,105 & 0,690 & No  \\
-      Joy      & 0,127     & 0,627 & No  \\
-      Sadness  & \(-\)0,146 & 0,576 & No  \\
-      Fear     & \(-\)0,036 & 0,891 & No  \\
-      Surprise & \(-\)0,143 & 0,585 & No  \\
-      \bottomrule
-    \end{tabular}
-    \caption{Pearson’s \(r\), \(p\)-values, and significance for negative recordings.}
-    \label{tab:rq3_corr-hume-neg}
-  \end{table}
-
-  Negatively oriented interviews are presented in Table~\ref{tab:rq3_corr-hume-neg} with similar results as for positive interviews where no correlations of significance are found (r = -0.146-0.127, p = 0.576-0.0.891). Four out of five emotion correlations are negative while joy has a weak positive relationship. Each correlation is considered weak without statistical significance, implying that Hume predicted emotions distinct from participants own evaluation.  
+Negatively oriented interviews, Table~\ref{tab:rq3_corr-hume-neg} show similar results as for positive interviews where no correlations of significance are found (r = -0.146-0.127, p = 0.576-0.0.891). Four out of five emotion correlations are negative while joy has a weak positive relationship. Each correlation is considered weak without statistical significance, implying that Hume predicted emotions distinct from participants own evaluation.  
 %%% Self vs NLP 
 \subsubsection{NLP Cloud vs Self-Reported Emotions}
 \label{sec:nlp-self}
 \begin{table}[H]
     \centering
     \caption*{\textbf{All NLP}}
-    \begin{tabular}{lrrl}
+    \begin{tabular}{lrrr}
       \toprule
       \textbf{Emotion} & \textbf{Pearson’s \(r\)} & \textbf{\(p\)-value} & \textbf{Significant} \\
       \midrule
@@ -1200,198 +1169,237 @@ detection and participants own perception for this emotion. Joy shows a moderate
   When analysing the full dataset, NLP Cloud demonstrated strong and statistically significant correlations with self-reporting for four of five emotions. Joy showed the strongest correlation (r = 0.863, p < 0.001), followed by Anger (r = 0.739, p < 0.001) and Sadness (r = 0.710, p < 0.001). 
 Fear had a moderately strong correlation with high statistical significance (r = 0.669, p < 0.001). Surprise was the single emotion showing weak correlation with no statistical significance (r = 0.092, p = 616). 
   
-  \begin{table}[H]
+\begin{table}[H]
     \centering
-    \caption*{\textbf{Positive Recordings (NLP)}}
-    \begin{tabular}{lrrl}
-      \toprule
-      \textbf{Emotion} & \textbf{Pearson’s \(r\)} & \textbf{\(p\)-value} & \textbf{Significant} \\
-      \midrule
-      Anger    & \(-\)0,199 & 0,477 & No  \\
-      Joy      & 0,622     & 0,013 & Yes \\
-      Sadness  & 0,363     & 0,183 & No  \\
-      Fear     & 0,527     & 0,043 & Yes \\
-      Surprise & 0,011     & 0,969 & No  \\
-      \bottomrule
-    \end{tabular}
-    \caption{Pearson’s \(r\), \(p\)-values, and significance for positive recordings (NLP).}
-    \label{tab:rq3_corr-nlp-pos}
+  
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{\textbf{Positive Recordings (NLP)}}\label{tab:rq3_corr-nlp-pos}
+      \begin{tabular}{l r r r}
+        \toprule
+        \textbf{Emotion} & \(\mathbf{r}\) & \(\mathbf{p}\) & \textbf{Sign.} \\
+        \midrule
+        Anger    & –0.199 & 0.477 & No  \\
+        Joy      &  0.622 & 0.013 & Yes \\
+        Sadness  &  0.363 & 0.183 & No  \\
+        Fear     &  0.527 & 0.043 & Yes \\
+        Surprise &  0.011 & 0.969 & No  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{\textbf{Negative Recordings (NLP)}}\label{tab:rq3_corr-nlp-neg}
+      \begin{tabular}{l r r r}
+        \toprule
+        \textbf{Emotion} & \(\mathbf{r}\) & \(\mathbf{p}\) & \textbf{Sign.} \\
+        \midrule
+        Anger    &  0.286 & 0.266 & No  \\
+        Joy      &  0.366 & 0.149 & No  \\
+        Sadness  &  0.429 & 0.086 & No  \\
+        Fear     &  0.599 & 0.011 & Yes \\
+        Surprise & –0.146 & 0.575 & No  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+  
+    \caption{Pearson’s \emph{r}, p-values, and significance for NLP Cloud vs.\ self (positive and negative)}
+    \label{tab:rq3_corr-nlp-pos-neg}
   \end{table}
   
   Table \ref{tab:rq3_corr-nlp-pos} presents correlation data between self-reports and NLP Cloud for positive interviews, where lower alignments between self-reports and NLP is found compared to the full dataset. 
   Only correlations for Joy (r = 0.622, p = 0.013) and Fear (r = 0.527, p = 0.043) are statistically significant. Sadness had a moderate correlation without statistical significance, Anger and Surprise presented weak correlations. 
-  \begin{table}[H]
-    \centering
-    \caption*{\textbf{Negative Recordings (NLP)}}
-    \begin{tabular}{lrrl}
-      \toprule
-      \textbf{Emotion} & \textbf{Pearson’s \(r\)} & \textbf{\(p\)-value} & \textbf{Significant} \\
-      \midrule
-      Anger    & 0,286     & 0,266 & No  \\
-      Joy      & 0,366     & 0,149 & No  \\
-      Sadness  & 0,429     & 0,086 & No  \\
-      Fear     & 0,599     & 0,011 & Yes \\
-      Surprise & \(-\)0,146 & 0,575 & No  \\
-      \bottomrule
-    \end{tabular}
-    \caption{Pearson’s \(r\), \(p\)-values, and significance for negative recordings (NLP).}
-    \label{tab:rq3_corr-nlp-neg}
-  \end{table}
   
-Table \ref{tab:rq3_corr-nlp-neg} demonstrates correlation coefficients for negative interviews, with similar results as for the positive interviews with weaker correlations compared to the full dataset. The single strong correlation with statistical significance is Fear (r = 0.599, p = 0.011). 
+  
+Correlation coefficients for negative interviews are presented in Table \ref{tab:rq3_corr-nlp-neg}, with similar results as for the positive interviews with weaker correlations compared to the full dataset. The single strong correlation with statistical significance is Fear (r = 0.599, p = 0.011). 
 Moderate correlation is found for Joy (r = 0.366 p = 0.149) and Sadness (r = 0.429, p = 0.086), both with no statistical significance. As for the positive recordings, both Anger and Surprise had weak correlations between NLP and self-reporting. 
 
 
 \subsubsection{Visual Correlation}
-Figure \ref{fig:scatter-anger-rq3} illustrates the correlation between self-reported Anger scores and AI-labeled predictions. As shown, Hume AI shows a weak to moderate positive tendency (r = 0.36, p = 0.043), still reaches statistical significance, even if the data points are more dispersed around the trend line. 
-In contrast, NLP Cloud shows a strong and statistical significant correlation (r = 0.74, p < 0.0001), which is visually very noticable with the tightly clustered linear relationship. 
 
-%% ANGER
-\begin{figure}[!h]
+Figure \ref{fig:scatter-anger-rq3-pos} illustrates the correlation between self-reported Anger scores and AI-labelled predictions for positive oriented interviews, while Figure~\ref{fig:scatter-anger-rq3-neg} illustrates the correlated data for negative interviews. 
+As shown, Hume shows a moderate positive correlation with no statistical significance (r = 0.40, p = 0.136) where the data points have some spreading around the trend line. NLP Cloud shows a weaker correlation with self-reports for anger (r = -0.20, p = 0.477) than Hume in positive recordings, 
+as demonstrated in the Figure~\ref{fig:scatter-anger-rq3-pos} for NLP vs Self where data points are spread out vertically in line with the 0.0 axis. 
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{png/results/rq3/scatter_anger_vs_self.pdf}
+    \includegraphics[width=0.7\textwidth]{png/results/rq3/scatter_anger_vs_self_positive.pdf}
     \caption{Scatter plot, Hume, NLP vs. Self for Anger.}
-    \label{fig:scatter-anger-rq3}
+    \label{fig:scatter-anger-rq3-pos}
+\end{figure}
+The correlation coefficients remain low in Figure~\ref{fig:scatter-anger-rq3-neg}, where NLP presents a moderate positive correlation (r = 0.29, p = 0.266) with self-assessed anger in negative contexts, while the relationship with Hume is weaker (r = -0.10, p = 0.690) than in the positive interviews. The dispersed data points around the trend line visualises the divergence between the AI-systems and participants own judgement. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{png/results/rq3/scatter_anger_vs_self_negative.pdf}
+    \caption{Scatter plot, Hume, NLP vs. Self for Anger.}
+    \label{fig:scatter-anger-rq3-neg}
 \end{figure}
 
-Figure \ref{fig:scatter-joy-rq3} demonstrates the Joy correlation between self-reports and AI-predictions. Similar to Anger, Hume AI presents a weak to moderate positive trend (r = 0.33, p = 0.062), however it does not reach statistical significance. The diagram illustrates a disperse for the data points comparable to Anger.
-As stated in previous results, NLP Cloud reveal a prominent statistical correlation (r = 0.86, p < 0001), clearly presented in the diagram. 
-%% JOY
-\begin{figure}[!h]
+Correlations for Joy is presented further in Figure~\ref{fig:scatter-joy-rq3-pos} for positive recordings. Both Hume and NLP show a moderate to strong correlation with self-reported joy, NLP with the strongest correlation with statistical significance (r = 0.62, p = 0.013). This relationship is clearly presented with the data points being relatively close to the trend line for NLP, while the Hume diagram has more dispersed data points. 
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{png/results/rq3/scatter_joy_vs_self.pdf}
+    \includegraphics[width=0.7\textwidth]{png/results/rq3/scatter_joy_vs_self_positive.pdf}
     \caption{Scatter plot, Hume, NLP vs. Self for Joy.}
-    \label{fig:scatter-joy-rq3}
+    \label{fig:scatter-joy-rq3-pos}
 \end{figure}
+
+Agreement between self-reported and AI-predicted joy is demonstrated for negative interviews in Figure ~\ref{fig:scatter-joy-rq3-neg}.
+The trend where NLP has a higher correlation (r = 0.37, p = 0.149) remain, however the moderate relationship has no statistical significance. Hume shows a weak correlation, in contrast with the positive oriented interviews. Data points are more widespread for both Hume and NLP correlation with self-reported joy, suggesting varying rating of this emotion in negative contexts. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{png/results/rq3/scatter_joy_vs_self_negative.pdf}
+    \caption{Scatter plot, Hume, NLP vs. Self for Joy.}
+    \label{fig:scatter-joy-rq3-neg}
+\end{figure}
+
 \medskip
 
-Figure \ref{fig:scatter-surprise-rq3} presents the correlation results for Surprise. Both Hume AI and NLP Cloud has minor correlation with self-reported Surprise scoring (r = 0.09), the lack of alignment is reflected in the scattered plots where no direct clear linear trend is shown. 
-As stated in \ref{sec:rq2-sentiment} RQ2, Sentiment-Based Analysis, the inconsistent results may be due to Surprise being slighter expressed during the interviews. For this research question, it is important to note that several participants expressed confusion about how to interpret and answer 
-their experienced Surprise, which can affect these inconsistent outcomes. 
-%% SURPRISE 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{png/results/rq3/scatter_surprise_vs_self.pdf}
-    \caption{Scatter plot, Hume, NLP vs. Self for Surprise.}
-    \label{fig:scatter-surprise-rq3}
-\end{figure}
-
-The scatter plots support previous presented statistical findings, highlighting the higher consistency of alignment between NLP Cloud and participant assessment for explicit expressed emotions as Joy and Anger. 
-The shared difficulty of both models in detecting Surprise is presented further, possibly due to participant misunderstanding or that the interview scenarios were not oriented directly towards Surprise. 
-
 \subsubsection{Conclusion Correlation and Visual Analysis}
-This section reveal a clear trend, both statistically and visually: NLP Cloud aligns strongly with self-reported emotions for four out of five emotions, Anger, Joy, Sadness, and Fear, while Hume has weaker and 
-non-significant correlations except for Anger. Both AI-models show weak levels of detecting Surprise, likely due to the interview setting and participant understanding of the question. 
-These results emphasize the strength of text-based emotion analysis for recognition of explicit verbally emotional states, often aligned with self-reports, and 
-implies that vocal-based interpretation within reflective interview setting may have difficulties, particularly in comparison to the participants own perceived emotion states. 
+
+MAYBE INCLUDE TEXT OR DELETE 
 
 \subsection{Statistical Analysis and Effect Sizes}
 
-To explore if AI-generated emotion scores has a significant difference from self-reported emotions, paired t-tests were conducted for both Hume AI and NLP Cloud across each emotion. 
-To evaluate the effect size of these differences, Cohen's d were calculated. These results are presented in Table~\ref{tab:t-test-rq3}.
-\begin{table}[!h]
+To explore if AI-generated emotion scores has a significant difference from self-reported emotions, paired t-tests were conducted for both Hume AI and NLP Cloud across each emotion for each sentiment. 
+To evaluate the effect size of these differences, Cohen's d were calculated. 
+
+\subsubsection{Hume vs Self-Reports}
+Table \ref{tab:rq3_t_hume_self_all} presents the results on paired t-tests with Cohen's d to compare Hume AI's speech-based emotion scores to participants reports across the full dataset. 
+As shown, Hume AI ratings on anger are higher than self-reports (t = 2.399, p = 0.023, d = 0.424), suggesting a moderate tendency for Hume overestimating anger compared to participants own perception. 
+In contrast, Hume underestimate Surprise relatively to self-reports (t = -2.109, p = 0.043, t = -0.373). No significant differences are found for sadness, fear, and surprise (p > 0.05, |d| < 0.20). 
+\begin{table}[H]
     \centering
-    \begin{tabular}{l|lllll}
-    \textbf{System} & \textbf{Emotion} & \textbf{t-statistic} & \textbf{p-value} & \textbf{Significant} & \textbf{Cohen's d} \\ \hline
-    HUME            & Anger            & 2,399                & 0,023            & Yes                  & 0,424              \\
-    NLP             & Anger            & -0,373               & 0,711            & No                   & -0,066             \\
-    HUME            & Joy              & -0,271               & 0,788            & No                   & -0,048             \\
-    NLP             & Joy              & 2,331                & 0,026            & Yes                  & 0,412              \\
-    HUME            & Sadness          & -1,069               & 0,293            & No                   & -0,189             \\
-    NLP             & Sadness          & -0,525               & 0,603            & No                   & -0,093             \\
-    HUME            & Fear             & 1,052                & 0,301            & No                   & 0,186              \\
-    NLP             & Fear             & -3,496               & 0,001            & Yes                  & -0,618             \\
-    HUME            & Surprise         & -2,109               & 0,043            & Yes                  & -0,373             \\
-    NLP             & Surprise         & -1,011               & 0,320            & No                   & -0,179            
+    \caption*{\textbf{All Recodings}}
+    \begin{tabular}{l r r l r}
+      \toprule
+      \textbf{Emotion} & \textbf{t-statistic} & \textbf{p-value} & \textbf{Significant} & \textbf{Cohen’s d} \\
+      \midrule
+      Anger    &  2.399 & 0.023 & Yes &  0.424 \\
+      Joy      & –0.271 & 0.788 & No  & –0.048 \\
+      Sadness  & –1.069 & 0.293 & No  & –0.189 \\
+      Fear     &  1.052 & 0.301 & No  &  0.186 \\
+      Surprise & –2.109 & 0.043 & Yes & –0.373 \\
+      \bottomrule
     \end{tabular}
-    \caption{T-statistics, p-value and Cohen's d for AI-models and self-assessed emotions.}
-    \label{tab:t-test-rq3}
-\end{table}
+    \caption{Hume AI vs.\ Self—All Recordings (paired t-test \& Cohen’s d)}
+    \label{tab:rq3_t_hume_self_all}
+  \end{table}
+  
+Table \ref{tab:rq3_t_hume_self_side_by_side} seperates these comparisons by sentiment. In positive interviews, four of five emotion comparisons show significant differences. 
+Hume tends to remarkably overestimate anger (t = 8.776, p < 0.001, d = 2.266) and underestimate joy (t = -5.112, p < 0.001, d = -1.320), 
+and assigning notable higher scores for sadness and fear compared to participants own evaluation. Surprise is the single emotion that remains unsignificant.
+In negative interviews, significant differences appears for joy (t = 3.878, p = 0.001, d = 0.941) where Hume predicts higher levels than self-reported scores, and for sadness (t = -2.890, p = 0.013, d = -0.677) that is rated higher by participants than Hume. 
+Other emotions show no reliable difference. 
 
-\textbf{Key Findings:}
-\begin{itemize}
-    \item Hume AI: 
-    \begin{itemize}
-        \item Anger (p = 0.023) and Surprise (p = 0.043) showed significant differences. 
-        \item Both Anger and Surprise showed small to moderate effect sizes (Cohen's d > 0.4), which suggests that Hume AI tends to overestimate Anger and underestimate Surprise compared to self-reported emotion scores. However, as declared in NLP vs. Self-Reported emotions~\ref{sec:nlp-self}, particpants stated confusion regarding assessing Surprise.
-        \item For the other emotions, Joy, Sadness, and Fear, no significant differences were found, suggesting closer average alignment for these emotions.
-    \end{itemize}
-    \item NLP Cloud: 
-    \begin{itemize}
-        \item Joy (p = 0.026) and Fear (p = 0.001) presented significant differences. 
-        \item Fear had a particularly evident difference, (Cohen's d = -0.618) states a medium-to-large effect size, indicating that NLP Cloud underestimated Fear compared to self-reported emotion scores. 
-        \item Joy had a small-to-moderate effect size (Cohen's d = 0.412), suggesting that NLP overestimated Joy compared to the participants own perception. 
-        \item Anger, Sadness, and Surprise showed no significant difference. 
-    \end{itemize}
-\end{itemize}
-\textbf{General Analysis:}
+  \begin{table}[H]
+    \centering
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{Positive Recordings}\label{tab:rq3_t_hume_self_pos}
+      \begin{tabular}{l r r l r}
+        \toprule
+        \textbf{Emotion} & \(\;t\;\) & \(\;p\;\) & \textbf{Sig?} & \(\;d\;\) \\
+        \midrule
+        Anger    &  8.776 & 0.000 & Yes &  2.266 \\
+        Joy      & –5.112 & 0.000 & Yes & –1.320 \\
+        Sadness  &  2.451 & 0.028 & Yes &  0.633 \\
+        Fear     &  2.463 & 0.027 & Yes &  0.636 \\
+        Surprise & –1.855 & 0.085 & No  & –0.479 \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{Negative Recordings}\label{tab:rq3_t_hume_self_neg}
+      \begin{tabular}{l r r l r}
+        \toprule
+        \textbf{Emotion} & \(\;t\;\) & \(\;p\;\) & \textbf{Sig?} & \(\;d\;\) \\
+        \midrule
+        Anger    & –0.517 & 0.612 & No  & –0.125 \\
+        Joy      &  3.878 & 0.001 & Yes &  0.941 \\
+        Sadness  & –2.790 & 0.013 & Yes & –0.677 \\
+        Fear     & –0.454 & 0.656 & No  & –0.110 \\
+        Surprise & –1.033 & 0.317 & No  & –0.250 \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+  
+    \caption{Paired t-test and Cohen’s d for Hume AI vs.\ Self in positive and negative interviews.}
+    \label{tab:rq3_t_hume_self_side_by_side}
+  \end{table}
+  
+These results suggests that Hume AI's speech-based assessments only have weak agreements with participant's self-reports, with varying alignment depending on emotion and sentiment context. 
+In positive interviews, the model remarkably over- or underestimates anger and joy compared to self-reported emotions, while in negative interviews the only significant differences occur for joy and sadness. 
 
-Both AI systems demonstrates some alignment with self-reported emotions, the results indicate certain biases. Self reported emotion scores appears to be more prone to diverge from Hume AI's detection of Anger and Surprise. 
-Regarding NLP Cloud, the emotion scores are distinct from self-assessed emotions for Fear and Joy, where Fear is most prominent. This could indicate either challenges in text-based detection of these subtle, negative emotions, 
-or challenges for the participants to assess these emotions. 
+\subsubsection{NLP Cloud vs Self-Reports}
+Paired t-tests with Cohen's d for comparison of NLP Cloud's text-based emotion scores and participants' self-reports for all recordings are presented in Table~\ref{tab:rq3_t_nlp_self_all}. 
+Significant differences are found for joy, where NLP rates it higher than self-reports (t = 2.331, p = 0.026, d = 0.412). In contrast, NLP tends to underestimate fear comparing to self-reports (t = -3.496, p = 0.001, d = 0.618). 
+Anger, sadness, and surprise show now significant difference (p > 0.05, |d| < 0.20).  
+\begin{table}[H]
+    \centering
+    \caption*{\textbf{All Recodings}}
+    \begin{tabular}{l r r l r}
+      \toprule
+      \textbf{Emotion} & \textbf{t-statistic} & \textbf{p-value} & \textbf{Significant} & \textbf{Cohen’s d} \\
+      \midrule
+      Anger    & –0.373 & 0.711 & No  & –0.066 \\
+      Joy      &  2.331 & 0.026 & Yes &  0.412 \\
+      Sadness  & –0.525 & 0.603 & No  & –0.093 \\
+      Fear     & –3.496 & 0.001 & Yes & –0.618 \\
+      Surprise & –1.011 & 0.320 & No  & –0.179 \\
+      \bottomrule
+    \end{tabular}
+    \caption{NLP Cloud vs.\ Self—All Recordings (paired t-test \& Cohen’s d)}
+    \label{tab:rq3_t_nlp_self_all}
+  \end{table}
+  
+Table \ref{tab:rq3_t_nlp_self_side_by_side} seperates the comparisons by sentiment. In positive interviews, NLP rates anger at significantly lower levels than participants (t = -4.853, p < 0.001, d = -1.253), while rating 
+joy higher than self-reports (t = 6.066, p < 0.001, d = 1.566). Both sadness and fear have a significant difference where NLP tends to underestimate these emotions compared to self-reports. Surprise remains without significance. 
+In negative oriented recordings, no significant difference between NLP and self-reports are found (p > 0.05, |d| < 0.389), suggesting closer alignment during negative contexts. 
 
-Even where statistical significance is found, the effect size implies that most differences are small to moderate, which 
-suggests that even if deviations exists, they are not disturbingly large. It is no consistent significant difference for the AI-systems across all emotions, proposing that AI performance may vary depending on emotional category and the method (speech vs text, and different AI-models).
-However, it is important to emphasize that these results may not fully reflect the performance or accuracy of the
-AI models, as the analysis are based on a small dataset with semi-structured interviews. Furthermore, disparity and miscalculations may arise from challenges participants experienced in assessing their own emotions after each interview. 
+  \begin{table}[H]
+    \centering
+  
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{Positive Recordings}\label{tab:rq3_t_nlp_self_pos}
+      \begin{tabular}{l r r l r}
+        \toprule
+        \textbf{Emotion} & \(\mathbf{t}\) & \(\mathbf{p}\) & \textbf{Sig?} & \(\mathbf{d}\) \\
+        \midrule
+        Anger    & –4.853 & 0.000 & Yes & –1.253 \\
+        Joy      &  6.066 & 0.000 & Yes &  1.566 \\
+        Sadness  & –2.852 & 0.013 & Yes & –0.736 \\
+        Fear     & –4.603 & 0.000 & Yes & –1.188 \\
+        Surprise & –0.075 & 0.941 & No  & –0.019 \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption{Negative Recordings}\label{tab:rq3_t_nlp_self_neg}
+      \begin{tabular}{l r r l r}
+        \toprule
+        \textbf{Emotion} & \(\mathbf{t}\) & \(\mathbf{p}\) & \textbf{Sig?} & \(\mathbf{d}\) \\
+        \midrule
+        Anger    &  1.335 & 0.200 & No  &  0.324 \\
+        Joy      & –0.578 & 0.571 & No  & –0.140 \\
+        Sadness  &  1.073 & 0.299 & No  &  0.260 \\
+        Fear     & –1.149 & 0.267 & No  & –0.279 \\
+        Surprise & –1.604 & 0.128 & No  & –0.389 \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+  
+    \caption{Paired t-test and Cohen’s d for NLP Cloud vs.\ Self in positive and negative interviews.}
+    \label{tab:rq3_t_nlp_self_side_by_side}
+  \end{table}
 
-\medskip
-Overall, these findings suggest that AI systems can approximate human emotional self-assessment with partial alignment, some differences still appear depending on emotion and detection method. 
-Hume AI had more diverse scores for Anger and Surprise, while NLP Cloud was more distinct for Fear and Joy. The differences may reflect some challenges in AI detection or difficulties for the participants to assess their emotions accurately. 
-
-Even if some differences were significant statistically, the effect sizes indicate that they are generally small to moderate. There is no consistent pattern across all emotions which indicates that the AI performance vary by emotion category and analysis method (speech vs text).
-\medskip
-
-Considering the small dataset, the subjective nature of self-assessment, and the recording circumstances of the interview setting, these findings should be interpreted 
-carefully and should be seen as exploratory and not conclusive. 
-
-
-%%%%% SENTIMENT rRQ3 %%%%%% 
-\subsection{Sentiment-Based Analysis}
-To explore how AI-generated emotion labels and self-reported emotions align, a sentiment-based analysis have been conducted through seperation of negative and positive interviews. 
-Each participant reported scores (1-6 scale, normalized to 0-1) for all five emotions after each interview-scenario, to provide a subjective component to compare with AI predictions.   
-
-Figure~\ref{fig:sentiment-bar-rq3} illustrate the average emotion scores for positive and negative interviews for Hume AI, NLP Cloud, and self-assessment. 
-When interpreting these results, it is important to note that participants actual emotional expressions, particularly vocally, may not be fully aligned with the intention to evoke distinct emotional tones, due to the reflective and conversational nature of the setting.
-\begin{figure}[!h]
-    \centering 
-    \includegraphics[width=0.7\textwidth]{png/results/rq3/rq3_sentiment_grouped_bar.pdf}
-    \caption{Emotion scores for all sources grouped by sentiment.}
-    \label{fig:sentiment-bar-rq3}
-\end{figure}
-
-\textbf{Positive Interviews}
-\begin{itemize}
-    \item Joy was highly self-reported consistently, which aligns closely with NLP Cloud's text-based ratings, but considerably higher than Hume AI's vocal analysis. 
-    This alignment suggest that participants expressed positive emotions verbally, which was captured by NLP Cloud effectively. The lower Hume ratings for Joy indicate a divergence since vocal expressions of Joy in 
-    the reflective, interview setting may be less pronounced and therefore harder for the speech-based model to detect. 
-    \item The negative emotions (Anger, Sadness, Fear) were assessed at lower levels by participants, as expected for positive oriented interviews. Self-assessments generally matched Hume's higher detection of subtle negative emotion expressions better than NLP's minor ratings. 
-    This aligns with the idea that participants may express suble negative tones unintentionally in their voice, even if the participants perceived their emotions as predonimantly positive. 
-    \item Surprise showed moderate self-report levels, more close agreed to NLP and slighly less alignment with Hume, reflecting inconsistency in vocal vs. textual emotion cues.  
-\end{itemize}
-In positive interviews, NLP Cloud consistently rated Joy higher, in agreement with previous results. The difference from self-reported joy is similar, although NLP tends to rate it moderately higher. 
-This reflect the strength of text-based detection for explicit positive sentiment when analyzed as a transcription. 
-
-\medskip
-\textbf{Negative Interviews}
-\begin{itemize}
-    \item Anger and Sadness were reported at higher levels by participants, which reflects the intention of the interview of recalling negative emotions. Both AI models were aligned with self-reports for Anger, even if NLP rated it somewhat higher, 
-    probably due to explicit negative language in transcriptions. Sadness showed stronger alignment with NLP than Hume, indicating explicit expressed sadness-related emotions verbally. 
-    \item Joy was reported low by participants, but frequently assigned higher by Hume than the other sources. Suggesting that vocal features were interpreted as positive by Hume might not align with subjective emotional experiences, 
-    showing a clear divergence between vocal emotion cures and participants own perception. 
-    \item Fear and Surprise showed low levels consistently across self-reports and both AI-models, indicating that these emotions were less expressed or experiences, resulting in minimal discrepancies. 
-\end{itemize}
-
-These results emphasize that emotional expression is complex in conversational settings, showing that textual anlyses track explicit articulated emotions, 
-while speech-based analyses reveal less intentionally expressed emotional nuances, sometimes in disagreement with participants subjective assessments. 
-
-The sentiment-based comparison clearly presents that emotional expression and self-awareness have a signficant variance between modalities. Explicit emotions articulated in words are closely aligned between self-assessed rating and text-based analysis. 
-While implicit or suble emotions expressed through vocal tone have a notable divergence. This highlights that AI modalities complement rather than duplicate emotional understanding. 
-Speech-based models provide insights into emotional subtleties that might be unconscious to the participant, while text-based analyses capture verbalized emotions closely to subjective experiences. 
+Overall, these results implies that NLP Cloud have higher agreement with self-reports in negative contexts, but in positive interviews notable divergencies are found for certain emotions, most appearing for anger, joy and fear.
 
 
 \subsection{Conclusion of RQ3 Data Analysis}
-The results show that both systems have partial alignment with self-reported emotions, however, the correlation varies depending on emotion and modality. 
-Text-based (NLP Cloud) presented a strong alignment with participants own perception for clear verbally expressed emotions like Joy And Anger. Subtler vocal cues were interpreted by the speech-based 
-model (Hume AI), which may not always reflect self-perceived emotions. Emotions like Fear and Surprise had most visiable differences for both AI models. 
-Overall, the results implies that speech- and text-based emotion recognition comprehend different layers of expressed emotions, suggesting that complementary use of modalities can offer a more nuanced understanding.  
+The result for the full dataset shows that Hume AI only has two small significant divergencies from self-reports, where anger is overestimated (d = 0.42) and surprise underestimated (d = -0.37) compared to ratings by the participants, while all other emotions show no significance in t-tests and weak correlations. When separated by sentiment, Hume tends to overestimate anger and underestimate joy relatively to self-reports in positive contexts, in negative interviews it diverges on joy and sadness. 
+In contrast, NLP Cloud are closely aligned with self-reports in negative contexts, with no significant differences, but in positive interviews NLP remarkedly underestimates anger (d = -1.25), rates fear at lower levels, and joy at higher levels compared to self-reports.  compared to self-reports. Correlation analyses strengthen these patterns, where NLP correlations with self-assessed scores are strong for anger, joy, sadness, and fear in the full set, and Hume only shows a moderate correlation for anger and weaker correlations for other emotions. However, the correlations are not as strong when separating the interviews by sentiment. 
+Overall, text-based emotion detection with NLP Cloud has higher agreement with participants’ self-assessments, especially in negative interviews, while speech-based detection with Hume have more variations between positive and negative contexts. These results shows that each modality captures distinct features when comparing with human-labelled rating of their own emotions, and the alignment is fluctuating depending on the interview sentiment.  
+  
