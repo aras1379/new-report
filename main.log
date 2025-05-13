@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  9 MAY 2025 11:05
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  13 MAY 2025 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1194,18 +1194,26 @@ Chapter 4.
 [33]
 
 [34]
-Overfull \hbox (9.5031pt too wide) in paragraph at lines 153--161
-[][] 
+Overfull \hbox (7.10313pt too wide) in paragraph at lines 155--166
+ [][] 
+ []
+
+
+Overfull \hbox (7.10313pt too wide) in paragraph at lines 177--188
+ [][] 
  []
 
 
 
 [35]
+Overfull \hbox (7.10313pt too wide) in paragraph at lines 197--208
+ [][] 
+ []
+
 File: png/results/rq1_new/vocal_vs_hume_correlations_positive.pdf Graphic file (type pdf)
 <use png/results/rq1_new/vocal_vs_hume_correlations_positive.pdf>
 File: png/results/rq1_new/vocal_vs_hume_correlations_negative.pdf Graphic file (type pdf)
 <use png/results/rq1_new/vocal_vs_hume_correlations_negative.pdf>
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1220,7 +1228,7 @@ File: png/results/rq1_new/vocal_vs_custom_categorization_correlations_negative.p
 
 
 [37]
-Overfull \hbox (19.19418pt too wide) in paragraph at lines 275--275
+Overfull \hbox (19.19418pt too wide) in paragraph at lines 286--286
 |[]\TU/lmr/bx/n/14.4 Limitations of the Custom Vocal Emotion Categorization Method| 
  []
 
@@ -1264,13 +1272,17 @@ File: png/results/rq1_new/012_neg_use-sadn-surp.pdf Graphic file (type pdf)
 
 
 [44]
-Overfull \hbox (3.39601pt too wide) in paragraph at lines 610--611
+
+[45]
+
+[46]
+Overfull \hbox (3.39601pt too wide) in paragraph at lines 796--797
 \TU/lmr/m/n/12 In Figure []4.11a[] and []4.11b[], data is demonstrated from a positively directed interview \TU/lmtt/m/n/12 id_004_pos\TU/lmr/m/n/12 ,
  []
 
 
 
-[45]
+[47]
 File: png/results/rq1/pitch_joy_4-pos.pdf Graphic file (type pdf)
 <use png/results/rq1/pitch_joy_4-pos.pdf>
 File: png/results/rq1/intensity_joy_4-pos.pdf Graphic file (type pdf)
@@ -1283,51 +1295,49 @@ File: png/results/rq1/zscore_fluctuations_id_015_neg.pdf Graphic file (type pdf)
 <use png/results/rq1/zscore_fluctuations_id_015_neg.pdf>
 
 
-[46]
-Overfull \hbox (0.49742pt too wide) in paragraph at lines 667--667
+[48]
+Overfull \hbox (0.49742pt too wide) in paragraph at lines 853--853
 |[]\TU/lmr/bx/n/17.28 Data Analysis for RQ2: Text and Speech Based Emo-
  []
 
 
 
-[47]
-File: png/results/rq2/hume_nlp_difference_all.pdf Graphic file (type pdf)
-<use png/results/rq2/hume_nlp_difference_all.pdf>
-
-
-[48]
-
 [49]
+File: png/results/rq2/sentiment_comparison_facet_all.pdf Graphic file (type pdf)
+<use png/results/rq2/sentiment_comparison_facet_all.pdf>
+File: png/results/rq2/hume_nlp_difference_positive.pdf Graphic file (type pdf)
+<use png/results/rq2/hume_nlp_difference_positive.pdf>
+File: png/results/rq2/hume_nlp_difference_negative.pdf Graphic file (type pdf)
+<use png/results/rq2/hume_nlp_difference_negative.pdf>
 
-LaTeX Warning: Reference `sec:theo-interviews' on page 50 undefined on input line 799.
-
-
-
-[50]
-File: png/results/rq2/sentiment_comparison_bar.pdf Graphic file (type pdf)
-<use png/results/rq2/sentiment_comparison_bar.pdf>
-
-
-[51]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
+[50]
+
+[51]
+
 [52]
 
 [53]
-Overfull \hbox (7.50313pt too wide) in paragraph at lines 940--948
- [][] 
- []
-
-File: png/results/rq3/rq3_emotion_comparison.pdf Graphic file (type pdf)
-<use png/results/rq3/rq3_emotion_comparison.pdf>
-
 
 [54]
+File: png/results/rq3/rq3_sentiment_grouped_bar.pdf Graphic file (type pdf)
+<use png/results/rq3/rq3_sentiment_grouped_bar.pdf>
+
 
 [55]
+Overfull \hbox (8.23117pt too wide) in paragraph at lines 1106--1109
+[]\TU/lmr/m/n/12 The sentiment-based comparison clearly presents that emotional expression and self-awareness
+ []
+
+
+
+[56]
+
+[57]
 File: png/results/rq3/scatter_anger_vs_self.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_anger_vs_self.pdf>
 
@@ -1337,51 +1347,47 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: png/results/rq3/scatter_joy_vs_self.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_joy_vs_self.pdf>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[58]
+
+LaTeX Warning: Reference `sec:rq2-sentiment' on page 59 undefined on input line 1269.
 
 File: png/results/rq3/scatter_surprise_vs_self.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_surprise_vs_self.pdf>
-
-
-[56]
-
-[57]
-
-[58]
-File: png/results/rq3/rq3_sentiment_grouped_bar.pdf Graphic file (type pdf)
-<use png/results/rq3/rq3_sentiment_grouped_bar.pdf>
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
 [59]
-Overfull \hbox (8.23117pt too wide) in paragraph at lines 1190--1193
+
+[60]
+File: png/results/rq3/rq3_sentiment_grouped_bar.pdf Graphic file (type pdf)
+<use png/results/rq3/rq3_sentiment_grouped_bar.pdf>
+
+
+[61]
+
+[62]
+Overfull \hbox (8.23117pt too wide) in paragraph at lines 1388--1391
 []\TU/lmr/m/n/12 The sentiment-based comparison clearly presents that emotional expression and self-awareness
  []
 
+)
 
-
-[60])
-
-[61]
+[63]
 \openout2 = `discussion.aux'.
 
  (./discussion.tex
 Chapter 5.
 
 
-[62
+[64
 
 
 
 
 ]
-
-[63]
-
-[64]
 
 [65]
 
@@ -1393,35 +1399,39 @@ Chapter 5.
 
 [69]
 
-[70])
+[70]
 
 [71]
+
+[72])
+
+[73]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 6.
 (./con-findings.tex) (./con-answer.tex) (./con-contribution.tex) (./con-limitations.tex) (./con-future.tex) (./con-closing.tex))
 
-[72
+[74
 
 
 
 
 ]
 
-[73
+[75
 
 
 
 ]
-
-[74]
-
-[75]
 
 [76]
 
-[77] (./main.aux (./abstract.aux) (./introduction.aux) (./method.aux) (./theoretical-framework.aux) (./results.aux) (./discussion.aux) (./conclusions.aux))
+[77]
+
+[78]
+
+[79] (./main.aux (./abstract.aux) (./introduction.aux) (./method.aux) (./theoretical-framework.aux) (./results.aux) (./discussion.aux) (./conclusions.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1431,18 +1441,18 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 755A92FA753C92C254EA297B108A4265;16915.
+(rerunfilecheck)             Checksum: FECA882F1FFBC268962D0C30B0D0F469;16902.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37092 strings out of 473832
- 758904 string characters out of 5729481
- 1983136 words of memory out of 5000000
- 59552 multiletter control sequences out of 15000+600000
- 563986 words of font info for 73 fonts, out of 8000000 for 9000
+ 37125 strings out of 473832
+ 759942 string characters out of 5729481
+ 1985029 words of memory out of 5000000
+ 59585 multiletter control sequences out of 15000+600000
+ 565534 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,11n,93p,2387b,5961s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,93p,2387b,5961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (78 pages).
+Output written on main.pdf (80 pages).
