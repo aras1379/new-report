@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  13 MAY 2025 19:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  13 MAY 2025 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1190,33 +1190,41 @@ Chapter 4.
 
 
 ]
-
-[33]
-
-[34]
-Overfull \hbox (7.10313pt too wide) in paragraph at lines 189--200
+Overfull \hbox (3.53389pt too wide) in paragraph at lines 73--85
  [][] 
  []
 
 
-Overfull \hbox (7.10313pt too wide) in paragraph at lines 211--222
+Overfull \hbox (3.53389pt too wide) in paragraph at lines 89--101
+ [][] 
+ []
+
+
+
+[33]
+Overfull \hbox (7.10313pt too wide) in paragraph at lines 221--232
+ [][] 
+ []
+
+
+
+[34]
+Overfull \hbox (7.10313pt too wide) in paragraph at lines 243--254
+ [][] 
+ []
+
+
+Overfull \hbox (7.10313pt too wide) in paragraph at lines 261--272
  [][] 
  []
 
 
 
 [35]
-Overfull \hbox (7.10313pt too wide) in paragraph at lines 231--242
- [][] 
- []
-
 File: png/results/rq1_new/vocal_vs_hume_correlations_positive.pdf Graphic file (type pdf)
 <use png/results/rq1_new/vocal_vs_hume_correlations_positive.pdf>
 File: png/results/rq1_new/vocal_vs_hume_correlations_negative.pdf Graphic file (type pdf)
 <use png/results/rq1_new/vocal_vs_hume_correlations_negative.pdf>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 
 [36]
@@ -1228,15 +1236,15 @@ File: png/results/rq1_new/vocal_vs_custom_categorization_correlations_negative.p
 
 
 [37]
-Overfull \hbox (19.19418pt too wide) in paragraph at lines 320--320
+Overfull \hbox (19.19418pt too wide) in paragraph at lines 350--350
 |[]\TU/lmr/bx/n/14.4 Limitations of the Custom Vocal Emotion Categorization Method| 
  []
 
+File: png/results/rq1_new/praat_hume_positive_scatter.pdf Graphic file (type pdf)
+<use png/results/rq1_new/praat_hume_positive_scatter.pdf>
 
 
 [38]
-File: png/results/rq1_new/praat_hume_positive_scatter.pdf Graphic file (type pdf)
-<use png/results/rq1_new/praat_hume_positive_scatter.pdf>
 File: png/results/rq1_new/praat_hume_negative_scatter.pdf Graphic file (type pdf)
 <use png/results/rq1_new/praat_hume_negative_scatter.pdf>
 
@@ -1263,119 +1271,109 @@ File: png/results/rq1_new/composite_correlations_negative.pdf Graphic file (type
 File: png/results/rq3_2/combined_zscore_hume_id_006_pos_4.pdf Graphic file (type pdf)
 <use png/results/rq3_2/combined_zscore_hume_id_006_pos_4.pdf>
 
-Overfull \hbox (31.5779pt too wide) in paragraph at lines 595--604
- [][] 
- []
-
-
 
 [44]
 File: png/results/rq3_2/combined_zscore_hume_id_012_neg_6.pdf Graphic file (type pdf)
 <use png/results/rq3_2/combined_zscore_hume_id_012_neg_6.pdf>
 
-Overfull \hbox (25.69789pt too wide) in paragraph at lines 641--654
- [][] 
+Overfull \hbox (0.49742pt too wide) in paragraph at lines 848--848
+|[]\TU/lmr/bx/n/17.28 Data Analysis for RQ2: Text and Speech Based Emo-
  []
 
 
 
 [45]
-
-[46]
-Overfull \hbox (0.49742pt too wide) in paragraph at lines 823--823
-|[]\TU/lmr/bx/n/17.28 Data Analysis for RQ2: Text and Speech Based Emo-
- []
-
 File: png/results/rq2/sentiment_comparison_facet_all.pdf Graphic file (type pdf)
 <use png/results/rq2/sentiment_comparison_facet_all.pdf>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-[47]
 File: png/results/rq2/hume_nlp_difference_positive.pdf Graphic file (type pdf)
 <use png/results/rq2/hume_nlp_difference_positive.pdf>
 File: png/results/rq2/hume_nlp_difference_negative.pdf Graphic file (type pdf)
 <use png/results/rq2/hume_nlp_difference_negative.pdf>
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[46]
+
+[47]
+
 [48]
 
 [49]
 
 [50]
-
-[51]
-
-[52]
 File: png/results/rq3/rq3_sentiment_grouped_bar.pdf Graphic file (type pdf)
 <use png/results/rq3/rq3_sentiment_grouped_bar.pdf>
 
-Overfull \hbox (8.23117pt too wide) in paragraph at lines 1072--1075
+
+[51]
+Overfull \hbox (8.23117pt too wide) in paragraph at lines 1097--1100
 []\TU/lmr/m/n/12 The sentiment-based comparison clearly presents that emotional expression and self-awareness
  []
 
 
 
-[53]
+[52]
 
-[54]
+[53]
 File: png/results/rq3/scatter_anger_vs_self_positive.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_anger_vs_self_positive.pdf>
-
-
-[55]
 File: png/results/rq3/scatter_anger_vs_self_negative.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_anger_vs_self_negative.pdf>
+
+
+[54]
 File: png/results/rq3/scatter_joy_vs_self_positive.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_joy_vs_self_positive.pdf>
-
-
-[56]
 File: png/results/rq3/scatter_joy_vs_self_negative.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_joy_vs_self_negative.pdf>
 
 
-[57]
-Overfull \hbox (8.9699pt too wide) in paragraph at lines 1299--1310
+[55]
+
+[56]
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1324--1335
  [][] 
  []
 
 
-Overfull \hbox (8.9699pt too wide) in paragraph at lines 1314--1325
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1339--1350
  [][] 
  []
 
 
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1391--1402
+ [][] 
+ []
+
+
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1406--1417
+ [][] 
+ []
+
+
+
+[57])
 
 [58]
-Overfull \hbox (8.9699pt too wide) in paragraph at lines 1366--1377
- [][] 
- []
-
-
-Overfull \hbox (8.9699pt too wide) in paragraph at lines 1381--1392
- [][] 
- []
-
-
-
-[59])
-
-[60]
 \openout2 = `discussion.aux'.
 
  (./discussion.tex
 Chapter 5.
 
 
-[61
+[59
 
 
 
 
 ]
+
+[60]
+
+[61]
 
 [62]
 
@@ -1387,43 +1385,39 @@ Chapter 5.
 
 [66]
 
-[67]
+[67])
 
 [68]
-
-[69])
-
-[70]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 6.
 (./con-findings.tex) (./con-contribution.tex) (./con-limitations.tex
 
-[71
+[69
 
 
 
 
 ]) (./con-future.tex) (./con-closing.tex))
 
-[72]
+[70]
 
-[73]
+[71]
 
-[74
+[72
 
 
 
 ]
 
+[73]
+
+[74]
+
 [75]
 
-[76]
-
-[77]
-
-[78] (./main.aux (./abstract.aux) (./introduction.aux) (./method.aux) (./theoretical-framework.aux) (./results.aux) (./discussion.aux) (./conclusions.aux))
+[76] (./main.aux (./abstract.aux) (./introduction.aux) (./method.aux) (./theoretical-framework.aux) (./results.aux) (./discussion.aux) (./conclusions.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1435,12 +1429,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37081 strings out of 473832
- 758265 string characters out of 5729481
- 1921392 words of memory out of 5000000
- 59546 multiletter control sequences out of 15000+600000
+ 37070 strings out of 473832
+ 758079 string characters out of 5729481
+ 1891627 words of memory out of 5000000
+ 59535 multiletter control sequences out of 15000+600000
  565558 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,14n,93p,2387b,5961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (79 pages).
+Output written on main.pdf (77 pages).

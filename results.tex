@@ -51,7 +51,6 @@ Audio recordings were processed with Praat Parselmouth. Vocal parameters were ex
     \item Pitch: mean pitch in Hz and semitones (ST). 
     \item Intensity: mean intensity measured in decibels (dB). 
     \item Voice Quality Metrics: Harmonic-to-Noise Ratio (HNR), jitter (local frequency perturbation), shimmer (local ampliture perturbation). 
-    \item Formant frequencies: mean frequencies (Hz) of F1, F2, and F3. 
 \end{itemize}
 These acoustic features were then categorized into discrete emotional labels (anger, joy, sadness, fear, surprise) based on thresholds and criteria defined in prior Swedish research \autocite{Ekberg2023}. 
 
@@ -60,64 +59,130 @@ The same audio were analyzed with Hume AI, that provided probability distributio
 The results were normalized according to ADD THAT PART INTO METHOD FROM PDF REFER TO HERE. 
 
 \subsubsection{Data Structure}
-The extracted vocal features, Praat-based emotion categorizations, and Hume AI outputs were matched and stored in JSON format, to enable direct comparison and further analysis. 
+The extracted vocal features, custom emotion categorizations of vocal features, and Hume AI outputs were combined for each recording and stored in JSON format, to enable direct comparison and further analysis. All data is normalized to sum up to 1 before loaded into the JSON files. 
+Table \ref{tab:summary_vocal_features_by_sentiment} includes the mean values and standard diversion for the analysed features (pitch, intensity, HNR, jitter, shimmer) seperated by sentiment. 
+Filtered Hume probabilities are presented in Table \ref{tab:summary_hume_by_sentiment} as mean values with standardized diversion for positive and negative recordings.
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{lrr}
-      \toprule
-      \textbf{Feature}          & \textbf{Mean}   & \textbf{Std}    \\
-      \midrule
-      mean\_pitch\_hz           & 155,1215        & 53,1089         \\
-      mean\_intensity\_db       & 63,3200         & 2,6828          \\
-      mean\_hnr\_db             & 5,5712          & 5,7352          \\
-      jitter\_local             & 0,0249          & 0,0039          \\
-      shimmer\_local            & 0,1251          & 0,0244          \\
-      \bottomrule
-    \end{tabular}
-    \caption{Summary Statistics: Vocal Features (All Clips)}
-    \label{tab:summary_vocal_features}
-  \end{table}
+The custom categorization of emotion based on vocal features are presented as mean values including standard diversions for positive and negative sentiments in Table~\ref{tab:summary_praat_by_sentiment}. 
 
   \begin{table}[H]
     \centering
-    
-    \begin{tabular}{lrr}
-      \toprule
-      \textbf{Metric}         & \textbf{Mean}   & \textbf{Std}    \\
-      \midrule
-      hume\_anger             & 0,2564          & 0,0727          \\
-      hume\_fear              & 0,1505          & 0,0437          \\
-      hume\_joy               & 0,3021          & 0,1136          \\
-      hume\_sadness           & 0,1724          & 0,0661          \\
-      hume\_surprise          & 0,1186          & 0,0217          \\
-      hume\_time (s)          & 57,776          & ---             \\
-      \bottomrule
-    \end{tabular}
-    \caption{Summary Statistics: Hume AI Probabilities (All Clips)}
-    \label{tab:summary_hume_probabilities}
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption*{\textbf{Negative Clips}}
+      \begin{tabular}{lrr}
+        \toprule
+        \textbf{Feature}         & \textbf{Mean}    & \textbf{Std}    \\
+        \midrule
+        mean\_pitch\_st          & –0,1606          & 5,9616          \\
+        mean\_pitch\_hz          & 157,1044         & 53,2213         \\
+        mean\_intensity\_db      & 62,9767          & 2,3435          \\
+        mean\_hnr\_db            & 5,7883           & 5,8332          \\
+        jitter\_local            & 0,0246           & 0,0032          \\
+        shimmer\_local           & 0,1219           & 0,0267          \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption*{\textbf{Positive Clips}}
+      \begin{tabular}{lrr}
+        \toprule
+        \textbf{Feature}         & \textbf{Mean}    & \textbf{Std}    \\
+        \midrule
+        mean\_pitch\_st          & –0,6688          & 6,0049          \\
+        mean\_pitch\_hz          & 152,8906         & 54,6353         \\
+        mean\_intensity\_db      & 63,7063          & 3,0511          \\
+        mean\_hnr\_db            & 5,3269           & 5,8034          \\
+        jitter\_local            & 0,0253           & 0,0046          \\
+        shimmer\_local           & 0,1286           & 0,0218          \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \caption{Summary Statistics: Vocal Features by Sentiment}
+    \label{tab:summary_vocal_features_by_sentiment}
   \end{table}
   
   
   \begin{table}[H]
     \centering
-    \caption{Summary Statistics: Praat Emotion Scores (All Clips)}
-    \label{tab:summary_praat_scores}
-    \begin{tabular}{lrr}
-      \toprule
-      \textbf{Metric}           & \textbf{Mean}   & \textbf{Std}    \\
-      \midrule
-      custom\_anger              & 0,2065          & 0,0032          \\
-      custom\_joy                & 0,2040          & 0,0040          \\
-      custom\_fear               & 0,2035          & 0,0082          \\
-      custom\_sadness            & 0,1909          & 0,0029          \\
-      custom\_surprise           & 0,1951          & 0,0062          \\
-      \bottomrule
-    \end{tabular}
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption*{\textbf{Positive Clips}}
+      \begin{tabular}{lrr}
+        \toprule
+        \textbf{Metric}      & \textbf{Mean}  & \textbf{Std}   \\
+        \midrule
+        hume\_anger          & 0,2262         & 0,0584         \\
+        hume\_fear           & 0,1485         & 0,0513         \\
+        hume\_joy            & 0,3318         & 0,1279         \\
+        hume\_sadness        & 0,1673         & 0,0644         \\
+        hume\_surprise       & 0,1264         & 0,0209         \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption*{\textbf{Negative Clips}}
+      \begin{tabular}{lrr}
+        \toprule
+        \textbf{Metric}      & \textbf{Mean}  & \textbf{Std}   \\
+        \midrule
+        hume\_anger          & 0,2832         & 0,0751         \\
+        hume\_fear           & 0,1523         & 0,0372         \\
+        hume\_joy            & 0,2758         & 0,0951         \\
+        hume\_sadness        & 0,1771         & 0,0691         \\
+        hume\_surprise       & 0,1117         & 0,0205         \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \caption{Summary Statistics: Hume AI Probabilities by Sentiment}
+    \label{tab:summary_hume_by_sentiment}
   \end{table}
+  
+
+  \begin{table}[H]
+    \centering
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption*{\textbf{Positive Clips}}
+      \begin{tabular}{lrr}
+        \toprule
+        \textbf{Metric}      & \textbf{Mean}  & \textbf{Std}   \\
+        \midrule
+        custom\_anger        & 0,2066         & 0,0031         \\
+        custom\_joy          & 0,2036         & 0,0039         \\
+        custom\_fear         & 0,2028         & 0,0079         \\
+        custom\_sadness      & 0,1913         & 0,0027         \\
+        custom\_surprise     & 0,1956         & 0,0062         \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}\hfill
+    \begin{subtable}{0.45\textwidth}
+      \centering
+      \caption*{\textbf{Negative Clips}}
+      \begin{tabular}{lrr}
+        \toprule
+        \textbf{Metric}      & \textbf{Mean}  & \textbf{Std}   \\
+        \midrule
+        custom\_anger        & 0,2064         & 0,0034         \\
+        custom\_joy          & 0,2043         & 0,0041         \\
+        custom\_fear         & 0,2042         & 0,0087         \\
+        custom\_sadness      & 0,1906         & 0,0032         \\
+        custom\_surprise     & 0,1946         & 0,0063         \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \caption{Summary Statistics: Custom Emotion Categorization Scores by Sentiment}
+    \label{tab:summary_praat_by_sentiment}
+  \end{table}
+  
+  
   
 
 \subsubsection{Segment-Level Data}
+Certain analyses in RQ1 rely on time-segmented data. For each recording, Hume AI returns emotion probabilities at regular time segments, an example of this is presented in Table~\ref{tab:segments_hume_example}. 
+In the data analysis, we extract the same set of acoustic features from matching time intervals with Praat, enabling time-to-time comparisons across modalities.
 \begin{table}[H]
     \centering
     
@@ -132,7 +197,7 @@ The extracted vocal features, Praat-based emotion categorizations, and Hume AI o
       43,2342 & 0,1216  & 0,0837 & 0,5861 & 0,0500 & 0,1586 \\
       \bottomrule
     \end{tabular}
-    \caption{Segment‐Level Hume Probabilities (Example Clip: id\_001\_neg)}
+    \caption{Segment‐Level Hume Probabilities for clip: id\_001\_neg}
     \label{tab:segments_hume_example}
   \end{table}
   
@@ -144,41 +209,8 @@ The extracted vocal features, Praat-based emotion categorizations, and Hume AI o
 The data collection for RQ2 and RQ3 is based on the same audio recordings as for RQ1. 
 Each recording was transcribed and analyzed with NLP Cloud (text-based), to extract emotion probabilities from the transcription. The same audio was analyzed using Hume AI for speech-based emotion detection, resulting in paired emotion probability scores alongside self-reported emotion ratings. All scores were normalized for comparison.
 
-The data was structured in JSON format as shown in Figure~\ref{tab:json_rq2_rq3}, each audio object consists of five emotion labels from each data type (Hume, NLP, Self). 
+The data was structured in JSON format, each audio object consists of five emotion labels from each data type (Hume, NLP, Self). 
 
-\begin{center}
-    \begin{minipage}{0.7\textwidth} 
-    \begin{lstlisting}[language=json, caption={Example of stored JSON structure for Hume, NLP, Self-labeling.}]
-        {
-            "id_013_neg": {
-                "audio_file": "audio_use/negative/13-neg.m4a",
-                "nlp_emotions": {
-                    "anger": 0.44,
-                    "joy": 0.0,
-                    "sadness": 0.31,
-                    "fear": 0.21,
-                    "surprise": 0.05
-                },
-                "hume_emotions": {
-                    "anger": 0.32,
-                    "fear": 0.13,
-                    "joy": 0.22,
-                    "sadness": 0.19,
-                    "surprise": 0.13
-                },
-                "self_assessed": {
-                    "anger": 0.31,
-                    "joy": 0.08,
-                    "sadness": 0.31,
-                    "fear": 0.23,
-                    "surprise": 0.08
-                }
-            }
-    }
-    \end{lstlisting}
-    \label{tab:json_rq2_rq3}
-\end{minipage}
-\end{center} 
 
 Table~\ref{tab:rq3_emotion-stats-combined} summarize the average emotion scores and standard deviations for both speech-based (Hume AI) and text-based (NLP Cloud) 
 models across all clips in the dataset. 
@@ -222,8 +254,6 @@ models across all clips in the dataset.
     \caption{Means and standard deviations of self-reported, Hume, and NLP emotion intensities for positive recordings.}
     \label{tab:rq3_emotion-stats-pos}
   \end{table}
-  
-INCLUDE TEXT 
 
 \begin{table}[H]
     \centering
@@ -320,9 +350,9 @@ These results show that the custom categorization function disproportionately we
 \subsection{Limitations of the Custom Vocal Emotion Categorization Method}
 To evaluate the performance of our custom emotion categorization function, which was developed based on vocal markers reported in the Swedish study \autocite{Ekberg2023}, we compared the emotion labels to the labels generated by Hume AI’s speech-based emotion recognition model. This comparison included both individual clip level and across the full dataset, seperated by sentiment. 
 
-However, the results revealed significant limitations in our approach. Regardless of the vocal input from our dataset, the categorization function consistently rendered near homogeneous emotion scores across all five emotions. This indicates that the function failed to capture emotional distinctions within spontaneous, conversational speech during interviews, regardless of theoretical relevance. 
+However, the results revealed significant limitations in our approach. Regardless of the vocal input from our dataset, the categorization function consistently rendered near homogeneous emotion scores across all five emotions. This indicates that the function failed to capture emotional distinctions within spontaneous, conversational speech during interviews. 
 
-Figure~\ref{fig:rq1_scatter_hume_praat_pos}, positive, and Figure~\ref{fig:rq1_scatter_hume_praat_neg}, negative, illustrates this issue across the full dataset, where the average scores assigned by our Praat-based categorization remain clustered around 0.2 across all emotions. Opposed to Hume that had greater variation through its labeling and reflects a more dynamic emotional detection.
+Figure~\ref{fig:rq1_scatter_hume_praat_pos}, positive, and Figure~\ref{fig:rq1_scatter_hume_praat_neg}, negative, illustrates this issue across the full dataset, where the average scores assigned by our Praat-based categorization remain clustered around 0.2 across all emotions. Opposed to Hume that had larger variation through its labeling. 
 
 \begin{figure}[H]
     \centering
@@ -418,8 +448,6 @@ showing that none of the features showed statistically significant differences b
   
 These results imply that within our dataset of spontaneous speech during interviews, the average values of the acoustic features did not systematically vary according to AI-labeled emotions. 
 
-OBS! Lägg till medelvärde osv i detta för varje feature (medel och standardavvikelse! )
-
 \subsection{Correlation Between Vocal Features and Hume AI Emotion Scores}
 Considering the limitations that had been identified in our vocal feature-based emotion categorization function, subsequent analyses shifted focus towards examining direct correlation between raw acoustic features and AI-predicted emotions. Instead of applying predefined vocal emotion mappings to rely on, essential vocal markers have been investigated to obtain an understanding of how these correlate with Hume AI’s emotion scores across our dataset. 
 
@@ -486,15 +514,10 @@ Anger was the single emotion showing weak correlation with intensity (r = -0.012
 Both fear and sadness predicted by Hume AI showed weak correlations with statistical significance with pitch for positive recordings (r = 0.209 and r = -0.225, both p < 0.001). All other pitch correlations were non-significant. 
 Intensity correlated most strongly with joy (r = 0.279, p < 0.001), and strongest negatively with sadness (r = -0.213, p < 0.001). Weak correlations with statistical significance were also prevelant between intensity and fear (r = -0.173, p < 0.001) and surprise (r = -0.173, p < 0.001).
 
-
-\subsubsection{OBS!!! DELETE!!! should be in discussion!!!! }
-
-
-Particularly intensity shows a positive correlation with joy, and suggests that higher vocal intensity tends to co-occur with AI detected happiness. In contrast, intensity shows a negative correlation with emotions such as sadness and fear, which is aligned with the expectations that these emotions are generally expressed with lower vocal energy. 
-
-For pitch, a minor positive correlation is found in correlation with anger and fear, also reflecting expectations reported in prior research, where higher pitch is associated with heightened arousal states, for example anger. A negative correlation between pitch and sadness is shown, also supporting the prior findings where sadness is linked to lower pitch. 
-
-However, the correlation strength is weak across all emotions, without values that indicate a strong linear association. This indicates, as our previous results, that single acoustic features like pitch and intensity alone are insufficient markers of emotional states when detected by speech emotion recognition systems, in the context of conversational, but interviewed, speech. 
+\medskip
+Particularly intensity shows a positive correlation with joy, and suggests that higher vocal intensity tends to co-occur with AI detected happiness. In contrast, intensity shows a negative correlation with emotions such as sadness and fear.
+For pitch, a minor positive correlation is found in correlation with anger and fear, while a negative correlation between pitch and sadness is shown.
+However, the correlation strength is weak across all emotions, without values that indicate a strong linear association. 
 
 \subsection{Time-to-Time Analysis}
 
@@ -522,7 +545,7 @@ Table \ref{tab:rq1_time_all_correlations} presents the significant correlations 
       jitter\_local         & sadness    &  0.088  & 0.0034 & Yes \\
       \bottomrule
     \end{tabular}
-    \caption{Significant Pearson correlations for the full (“all”) dataset.}
+    \caption{Significant Pearson correlations for the full dataset.}
     \label{tab:rq1_time_all_correlations}
   \end{table}
  
@@ -535,10 +558,9 @@ Table \ref{tab:ttest_full_features} compares the top 30\% and bottom 70\% of emo
 A large t-statistic value indicate a reliable shift in that feature when Hume rates that emotion high. 
 \begin{table}[H]
     \centering
-    \caption{High-vs-low t-test results for significant acoustic features (full dataset)}
     \begin{tabular}{l l r r l}
       \toprule
-      \textbf{Feature} & \textbf{Emotion} & \textbf{t-statistic} & \textbf{\(p\)-value} & \textbf{Significant?} \\
+      \textbf{Feature} & \textbf{Emotion} & \textbf{t-statistic} & \textbf{\(p\)-value} & \textbf{Significant} \\
       \midrule
       mean\_pitch\_hz       & anger     &  4.533 & 0.0000 & Yes \\
       mean\_pitch\_hz       & sadness   & –8.973 & 0.0000 & Yes \\
@@ -552,6 +574,7 @@ A large t-statistic value indicate a reliable shift in that feature when Hume ra
       jitter\_local         & sadness   &  1.808 & 0.0709 & No  \\
       \bottomrule
     \end{tabular}
+    \caption{High-vs-low t-test results for significant acoustic features (full dataset)}
     \label{tab:ttest_full_features}
   \end{table}
   
@@ -561,102 +584,6 @@ A large t-statistic value indicate a reliable shift in that feature when Hume ra
   Segments with high surprise predictions has the moderately low intensity (t = -3.646). 
   
 
-\subsubsection{Case Examples}
-For a more concrete illustration of the prior tendencies , two interview recordings were analyzed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
-
-\medskip
-
-\begin{figure}[H]
-    \centering
-    
-    \includegraphics[width=0.85\textwidth]{png/results/rq3_2/combined_zscore_hume_id_006_pos_4.pdf}
-    \caption{Pitch and Intensity vs. Hume Joy for single positive clip.}
-    \label{fig:006_pos-anger-joy}
-\end{figure}
-% ----------------- Clip ID 006 -----------------
-\begin{table}[H]
-    \centering
-    \begin{subtable}{0.45\textwidth}
-      \centering
-      \caption{Correlation (ID 006)}\label{tab:id006_corr}
-      \begin{tabular}{l r r r}
-        \toprule
-        \textbf{Feature} & \textbf{Emotion} & \textbf{\(r\)} & \textbf{Sign.} \\
-        \midrule
-        pitch     & surprise &  0.365 & Yes \\
-        intensity & anger    &  0.333 & Yes \\
-        intensity & fear     & –0.415 & Yes \\
-        \bottomrule
-      \end{tabular}
-    \end{subtable}\hfill
-    \begin{subtable}{0.45\textwidth}
-      \centering
-      \caption{High vs Low T-Test (ID 006)}\label{tab:id006_ttest}
-      \begin{tabular}{l l r r r}
-        \toprule
-        \textbf{Feature} & \textbf{Emotion} & \textbf{t} & \textbf{p} & \textbf{Sign.} \\
-        \midrule
-        pitch     & surprise &  2.622 & 0.0121 & Yes \\
-        intensity & anger    &  2.333 & 0.0245 & Yes \\
-        intensity & fear     & –1.629 & 0.1109 & No  \\
-        \bottomrule
-      \end{tabular}
-    \end{subtable}
-  
-    \caption{ID 006: Pearson correlations and high-vs-low t-tests for key features.}
-    \label{tab:id006_summary}
-  \end{table}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{png/results/rq3_2/combined_zscore_hume_id_012_neg_6.pdf} 
-    \caption{Pitch and HNR vs. Hume Anger for single negative clip.}
-    \label{fig:006_pos-surp-sadn}
-\end{figure}
-    
-
-
-
-% ----------------- Clip ID 012 -----------------
-\begin{table}[H]
-    \centering
-    \begin{subtable}{0.45\textwidth}
-      \centering
-      \caption{Correlation (ID 012)}\label{tab:id012_corr}
-      \begin{tabular}{l r r r}
-        \toprule
-        \textbf{Feature} & \textbf{Emotion} & \textbf{\(r\)} & \textbf{Sign.} \\
-        \midrule
-        pitch     & fear        &  0.310 & Yes \\
-        intensity & fear        & –0.320 & Yes \\
-        hnr       & fear        &  0.401 & Yes \\
-        shimmer      & anger       &  0.374 & Yes \\
-        \bottomrule
-      \end{tabular}
-    \end{subtable}\hfill
-    \begin{subtable}{0.45\textwidth}
-      \centering
-      \caption{High vs Low T-Test (ID 012)}\label{tab:id012_ttest}
-      \begin{tabular}{l l r r r}
-        \toprule
-        \textbf{Feature} & \textbf{Emotion} & \textbf{t} & \textbf{p} & \textbf{Sign.} \\
-        \midrule
-        pitch     & fear      &  1.193 & 0.239  & No  \\
-        pitch     & sadness   & –2.209 & 0.032  & Yes \\
-        intensity & fear      & –1.602 & 0.116  & No  \\
-        intensity & surprise  & –2.116 & 0.040  & Yes \\
-        hnr       & fear      &  1.479 & 0.146  & No  \\
-        jitter       & surprise  &  2.746 & 0.009  & Yes \\
-        shimmer      & anger     &  2.452 & 0.018  & Yes \\
-        \bottomrule
-      \end{tabular}
-    \end{subtable}
-  
-    \caption{ID 012: Pearson correlations and high-vs-low t-tests for key features.}
-    \label{tab:id012_summary}
-  \end{table}
-
   \subsubsection{Time-to-Time Analysis by Sentiment}
   \begin{table}[H]
     \centering
@@ -665,7 +592,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{Pitch and Anger (Pearson \(r\))}\label{tab:rq1_corr_pitch_anger}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;r\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;r\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      &  0.108 & 0.0003 & Yes \\
         negative &  0.194 & 0.0000 & Yes \\
@@ -678,7 +605,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{Pitch and Anger (t-test)}\label{tab:rq1_ttest_pitch_anger}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;t\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;t\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      &  4.533 & 0.0000 & Yes \\
         negative &  4.836 & 0.0000 & Yes \\
@@ -703,7 +630,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{HNR and Anger (r)}\label{tab:rq1_corr_hnr_anger}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;r\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;r\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      & 0.126 & 0.0000 & Yes \\
         negative & 0.193 & 0.0000 & Yes \\
@@ -716,7 +643,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{HNR and Anger (t-test)}\label{tab:rq1_ttest_hnr_anger}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;t\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;t\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      & 4.547 & 0.0000 & Yes \\
         negative & 4.800 & 0.0000 & Yes \\
@@ -743,7 +670,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{Pitch and Joy (r)}\label{tab:rq1_corr_pitch_joy}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;r\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;r\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      & 0.048 & 0.1067 & No  \\
         negative & 0.005 & 0.8912 & No  \\
@@ -756,7 +683,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{Pitch and Joy (t-test)}\label{tab:rq1_ttest_pitch_joy}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;t\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;t\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      & 2.320 & 0.0205 & Yes \\
         negative & 0.847 & 0.3972 & No  \\
@@ -782,7 +709,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{Intensity and Joy (r)}\label{tab:rq1_corr_intensity_joy}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;r\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;r\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      & 0.171 & 0.0000 & Yes \\
         negative & 0.149 & 0.0002 & Yes \\
@@ -795,7 +722,7 @@ For a more concrete illustration of the prior tendencies , two interview recordi
       \caption{Intensity and Joy (t-test)}\label{tab:rq1_ttest_intensity_joy}
       \begin{tabular}{l r r l}
         \toprule
-        Sentiment & \(\;t\;\) & \(\;p\;\) & Sig? \\
+        Sentiment & \(\;t\;\) & \(\;p\;\) & Sign. \\
         \midrule
         all      & 5.018 & 0.0000 & Yes \\
         negative & 2.701 & 0.0071 & Yes \\
@@ -810,6 +737,104 @@ For a more concrete illustration of the prior tendencies , two interview recordi
 Table \ref{tab:rq1_intensity_joy_side_by_side} demonstrates the correlation between intensity and joy, showing stronger associations compared to joy and pitch. 
 All contexts show a positive relationship, strongest for positive clips (r = 0.192, p < 0.001) with significant mean differences where the full dataset has highest significance (t = 5.02, p < 0.001). 
 These results suggests that intensity is a stable cue to joy regardless of the overall sentiment context, even if higher correlation occurs for the full and positive sets than the negative subset (r = 0.149, p < 0.001 and t = 2.701, p = 0.007). 
+
+
+\subsubsection{Case Examples}
+For a more concrete illustration of the prior tendencies , two interview recordings were analyzed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
+
+\medskip
+
+\begin{figure}[H]
+    \centering
+    
+    \includegraphics[width=0.85\textwidth]{png/results/rq3_2/combined_zscore_hume_id_006_pos_4.pdf}
+    \caption{Pitch and Intensity vs. Hume Joy for single positive clip.}
+    \label{fig:006_pos-anger-joy}
+\end{figure}
+% ----------------- Clip ID 006 -----------------
+% \begin{table}[H]
+%     \centering
+%     \begin{subtable}{0.45\textwidth}
+%       \centering
+%       \caption{Correlation (ID 006)}\label{tab:id006_corr}
+%       \begin{tabular}{l r r r}
+%         \toprule
+%         \textbf{Feature} & \textbf{Emotion} & \textbf{\(r\)} & \textbf{Sign.} \\
+%         \midrule
+%         pitch     & surprise &  0.365 & Yes \\
+%         intensity & anger    &  0.333 & Yes \\
+%         intensity & fear     & –0.415 & Yes \\
+%         \bottomrule
+%       \end{tabular}
+%     \end{subtable}\hfill
+%     \begin{subtable}{0.45\textwidth}
+%       \centering
+%       \caption{High vs Low T-Test (ID 006)}\label{tab:id006_ttest}
+%       \begin{tabular}{l l r r r}
+%         \toprule
+%         \textbf{Feature} & \textbf{Emotion} & \textbf{t} & \textbf{p} & \textbf{Sign.} \\
+%         \midrule
+%         pitch     & surprise &  2.622 & 0.0121 & Yes \\
+%         intensity & anger    &  2.333 & 0.0245 & Yes \\
+%         intensity & fear     & –1.629 & 0.1109 & No  \\
+%         \bottomrule
+%       \end{tabular}
+%     \end{subtable}
+  
+%     \caption{ID 006: Pearson correlations and high-vs-low t-tests for key features.}
+%     \label{tab:id006_summary}
+%   \end{table}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{png/results/rq3_2/combined_zscore_hume_id_012_neg_6.pdf} 
+    \caption{Pitch and HNR vs. Hume Anger for single negative clip.}
+    \label{fig:006_pos-surp-sadn}
+\end{figure}
+    
+
+
+
+% % ----------------- Clip ID 012 -----------------
+% \begin{table}[H]
+%     \centering
+%     \begin{subtable}{0.45\textwidth}
+%       \centering
+%       \caption{Correlation (ID 012)}\label{tab:id012_corr}
+%       \begin{tabular}{l r r r}
+%         \toprule
+%         \textbf{Feature} & \textbf{Emotion} & \textbf{\(r\)} & \textbf{Sign.} \\
+%         \midrule
+%         pitch     & fear        &  0.310 & Yes \\
+%         intensity & fear        & –0.320 & Yes \\
+%         hnr       & fear        &  0.401 & Yes \\
+%         shimmer      & anger       &  0.374 & Yes \\
+%         \bottomrule
+%       \end{tabular}
+%     \end{subtable}\hfill
+%     \begin{subtable}{0.45\textwidth}
+%       \centering
+%       \caption{High vs Low T-Test (ID 012)}\label{tab:id012_ttest}
+%       \begin{tabular}{l l r r r}
+%         \toprule
+%         \textbf{Feature} & \textbf{Emotion} & \textbf{t} & \textbf{p} & \textbf{Sign.} \\
+%         \midrule
+%         pitch     & fear      &  1.193 & 0.239  & No  \\
+%         pitch     & sadness   & –2.209 & 0.032  & Yes \\
+%         intensity & fear      & –1.602 & 0.116  & No  \\
+%         intensity & surprise  & –2.116 & 0.040  & Yes \\
+%         hnr       & fear      &  1.479 & 0.146  & No  \\
+%         jitter       & surprise  &  2.746 & 0.009  & Yes \\
+%         shimmer      & anger     &  2.452 & 0.018  & Yes \\
+%         \bottomrule
+%       \end{tabular}
+%     \end{subtable}
+  
+%     \caption{ID 012: Pearson correlations and high-vs-low t-tests for key features.}
+%     \label{tab:id012_summary}
+%   \end{table}
+
 
 \subsection{Conclusion RQ1 Data Analysis}
 The results revealed only weak to moderate correlations for the analysis between individual vocal features and how Hume AI predicted emotions, where intensity and pitch showed most patterns consistently. 
@@ -997,7 +1022,7 @@ Hume rates Sadness and Fear more prominent than NLP, and Surprise remain inconsi
       Surprise &  1.311 & 0.208   & No  &  0.318 \\
       \bottomrule
     \end{tabular}
-    \caption{t-statistics, p-value with significance, and2 Cohen’s d for negative interviews.}
+    \caption{t-statistics, p-value with significance, and Cohen’s d for negative interviews.}
     \label{tab:t-test-neg}
   \end{table}
 Table \ref{tab:t-test-neg} presents conducted t-tests and Cohen's d in negative interviews, with significant differences for Joy (t = 3.720, p = 0.002), where Hume rates it significantly higher than NLP. 
@@ -1085,7 +1110,7 @@ With these measurements the relationship's strength and direction and the statis
     \caption*{\textbf{All Hume}}
     \begin{tabular}{lrrl}
       \toprule
-      \textbf{Emotion} & \textbf{Pearson’s \(r\)} & \textbf{\(p\)-value} & \textbf{Significant} \\
+      \textbf{Emotion} & \textbf{Pearson’s r} & \textbf{p-value} & \textbf{Significant} \\
       \midrule
       Anger    & 0,359 & 0,043 & Yes \\
       Joy      & 0,334 & 0,062 & No  \\
@@ -1094,7 +1119,7 @@ With these measurements the relationship's strength and direction and the statis
       Surprise & 0,088 & 0,631 & No  \\
       \bottomrule
     \end{tabular}
-    \caption{Pearson’s \(r\), \(p\)-values, and significance for all Hume recordings.}
+    \caption{Pearson’s r, p-values, and significance for all Hume recordings.}
     \label{tab:rq3_corr-hume-all}
   \end{table}
 
@@ -1137,7 +1162,7 @@ detection and participants own perception for this emotion. Joy shows a moderate
       \end{tabular}
     \end{subtable}
   
-    \caption{Pearson’s \emph{r}, p-values, and significance for Hume AI vs.\ self (positive and negative).}
+    \caption{Pearson’s r, p-values, and significance for Hume AI vs.\ self (positive and negative).}
     \label{tab:rq3_corr-hume-pos-neg}
   \end{table}
 
@@ -1152,7 +1177,7 @@ Negatively oriented interviews, Table~\ref{tab:rq3_corr-hume-neg} show similar r
     \caption*{\textbf{All NLP}}
     \begin{tabular}{lrrr}
       \toprule
-      \textbf{Emotion} & \textbf{Pearson’s \(r\)} & \textbf{\(p\)-value} & \textbf{Significant} \\
+      \textbf{Emotion} & \textbf{Pearson’s r} & \textbf{p-value} & \textbf{Significant} \\
       \midrule
       Anger    & 0,739 & 0,000 & Yes \\
       Joy      & 0,863 & 0,000 & Yes \\
@@ -1161,7 +1186,7 @@ Negatively oriented interviews, Table~\ref{tab:rq3_corr-hume-neg} show similar r
       Surprise & 0,092 & 0,616 & No  \\
       \bottomrule
     \end{tabular}
-    \caption{Pearson’s \(r\), \(p\)-values, and significance for all NLP recordings.}
+    \caption{Pearson’s r, p-values, and significance for all NLP recordings.}
     \label{tab:rq3_corr-nlp-all}
   \end{table}
 
@@ -1203,7 +1228,7 @@ Fear had a moderately strong correlation with high statistical significance (r =
       \end{tabular}
     \end{subtable}
   
-    \caption{Pearson’s \emph{r}, p-values, and significance for NLP Cloud vs.\ self (positive and negative)}
+    \caption{Pearson’s r, p-values, and significance for NLP Cloud vs.\ self (positive and negative)}
     \label{tab:rq3_corr-nlp-pos-neg}
   \end{table}
   
@@ -1298,7 +1323,7 @@ Other emotions show no reliable difference.
       \caption{Positive Recordings}\label{tab:rq3_t_hume_self_pos}
       \begin{tabular}{l r r l r}
         \toprule
-        \textbf{Emotion} & \(\;t\;\) & \(\;p\;\) & \textbf{Sig?} & \(\;d\;\) \\
+        \textbf{Emotion} & \(\;t\;\) & \(\;p\;\) & \textbf{Sign.} & \(\;d\;\) \\
         \midrule
         Anger    &  8.776 & 0.000 & Yes &  2.266 \\
         Joy      & –5.112 & 0.000 & Yes & –1.320 \\
@@ -1313,7 +1338,7 @@ Other emotions show no reliable difference.
       \caption{Negative Recordings}\label{tab:rq3_t_hume_self_neg}
       \begin{tabular}{l r r l r}
         \toprule
-        \textbf{Emotion} & \(\;t\;\) & \(\;p\;\) & \textbf{Sig?} & \(\;d\;\) \\
+        \textbf{Emotion} & \(\;t\;\) & \(\;p\;\) & \textbf{Sign.} & \(\;d\;\) \\
         \midrule
         Anger    & –0.517 & 0.612 & No  & –0.125 \\
         Joy      &  3.878 & 0.001 & Yes &  0.941 \\
@@ -1349,7 +1374,7 @@ Anger, sadness, and surprise show now significant difference (p > 0.05, |d| < 0.
       Surprise & –1.011 & 0.320 & No  & –0.179 \\
       \bottomrule
     \end{tabular}
-    \caption{NLP Cloud vs.\ Self—All Recordings (paired t-test \& Cohen’s d)}
+    \caption{Paired t-tests and Cohen's d for NLP Cloud vs.\ Self. All Recordings}
     \label{tab:rq3_t_nlp_self_all}
   \end{table}
   
@@ -1365,7 +1390,7 @@ In negative oriented recordings, no significant difference between NLP and self-
       \caption{Positive Recordings}\label{tab:rq3_t_nlp_self_pos}
       \begin{tabular}{l r r l r}
         \toprule
-        \textbf{Emotion} & \(\mathbf{t}\) & \(\mathbf{p}\) & \textbf{Sig?} & \(\mathbf{d}\) \\
+        \textbf{Emotion} & \(\mathbf{t}\) & \(\mathbf{p}\) & \textbf{Sign.} & \(\mathbf{d}\) \\
         \midrule
         Anger    & –4.853 & 0.000 & Yes & –1.253 \\
         Joy      &  6.066 & 0.000 & Yes &  1.566 \\
@@ -1380,7 +1405,7 @@ In negative oriented recordings, no significant difference between NLP and self-
       \caption{Negative Recordings}\label{tab:rq3_t_nlp_self_neg}
       \begin{tabular}{l r r l r}
         \toprule
-        \textbf{Emotion} & \(\mathbf{t}\) & \(\mathbf{p}\) & \textbf{Sig?} & \(\mathbf{d}\) \\
+        \textbf{Emotion} & \(\mathbf{t}\) & \(\mathbf{p}\) & \textbf{Sign.} & \(\mathbf{d}\) \\
         \midrule
         Anger    &  1.335 & 0.200 & No  &  0.324 \\
         Joy      & –0.578 & 0.571 & No  & –0.140 \\
