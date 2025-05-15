@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  13 MAY 2025 20:47
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.30)  15 MAY 2025 08:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1151,12 +1151,11 @@ File: png/theoretical/ser-diagram.pdf Graphic file (type pdf)
 [23]
 File: png/theoretical/hume-prosody.pdf Graphic file (type pdf)
 <use png/theoretical/hume-prosody.pdf>
-
-
-[24]
 File: png/theoretical/hume-vocal.pdf Graphic file (type pdf)
 <use png/theoretical/hume-vocal.pdf>
 
+
+[24]
 
 [25]
 
@@ -1221,46 +1220,71 @@ Overfull \hbox (7.10313pt too wide) in paragraph at lines 261--272
 
 
 [35]
-File: png/results/rq1_new/vocal_vs_hume_correlations_positive.pdf Graphic file (type pdf)
-<use png/results/rq1_new/vocal_vs_hume_correlations_positive.pdf>
-File: png/results/rq1_new/vocal_vs_hume_correlations_negative.pdf Graphic file (type pdf)
-<use png/results/rq1_new/vocal_vs_hume_correlations_negative.pdf>
+File: png/results/rq1_nr3/vocal_vs_hume_correlations_positive.png.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/vocal_vs_hume_correlations_positive.png.pdf>
+File: png/results/rq1_nr3/vocal_vs_hume_correlations_negative.png.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/vocal_vs_hume_correlations_negative.png.pdf>
 
 
 [36]
 Missing character: There is no ≈ (U+2248) in font [lmroman12-regular]:mapping=tex-text;!
-File: png/results/rq1_new/vocal_vs_custom_categorization_correlations_positive.pdf Graphic file (type pdf)
-<use png/results/rq1_new/vocal_vs_custom_categorization_correlations_positive.pdf>
-File: png/results/rq1_new/vocal_vs_custom_categorization_correlations_negative.pdf Graphic file (type pdf)
-<use png/results/rq1_new/vocal_vs_custom_categorization_correlations_negative.pdf>
+File: png/results/rq1_nr3/vocal_vs_custom_categorization_correlations_positive.png.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/vocal_vs_custom_categorization_correlations_positive.png.pdf>
+File: png/results/rq1_nr3/vocal_vs_custom_categorization_correlations_negative.png.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/vocal_vs_custom_categorization_correlations_negative.png.pdf>
 
 
 [37]
-Overfull \hbox (19.19418pt too wide) in paragraph at lines 350--350
-|[]\TU/lmr/bx/n/14.4 Limitations of the Custom Vocal Emotion Categorization Method| 
- []
-
-File: png/results/rq1_new/praat_hume_positive_scatter.pdf Graphic file (type pdf)
-<use png/results/rq1_new/praat_hume_positive_scatter.pdf>
+Missing character: There is no ≈ (U+2248) in font [lmroman12-regular]:mapping=tex-text;!
+File: png/results/rq1_nr3/confusion_matrix_Positive_Recordings.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/confusion_matrix_Positive_Recordings.pdf>
+File: png/results/rq1_nr3/confusion_matrix_Negative_Recordings.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/confusion_matrix_Negative_Recordings.pdf>
 
 
 [38]
-File: png/results/rq1_new/praat_hume_negative_scatter.pdf Graphic file (type pdf)
-<use png/results/rq1_new/praat_hume_negative_scatter.pdf>
+File: png/results/rq1_nr3/praat_hume_positive_scatter.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/praat_hume_positive_scatter.pdf>
+File: png/results/rq1_nr3/praat_hume_negative_scatter.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/praat_hume_negative_scatter.pdf>
 
 
 [39]
-File: png/results/rq1_new/id_006_pos_praat_hume_comparison.pdf Graphic file (type pdf)
-<use png/results/rq1_new/id_006_pos_praat_hume_comparison.pdf>
-File: png/results/rq1_new/id_006_neg_praat_hume_comparison.pdf Graphic file (type pdf)
-<use png/results/rq1_new/id_006_neg_praat_hume_comparison.pdf>
+Overfull \hbox (17.87392pt too wide) in paragraph at lines 410--422
+ [][] 
+ []
+
+
+Overfull \hbox (17.87392pt too wide) in paragraph at lines 426--438
+ [][] 
+ []
+
+
+Overfull \hbox (19.19418pt too wide) in paragraph at lines 445--445
+|[]\TU/lmr/bx/n/14.4 Limitations of the Custom Vocal Emotion Categorization Method| 
+ []
+
+
+Overfull \hbox (6.50423pt too wide) in paragraph at lines 454--465
+[][]
+ []
+
+
+Overfull \hbox (10.41624pt too wide) in paragraph at lines 470--478
+[][] 
+ []
+
 
 
 [40]
-File: png/results/rq1_new/composite_correlations_positive.pdf Graphic file (type pdf)
-<use png/results/rq1_new/composite_correlations_positive.pdf>
-File: png/results/rq1_new/composite_correlations_negative.pdf Graphic file (type pdf)
-<use png/results/rq1_new/composite_correlations_negative.pdf>
+File: png/results/rq1_nr3/id_006_pos_praat_hume_comparison.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/id_006_pos_praat_hume_comparison.pdf>
+File: png/results/rq1_nr3/id_008_pos_praat_hume_comparison.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/id_008_pos_praat_hume_comparison.pdf>
+File: png/results/rq1_nr3/id_009_neg_praat_hume_comparison.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/id_009_neg_praat_hume_comparison.pdf>
+File: png/results/rq1_nr3/id_015_neg_praat_hume_comparison.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/id_015_neg_praat_hume_comparison.pdf>
 
 
 [41]
@@ -1268,173 +1292,213 @@ File: png/results/rq1_new/composite_correlations_negative.pdf Graphic file (type
 [42]
 
 [43]
+
+[44]
 File: png/results/rq3_2/combined_zscore_hume_id_006_pos_4.pdf Graphic file (type pdf)
 <use png/results/rq3_2/combined_zscore_hume_id_006_pos_4.pdf>
 
 
-[44]
+[45]
+Overfull \hbox (1.43158pt too wide) in paragraph at lines 900--910
+ [][] 
+ []
+
 File: png/results/rq3_2/combined_zscore_hume_id_012_neg_6.pdf Graphic file (type pdf)
 <use png/results/rq3_2/combined_zscore_hume_id_012_neg_6.pdf>
 
-Overfull \hbox (0.49742pt too wide) in paragraph at lines 848--848
-|[]\TU/lmr/bx/n/17.28 Data Analysis for RQ2: Text and Speech Based Emo-
+Overfull \hbox (1.43158pt too wide) in paragraph at lines 977--989
+ [][] 
+ []
+
+
+Overfull \hbox (1.43158pt too wide) in paragraph at lines 995--1005
+ [][] 
+ []
+
+File: png/results/rq1_nr3/combined_zscore_hume_id_010_pos_7.pdf Graphic file (type pdf)
+<use png/results/rq1_nr3/combined_zscore_hume_id_010_pos_7.pdf>
+
+
+[46]
+Overfull \hbox (39.86758pt too wide) in paragraph at lines 1023--1037
+ [][] 
+ []
+
+
+Overfull \hbox (39.86758pt too wide) in paragraph at lines 1043--1053
+ [][] 
  []
 
 
 
-[45]
+[47]
+Overfull \hbox (0.49742pt too wide) in paragraph at lines 1107--1107
+|[]\TU/lmr/bx/n/17.28 Data Analysis for RQ2: Text and Speech Based Emo-
+ []
+
 File: png/results/rq2/sentiment_comparison_facet_all.pdf Graphic file (type pdf)
 <use png/results/rq2/sentiment_comparison_facet_all.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: png/results/rq2/hume_nlp_difference_positive.pdf Graphic file (type pdf)
 <use png/results/rq2/hume_nlp_difference_positive.pdf>
 File: png/results/rq2/hume_nlp_difference_negative.pdf Graphic file (type pdf)
 <use png/results/rq2/hume_nlp_difference_negative.pdf>
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-
-[46]
-
-[47]
 
 [48]
 
 [49]
 
 [50]
+
+[51]
+
+[52]
 File: png/results/rq3/rq3_sentiment_grouped_bar.pdf Graphic file (type pdf)
 <use png/results/rq3/rq3_sentiment_grouped_bar.pdf>
 
 
-[51]
-Overfull \hbox (8.23117pt too wide) in paragraph at lines 1097--1100
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[53]
+Overfull \hbox (8.23117pt too wide) in paragraph at lines 1356--1359
 []\TU/lmr/m/n/12 The sentiment-based comparison clearly presents that emotional expression and self-awareness
  []
 
 
 
-[52]
+[54]
 
-[53]
+[55]
 File: png/results/rq3/scatter_anger_vs_self_positive.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_anger_vs_self_positive.pdf>
+
+
+[56]
 File: png/results/rq3/scatter_anger_vs_self_negative.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_anger_vs_self_negative.pdf>
-
-
-[54]
 File: png/results/rq3/scatter_joy_vs_self_positive.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_joy_vs_self_positive.pdf>
+
+
+[57]
 File: png/results/rq3/scatter_joy_vs_self_negative.pdf Graphic file (type pdf)
 <use png/results/rq3/scatter_joy_vs_self_negative.pdf>
 
 
-[55]
-
-[56]
-Overfull \hbox (13.8539pt too wide) in paragraph at lines 1324--1335
- [][] 
- []
-
-
-Overfull \hbox (13.8539pt too wide) in paragraph at lines 1339--1350
- [][] 
- []
-
-
-Overfull \hbox (13.8539pt too wide) in paragraph at lines 1391--1402
- [][] 
- []
-
-
-Overfull \hbox (13.8539pt too wide) in paragraph at lines 1406--1417
- [][] 
- []
-
-
-
-[57])
-
 [58]
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1583--1594
+ [][] 
+ []
+
+
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1598--1609
+ [][] 
+ []
+
+
+
+[59]
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1650--1661
+ [][] 
+ []
+
+
+Overfull \hbox (13.8539pt too wide) in paragraph at lines 1665--1676
+ [][] 
+ []
+
+
+
+[60])
+
+[61]
 \openout2 = `discussion.aux'.
 
  (./discussion.tex
 Chapter 5.
+(./dis-rq1.tex
 
-
-[59
+[62
 
 
 
 
 ]
 
-[60]
-
-[61]
-
-[62]
-
-[63]
+[63]) (./dis-rq2.tex
 
 [64]
 
-[65]
+[65]) (./dis-rq3.tex
 
 [66]
 
-[67])
+[67]) (./dis-conclusions.tex
 
-[68]
+[68]) (./dis-method.tex
+
+[69]
+
+[70]) (./dis-limitations.tex
+
+[71]))
+
+[72]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 6.
 (./con-findings.tex) (./con-contribution.tex) (./con-limitations.tex
 
-[69
+[73
 
 
 
 
 ]) (./con-future.tex) (./con-closing.tex))
 
-[70]
+[74]
 
-[71]
+[75]
 
-[72
+[76
 
 
 
 ]
 
-[73]
+[77]
 
-[74]
+[78]
 
-[75]
+[79]
 
-[76] (./main.aux (./abstract.aux) (./introduction.aux) (./method.aux) (./theoretical-framework.aux) (./results.aux) (./discussion.aux) (./conclusions.aux))
+[80] (./main.aux (./abstract.aux) (./introduction.aux) (./method.aux) (./theoretical-framework.aux) (./results.aux) (./discussion.aux) (./conclusions.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EF4DBF7297220AB85A4D313B3AD2A044;16708.
+(rerunfilecheck)             Checksum: E6A5A64DCEA7D1FEF3EF6506C4150856;17019.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37070 strings out of 473832
- 758079 string characters out of 5729481
- 1891627 words of memory out of 5000000
- 59535 multiletter control sequences out of 15000+600000
- 565558 words of font info for 82 fonts, out of 8000000 for 9000
+ 37167 strings out of 473832
+ 761553 string characters out of 5729481
+ 1894485 words of memory out of 5000000
+ 59611 multiletter control sequences out of 15000+600000
+ 564010 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,14n,93p,2387b,5961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (77 pages).
+Output written on main.pdf (81 pages).
