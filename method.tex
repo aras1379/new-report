@@ -11,7 +11,8 @@ This is classified as an experimental study, as it involves a controlled setting
 The study evaluates AI-generated emotion labels from speech compared with existing research on vocal markers, text-based emotion recognition and self-reported emotions. The self-reports serve as a reference point and not a ground objective truth, to acknowledge the subjective nature of emotional perception.  
 
 \section{Data Collection}
-The study involves participants for semi-structured interviews where they respond to predefined scenarios to provoke emotions. Ethical considerations, such as informed consent and anonymization, are followed firmly to ensure participant well-being. In the first phase, interviews are collected for analysis. 
+The study involves participants for semi-structured interviews where they respond to predefined scenarios to provoke emotions. 
+Ethical considerations, such as informed consent and anonymization, are followed firmly to ensure participant well-being. In the first phase, interviews are collected for analysis. 
 
 16 Swedish speakers, primarily acquaintances to the researchers, are recruited via invitations. Interviews include 2 scenarios, 
 each scenario includes 5-7 questions designed to elicit either positive or negative emotions, the participants select one of these questions for each semantic area, to maintain freedom in the speech as well as avoiding asking questions the participant are not comfortable to answer. The participants are not pre-informed about the feeling that are aimed to be provoked during the interviews. 
@@ -19,23 +20,9 @@ The scenarios have been pilot-tested for effectiveness.
 The interviews are recorded in a quiet room. Each scenario last between 2 and 4 minutes with breaks between them, the order of the scenarios varies to minimize affecting the results because of the possibility of the order influencing the different emotions. Each recording have been edited to delete our questions and any longer silent pauses. 
 
 Participants are asked open-ended questions designed to bring out previously lived through personal experiences of anger and happiness. The questions about anger are focused on previous experiences of unfair treatment and frustration regarding their everyday lives or society, while the questions related to happiness explore moments of pride and unexpected joy through memories. 
-The semi-structured format allows for follow-up questions based on participant responses, to bring out as much emotion as possible. The follow-up questions include "How did that make you feel?", "Can you evaluate on that specific situation?", and "What feelings did you experience?". 
- 
-Two example questions that can be selected in each scenario are stated below: 
-\textbf{Negative:}
-\begin{itemize}
-    \item Think about a situation when something did not go as planned. What was it? What feelings did you experience? 
-    \item Is it something about society that makes you upset? What? Can you elaborate? 
-\end{itemize}
-\textbf{Positive: }
-\begin{itemize}
-    \item Describe a situation when something unexpected raised immense happiness in you. How did you feel in that moment? 
-    \item Think about a moment when you were very proud of yourself. What did you do and how did you feel?
-\end{itemize}
+The semi-structured format allows for follow-up questions based on participant responses, to bring out as much emotion as possible. The follow-up questions include "How did that make you feel?", "Can you evaluate on that specific situation?", and "What feelings did you experience?". See appendix for the full set of interview questions. 
 
-
-The study adopts a mixed-method interview approach \autocite{Bryman2022}, where the qualitative data from speech is transformed into quantitative AI-generated emotion labels, to enable comparison in a structured way \autocite{Creswell2023}.
-Audio is recorded and pre-processed to reduce background noise. Vocal markers from each recording are extracted using Parselmouth, a Python library for vocal feature extraction, to answer RQ1. The audio is analysed simultaneously using two emotion recognition models: Hume.ai to extract speech-based emotional labels, and NLP Cloud to transcribe the speech and then analyse the textual content in terms of emotion scores. The same dataset is used for all research questions to ensure consistency. 
+Audio is recorded and pre-processed to reduce background noise and normalise volume. Vocal markers from each recording are extracted using Parselmouth, a Python library for vocal feature extraction, to answer RQ1. The audio is analysed simultaneously using two emotion recognition models: Hume.ai to extract speech-based emotional labels, and NLP Cloud to transcribe the speech and then analyse the textual content in terms of emotion scores. The same dataset is used for all research questions to ensure consistency. 
 
 The diagram in Figure~\ref{fig:pipeline} visualizes the multi-modal pipeline used in this study.  
 The interview audio files are processed through three primary channels: speech-to-text transcription via NLP Cloud,  
@@ -80,30 +67,19 @@ For the third question, participants complete a self-assessment survey after eac
 To systematically evaluate the agreement between different emotion detection methods, a combination of statistical analyses and visualizations was applied for speech-based AI, text-based AI, vocal markers, and self-reported emotions. 
 The analysis aimed to assess the alignment with established vocal marker research and subjective human perception, where identification and categorization of differences where analyzed. 
 
-\subsection{Statistical Analysis Approach}
-\subsubsection{RQ1: Vocal Markers vs. Speech-Based Emotion Recognition}
-The first step involved applying a custom emotion categorization function based on standardized distances from the Swedish research on vocal markers \autocite{Ekberg2023}, to cluster vocal features into emotional categories. This approach adapted 
-absolute standardized deviations across key acoustic features, as detailed in section \ref{sec:vocal-markers} and \ref{sec:theo-stat-analyse}. 
+Visualised analysis is included as a complement to tables with data, for easy interpertation of how the different methods correlate and observe behavioral differences, or where the models agree. 
+This includes correlation heatmaps, confusion matrices of top emotion labels, scatter plots illustrating two methods mean emotion probability, and bar charts. 
+Individual clips are presented with bar charts and diagrams representing changes over time segments. 
 
-Following the initial clustering, correlations were calculated between: 
-\begin{itemize}
-    \item Individual vocal features and Hume AI emotion scores. 
-    \item The categorized vocal emotion scores and corresponding vocal features. 
-    \item The categorized vocal emotion scores and Hume AI emotion scores.
-\end{itemize}
-Limiations of the customized categorization method were identified during this phase and are discussed in the results. 
 
-For further exploration of how vocal features varied across AI-detected emotions, one-way ANOVA tests were conducted, follwed by Tukey's HSD analysis to evaluate specifc feature differences, see \ref{sec:theo-stat-analyse} Statistic Analysis for details.  
 
-To track changes over time, each audio recording were segmented into timeframes of around 5s including Hume AI emotion scoring and vocal features for that specific segmment. These were analyzed by tracking Z-score variations, see \ref{sec:theo-stat-analyse}, in key vocal features (pitch, intensity, jitter, and shimmer) throughout each recording. 
-This enabled observation of how vocal features shifted within a single clip and to see how these changes matched Hume's emotion predictions. 
+\subsection{Emotion Categorization from Vocal Markers}
+We analysed each of the 30 clips in several stages to answer the first research question. Extracted vocal features included mean pitch (st, Hz), mean intensity(dB), mean hnr (dB), F1, F2, F3 formants (Hz), jitter and shimmer [CITE THEORETICAL FRAMEWORK].
+First, acoustic features were categorized in five emotion groups based on standardized distances based on [T.F Vocal]. Because of the method yielded near uniform emotion scoring (≈0.20), a rule-based function was developed and refined through four variants (V0-V3), 
+where threshold adjustions and anchors was applied to each layer.  
 
-\subsubsection{Custom Emotion Categorization Method}
-To complement the correlation analysis with Hume AI, a custom rule-based categorization method was integrated to group emotion probabilities from extracted vocal features. 
-The approach was based on the Swedish research on vocal markers in emotions \autocite{Ekberg2023}, where statistical patterns were identified in vocal markers across five emotions: 
-anger, joy, sadness, fear, and surprise. The Swedish research did not state their used baseline for neutral speech, therefore the baseline for this study is the average vocal features of all clips. 
-
-The method functions as following: 
+\subsubsection{Standardized distance function}
+\label{sec:method-stand-func}
 \begin{itemize}
     \item 1. Predefined means and standard deviations for each vocal features identified for each emotion were retrieved from the Swedish research \autocite{Ekberg2023}. These features are stored in JSON format. 
     \item 2. For every feature included in a recording, the function calculates the standardized distance between the measured vocal value and the mean for each emotion: 
@@ -118,8 +94,71 @@ The method functions as following:
     \]
     \item 4. The output is a normalized probability value that is distributed across all five emotions. 
 \end{itemize}
-The method allowed to map vocal data to emotion estimates in an interpretable way to enable structured comparison with speech-based emotion labels. 
-However, the performance of this method for our dataset had limitations and gave uniform emotion labels. 
+Baseline for neutral speech was not described in the reffered research, therefore the baseline for this study is the average vocal features of all clips. 
+Analysis of our data yielded every emotion probability around 0.18-0.22 for each clip, appearing creating arbitrary scores. This motivated the rule-based approach. 
+
+\subsubsection{Rule-based method: V0 (Global K)}
+
+To mark outer values, 90\% confidence interval were used to mark the outer population \autocite{Bruce2017} yielding the critical value Z = $\pm$ 1.645 $\sigma$ [CITE NIST HANDBOOK]. 
+Our threshold K\_EXTREME was therefore initialized to 1.6 $\sigma$ for all emotions. For the normal distribution range we used roughly 1.5 standard deviation from mean, as K\_NEAR = 1.25 $\sigma$. 
+Benchmarks from \textcite{Ekberg2023} were applied: 
+\begin{itemize}
+    \item "anger": [("hnr","below"), ("jit","below"), ("loud", "above")]
+    \item "joy": [("pitch","above"), ("hnr","above"), ("loud","above")]
+    \item "sadness": [("pitch","below"), ("hnr","below"), ("loud", "below")]
+    \item "fear": [("hnr","above"), ("jit","below")]
+    \item "surprise": [("jit","above"), ("shim","above")]
+\end{itemize}
+If any emotion goes beyond the extreme threshold, the emotion is scored. 
+
+For all eight features, if the clip value is within the K\_NEAR, 1.25 $\sigma$ of an emotion's mean, one more point is added, to ensure typical matches are added even if no extreme cue is found. 
+
+After the functions loop, each emotion has a score and the highest score is assigned the clip's main emotion label. 
+
+V0 resulted in mainly anger and surprise scores. 
+\subsubsection{Rule-based method: V1 (Per-emotion K)}
+K\_EXTREME values were adjusted for all emotions. See [T.F Voc Mark] for justification. 
+Joy = 0.5 $\sigma$ 
+Anger = 1.6 $\sigma$ 
+Others = 1.0 $\sigma$
+
+\medskip
+V1 showed the same results as V0 with no distinct difference. 
+
+\subsubsection{Rule-based method: V2 (+ Feature Weight)}
+V1 was extended with utilizing the standardised function \ref{sec:method-stand-func} as fallback before returning the loaded dictionary with emotion scores. 
+The returned values from the standardised function was multiplied with 0.25 and added to the rule-based versions result.
+
+Initially, all vocal features were equally weighted as 1.0. For this version, loudness were decreased to 0.5 motivated by prior research showing that loudness is the 
+least discriminative of the vocal features extracted for this study as explained in \ref{sec:vocal-markers}. 
+
+The approach yield more dispered emotion scores but still rated anger as top-label for more than 50\% of the recordings. 
+
+\subsubsection{Rule-based method: V3 (+ Benchmarks)}
+Benchmarks cues for anger, joy, and sadness was implemented to avoid overlabeling. To yield a score, anger are required to have at least two benchmark cues, ensuring at least two of the emotion-specific benchmarks (see V0) is fulfilled.  
+Joy and sadness need one of their individual benchmark. This approach avoids false scoring. 
+
+Other emotions skip this gate and can only get their scores from their seperate benchmarks. Each score is worth 1.0 points. 
+
+This gating is motivated by data from \textcite{Ekberg2023}, see [T.F], showing that pitch and intensity are most distinctive for 
+the two high-arousal emotions, while single universal cues caused false positives in the pilot runs [SEE RESULT]. 
+
+Version 3 is the final method that is used for data analysis in results. 
+
+\subsubsection{Analysis rule-based emotion categorisation and Hume AI}
+Alignment and divergence between the rule-based function and Hume AI emotion probability is analysed with confusion matrices including both sources top-label for each interview. 
+Mean rating score for the full dataset is visualised with scatter plots followed by Pearson's correlation coefficients to assess relationships and corresponding significance. 
+
+\subsubsection{Comparison Hume and Vocal Features}
+To explore the relationship between Hume AI Emotion labels and vocal features, without feature based emotion categorisation, further analysis were conducted to assess correlation between each acoustic marker and Hume predefined emotions, presented as a heatmap.
+Further analyses include one-way ANOVA tests, see \ref{sec:theo-stat-analyse} for clarification. 
+
+To track patterns over time and enable more detailed analysis, each audio recording were segmented into timeframes including Hume AI emotion scoring and vocal features for that specific segmment. These were analyzed by tracking Z-score variations, see \ref{sec:theo-stat-analyse}, in key vocal features (pitch, intensity, jitter, and shimmer) throughout each recording. 
+Beside correlation measurements, top 30\% and bottom 70\% of emotion probability time-segments are compared to test wheather the mean z-scored feature differs between the high vs. low groups. 
+A large t-statistic value indicate a reliable shift in that feature when Hume rates that emotion high.
+
+Output from Hume AI include segmented results with individual time stamps, varying for each clip. Vocal feature extraction is set to a fixed 2.5s window, therefore, the segments are not fully aligned. 
+By this reason, individual recordings from two interviews are included to visualise how pitch and intensity behaves for Hume labelled joy and sadness. 
 
 \subsection{RQ2 and RQ3: Speech-Based AI vs. Text-Based AI, AI-labels vs. Self-Assessed Emotions}
 For both RQ2 and RQ3, statistical analyses were used to evaluate the alignment between AI-generated emotion scores and self-reported emotions. The following methods were applied across both research questions:
@@ -140,15 +179,7 @@ To enable direct comparison across different sources, all emotion scores were no
 \end{itemize}
 Normalization ensured consistent comparability between the sources, for both AI models and self-assessments, regardless of scale differences in raw scores. 
 \subsection{Visual Analysis}
-\subsubsection{RQ1:}
-Visualizations included: 
-\begin{itemize}
-    \item Heatmaps showing correlation matrices.
-    \item Line plot diagrams for the full dataset. 
-    \item Bar chart diagrams for single clips. 
-    \item Composite correlation diagrams. 
-    \item Over-time diagrams comparing vocal features and Hume labels. 
-\end{itemize}
+
 To evaluate the performance of the custom vocal feature-based emotion categorization method, line plots and bar charts were implemented to visualize differences between the generated scores and Hume AI's predictions. 
 The line plot summerizes average emotion scores across the full dataset, while bar charts presented detailed comparisons for individual audio recordings. 
 These diagrams emphasizes deviations and alignments between the categorized vocal marker method and AI-based emotion prediction. 
@@ -156,14 +187,7 @@ These diagrams emphasizes deviations and alignments between the categorized voca
 Composite correlation diagrams were used to explore associations between single vocal features and AI-generated emotion scores. 
 For these diagrams, Pearson correlation coefficients were calculated for each emotion and its relation to pitch and intensity, the results are visualized as grouped bar charts to easily identify positive or negative tendencies. 
 
-\subsubsection{RQ2 and RQ3:}
-Visual methods included: 
-\begin{itemize}
-    \item Difference bar charts to illustrate the average difference in Hume AI and NLP Cloud's emotion scores for each emotion category, to provide a clear view of systematic deviations. 
-    \item Grouped bar charts to present average emotion scores from both AI systems, seperated by interview sentiment (positive vs. negative), to explore variations in emotion detection depending on the interview context. 
-    \item Scatter plots (RQ3) to explore detailed relationships between AI-based emotion scores and self-reported emotions for single emotions and recordings.
-\end{itemize}
-These visualizations were integrated to support the identification of alignment patterns between the AI systems, and contributed with insights into how the modality of the AI influences emotion recognition results. 
+Visualizations were also integrated to support the identification of alignment patterns between the AI systems, and contributed with insights into how the modality of the AI influences emotion recognition results. 
 Python have been utilized to create all visualizations. 
 
 Given the limited dataset size and timeframe, a combination of statistical methods and visual analysis, was utilized to balance quantitative data with qualitative interpretation and support the exploratory nature of this study. 

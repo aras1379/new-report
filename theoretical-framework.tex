@@ -117,21 +117,30 @@ There are limited publicly available APIs for text-based emotion detection. The 
 \section{Vocal Markers}
 \label{sec:vocal-markers}
 
- States of emotions are determined by many different factors, but in speech, different vocal markers such as prosody, pitch and loudness are among the telling features when it comes to emotions \autocite{Ekberg2023}, where frequency is perceived as pitch, while amplitude is heard as loudness \autocite{Frhholz2019}.
+Vocal features have a significant role in distinguishing emotion through speech. It has been demonstrated that a listener accurately can recognize different emotions based on vocal cues, suggesting that emotional vocal expression has different patterns \autocite{Banse1996}. Acoustic variables that are involved in signalling emotions vocally include the fundamental frequency (pitch), vocal energy (intensity, loudness), the location of frequency formants (F1, F2, F3) which is associated with how articulation is perceived, and speech tempo. 
+High arousal states include increased pitch and intensity, are related to positive emotion states as happiness/joy. These features indicate the same in Swedish \autocite{Ekberg2023}, where acoustic markers for five different emotions (anger, happiness, fear, sadness, surprise) were studied on fourteen acted sentences, each sentence articulated expressed with each emotion. Happiness presented highest fundamental frequency, increased loudness (intensity) and second highest harmony-noise-ratio (HNR). These results describe the largest pitch SD (6.25) for happiness, implying acoustic variability. 
+Similar patterns are presented in a review on 108 studies \autocite{Kamilolu2020}, including twenty-six that researched acoustic features on positive emotions. Pitch, loudness, and formant features revealed the strongest indicators of positive emotions when compared with neutral vocalizations. The review suggests candidates as HNR indicating happiness as well but explain that clear conclusions cannot be composed due to limited empirical evidence. 
+Anger shares increased pitch and vocal energy with joy \autocite{Banse1996}. The Swedish study indicates this pattern as well, although anger is not captured by frequency features separately but by amplitude cues as HNR and intensity \autocite{Ekberg2023}. HNR exhibited lower values than for happiness and fear, but higher than sadness and surprise. 
+Sadness is predicted by lower intensity and pitch with slower speech rate, aligning with results on the Swedish language \autocites{Ekberg2023}{Scherer2003}. 
+Vocalised fear is associated with panic in \autocite{Banse1996}, where pitch and frequency formants are heightened with increased rate of articulation. The Swedish report does not describe fear aligned with panic, although the opposite is not mentioned. The results showed second highest pitch, third highest loudness, and top HNR value. Frequency related jitter distinguished fear with the lowest value of the emotions. 
+Jitter alongside amplitude associated shimmer characterised surprise in the Swedish results, with lower loudness and pitch than anger and happiness. Surprise is not included with listed values in the other studies referred to in this subsection. 
 
-In this research vocal markers are crucial to understand the difference in certain emotions in voice.
+The results from the Swedish study \autocite{Ekberg2023} on emotional acoustic features are presented in Figure \ref{fig:compare-acoustic-parameters} with mean and standard deviation values for the five emotions. Other studies mentioned \autocites{Banse1996}{Kamilolu2020}{Scherer2003} and additionally Figure \ref{fig:acoustic-variations} \autocite{Khalil2019} demonstrate similar vocal expression patterns, but are mainly studied on English. 
+Therefore, the results from the research on Swedish speech will serve as our reference when categorising emotions based on vocal markers in this study. 
 
  Figure \ref{fig:compare-acoustic-parameters} \autocite{Ekberg2023} shows a table of comparisons with certain parameters of vocal markers measured for five different emotions in the Swedish language and some explanations for the different parameters. This is used in this thesis as a comparison for the vocal markers collected from the interview data in the conducted experiment, although this thesis does not use all acoustic features to measure emotions.
  
 \clearpage
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=10cm]{png/theoretical/table-acoustic.pdf}
     \caption{\textit{Table comparing acoustic parameters between emotions} \autocite{Ekberg2023}}
     \label{fig:compare-acoustic-parameters}
 \end{figure}
 
- Figure \ref{fig:acoustic-variations} shows a table of variations in different emotions measuring the acoustic parameters pitch, intensity, speaking rate and voice quality which are often used to identify emotions \autocite{Khalil2019}. Although figure 3.4 displays a wider variety of more specific acoustic features, figure 3.5 provides a foundational understanding of different acoustic features connected to the different emotions.
+The mean loudness divergencies between different emotions is shown in table \ref{fig:compare-acoustic-parameters} come with a very small standard deviation (e.g. $\sigma$ = 0.66 for anger mean = 7.16, happiness mean = 6.49). Contrasting, pitch differentiates between 2-6 $\sigma$. 
+This suggests that loudness varies far less reliably than pitch across anger, happiness and fear. 
+Figure \ref{fig:acoustic-variations} shows a table of variations in different emotions measuring the acoustic parameters pitch, intensity, speaking rate and voice quality which are often used to identify emotions \autocite{Khalil2019}. Although figure 3.4 displays a wider variety of more specific acoustic features, figure 3.5 provides a foundational understanding of different acoustic features connected to the different emotions.
 
 \begin{figure}[h]
     \centering
