@@ -32,7 +32,7 @@ Although there is a wide range of SER-algorithms, with some approaches using mor
     \label{fig:stages-SER}
 \end{figure}
  
-While emotions can be recognized via many channels such as speech, facial expressions and text, speech signals are rapid and natural which makes vocal audio fitting for emotion recognition. According to \autocite{LGENSNMEZ2024} there are several key benefits with SER, such as a limited amount of hardware needed for the capturing the vocal data which simplifies the process of the vocal data collection. Another benefit is that vocal data being less demanding in terms of storage, compared to video footage for example, and participants in SER experiments may feel more comfortable with vocal analysis than face analysis in terms of confidentiality, resulting in datasets reflecting real emotions more accurately.
+While emotions can be recognized via many channels such as speech, facial expressions and text, speech signals are rapid and natural which makes vocal audio fitting for emotion recognition. According to \textcite{LGENSNMEZ2024} there are several key benefits with SER, such as a limited amount of hardware needed for the capturing the vocal data which simplifies the process of the vocal data collection. Another benefit is that vocal data being less demanding in terms of storage, compared to video footage for example, and participants in SER experiments may feel more comfortable with vocal analysis than face analysis in terms of confidentiality, resulting in datasets reflecting real emotions more accurately.
 
 \subsection{Hume AI }
 
@@ -81,7 +81,7 @@ Designed to provide efficient access to the core functionalities of Praat in Pyt
 
 Python is widely used for data analysis, but it had been noted that there were challenges with analyzing acoustics in Praat, this due to the functionality often being missing or scattered across multiple incompatible libraries.
 
-Parselmouth streamlines and optimizes workflows in a single programming environment by enabling a deeper integration of the capabilities of Praat in combination with other libraries \autocite{Jadoul2024}. Not designed to replace Praat, but rather a way to enable users to access the functionality of Praat directly in Python, there some main objectives in Parselmouth according to \autocite{Jadoul2018}.
+Parselmouth streamlines and optimizes workflows in a single programming environment by enabling a deeper integration of the capabilities of Praat in combination with other libraries \autocite{Jadoul2024}. Not designed to replace Praat, but rather a way to enable users to access the functionality of Praat directly in Python, there some main objectives in Parselmouth according to \textcite{Jadoul2018}.
 One objective is to enable users already experienced with Praat to effectively incorporate its functionality with Python’s scientific tools, being tools that are not obtainable in Praat.
 Providing Python users with the ability to utilize the functionality of Praat, even if they are not experienced users of it, is also an important aspect, as well as enhancing the optimal aspect of workflow for users preferring to conduct their work within a single programming language.
  
@@ -93,7 +93,7 @@ There are other similar tools that essentially could accomplish the same task, l
 
 \section{Text-Based Emotion Recognition}
 In the field of NLP, the comprehension of the context behind words in text-form has gone from only being able to determine the tone in text to actually identifying the emotions behind them \autocite{Esfahani2024}, recognizing these capabilities has valuable practical applications in enhancing different domains within human-computer interaction \autocite{Shelke2022}. 
-Text-based systems rely strongly on lexical cues, and research shows different types of words carries different levels of intensity (källa****chau 2024****). This highlights both a strength and a limitation of text-based emotion recognition, as emotional sentiment may go undetected unless it is verbalized, since emotions may not necessarily be expressed through text (källa**** Soleymani2017****).
+Text-based systems rely strongly on lexical cues, and research shows different types of words carries different levels of intensity \autocite{Chauhan2024}. This highlights both a strength and a limitation of text-based emotion recognition, as emotional sentiment may go undetected unless it is verbalized, since emotions may not necessarily be expressed through text \autocite{Soleymani2017}.
 
 Text-based emotion detection relies on four main approaches, according to \textcite{Kusal2023}.
 The first approach is keyword-based, which matches words in a text with predefined emotion keywords from resources like WordNet, adjusting for intensity and negation. The second approach is rule-based, and this approach uses linguistic rules and probabilistic affinity to classify emotions after preprocessing. The third is machine learning-based which applies supervised or unsupervised models to classify emotions, extracting key features from preprocessed text. The fourth and last approach is deep learning-based and it utilizes neural networks to learn complex patterns from tokenized and embedded text data for emotion classification.
@@ -139,7 +139,7 @@ Therefore, the results from the research on Swedish speech will serve as our ref
 \end{figure}
 
 The mean loudness divergencies between different emotions is shown in table \ref{fig:compare-acoustic-parameters} come with a very small standard deviation (e.g. $\sigma$ = 0.66 for anger mean = 7.16, happiness mean = 6.49). Contrasting, pitch differentiates between 2-6 $\sigma$. 
-This suggests that loudness varies far less reliably than pitch across anger, happiness and fear. According to \autocite{Banse1996} is the fundamental frequency (pitch) the most studied and perceptually prominent feature. Happiness is one of the emotions that can be identified from pitch, yet both \textcites{Banse1996}{Ekberg2023} shows this positive emotion a wide overall acoustic spread. 
+This suggests that loudness varies far less reliably than pitch across anger, happiness and fear. According to \textcite{Banse1996} is the fundamental frequency (pitch) the most studied and perceptually prominent feature. Happiness is one of the emotions that can be identified from pitch, yet both \textcites{Banse1996}{Ekberg2023} shows this positive emotion a wide overall acoustic spread. 
 Figure \ref{fig:acoustic-variations} shows a table of variations in different emotions measuring the acoustic parameters pitch, intensity, speaking rate and voice quality which are often used to identify emotions \autocite{Khalil2019}. Although figure 3.4 displays a wider variety of more specific acoustic features, figure 3.5 provides a foundational understanding of different acoustic features connected to the different emotions.
 
 \begin{figure}[h]
@@ -175,7 +175,7 @@ The steps for the process consist of:
 \label{sec:theo-interviews}
 
 The semi-structured interviews involve voluntary participants engaging in short audio-recorded interviews, designed to draw out natural emotional responses. The participants will be asked questions to prompt them to recall and reflect on past experiences which encourages them to revisit emotions they felt at that time. 
-As the format of the interviews are semi-structured and involve spontaneous speech unlike acted datasets, a well-known challenge emerges. Spontaneous vocal data tends to involve more neutral expressions, and research have shown some emotional classifiers to have a lower accuracy in detecting neutral statements (källa****cao 2015****). This is also supported by other research, stating that acted speech shows higher levels of intensity (källa****Chakr 2016****). While spontaneous speech presents some documented challenges, it also reflects real word conditions.
+As the format of the interviews are semi-structured and involve spontaneous speech unlike acted datasets, a well-known challenge emerges. Spontaneous vocal data tends to involve more neutral expressions, and research have shown some emotional classifiers to have a lower accuracy in detecting neutral statements \autocite{Cao2015}. This is also supported by other research, stating that acted speech shows higher levels of intensity \autocite{Chakraborty2016}. While spontaneous speech presents some documented challenges, it also reflects real word conditions.
 
 For ethical purposes the participants will be given a selection of topics to choose from, minimizing the risk of discomfort or distress. The audio recordings will be anonymous and recorded in a controlled acoustic environment to ensure minimal noise interference.
 
