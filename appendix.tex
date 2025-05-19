@@ -2,7 +2,53 @@
 %%% ABSTRACT
 \chapter*{Appendix}
 
-
+\begin{table}[ht]
+    \centering
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{Summary statistics for female speakers}
+      \label{tab:summary_female}
+      \begin{tabular}{l r r}
+        \toprule
+        Feature               & Mean     & Std      \\
+        \midrule
+        mean\_pitch\_hz       & 215.168  & 12.744   \\
+        mean\_pitch\_st       &   6.218  &  1.012   \\
+        mean\_intensity\_db   &  62.419  &  3.022   \\
+        mean\_hnr\_db         &  12.068  &  1.642   \\
+        jitter\_local         &   0.022  &  0.003   \\
+        shimmer\_local        &   0.110  &  0.022   \\
+        formant\_F1\_hz       & 694.094  & 353.464  \\
+        formant\_F2\_hz       & 1810.434 & 647.845  \\
+        formant\_F3\_hz       & 3045.689 & 464.207  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}%
+    \hfill
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{Summary statistics for male speakers}
+      \label{tab:summary_male}
+      \begin{tabular}{l r r}
+        \toprule
+        Feature               & Mean     & Std      \\
+        \midrule
+        mean\_pitch\_hz       & 112.665  & 13.657   \\
+        mean\_pitch\_st       &  –5.072  &  2.067   \\
+        mean\_intensity\_db   &  63.816  &  2.550   \\
+        mean\_hnr\_db         &   1.033  &  1.262   \\
+        jitter\_local         &   0.027  &  0.003   \\
+        shimmer\_local        &   0.138  &  0.017   \\
+        formant\_F1\_hz       & 688.201  & 311.007  \\
+        formant\_F2\_hz       & 1916.512 & 457.306  \\
+        formant\_F3\_hz       & 2990.914 & 375.011  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \caption{Vocal feature means and standard deviations by gender}
+    \label{tab:summary_gender}
+  \end{table}
+  
 \begin{table}[H]
     \caption{Interview prompts for positive and negative scenarios}
     \label{list:prompts}
