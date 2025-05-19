@@ -16,3 +16,146 @@
     \item Can you remember a time when you felt completely carefree and happy? What did you do and who were you with?
     \item Think of a moment when you got a compliment or acknowledgement that made you feel really good about yourself. How did it affect your mood?
 \end{itemize}
+
+
+\begin{table}[H]
+    \centering 
+    \begin{subtable}[b]{0.48\textwidth}
+        \centering
+        \caption*{\textbf{Positive recordings}}
+        \begin{tabular}{lrr}
+        \toprule
+        \multicolumn{1}{c}{\textbf{Feature}} & \textbf{ANOVA P-value} & \textbf{Sign.} \\
+        \midrule
+        Pitch      & 0.7595    & No          \\
+        Intensity  & 0.8627    & No          \\
+        HNR        & 0.6149    & No          \\
+        Jitter     & 0.9564    & No          \\
+        Shimmer    & 0.7828    & No          \\
+        \bottomrule
+        \end{tabular}
+        \caption{ANOVA: Positive recordings.}
+        \label{tab:rq1_anova_pos}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[b]{0.48\textwidth}
+        \centering
+        \caption*{\textbf{Negative recordings}}
+        \begin{tabular}{lrr}
+        \toprule
+        \multicolumn{1}{c}{\textbf{Feature}} & \textbf{ANOVA P-value} & \textbf{Sign.} \\
+        \midrule
+        Pitch      & 0.5393    & No          \\
+        Intensity  & 0.1307    & No          \\
+        HNR        & 0.5142    & No          \\
+        Jitter     & 0.9066    & No          \\
+        Shimmer    & 0.6863    & No          \\
+        \bottomrule
+        \end{tabular}
+        \caption{ANOVA: Negative recordings.}
+        \label{tab:rq1_anova_neg}
+    \end{subtable}
+    \caption{ANOVA for vocal features across emotions.}
+    \label{tab:rq1_anova_all}
+\end{table}  
+
+
+
+\begin{table}[ht]
+    \centering
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{Pearson Correlation (Clip id\_006\_pos)}
+      \label{tab:clip006_pos_pearson}
+      \begin{tabular}{llrrl}
+        \toprule
+        Feature            & Emotion &  $r$ & $p$ & Sign \\
+        \midrule
+        pitch\     & joy     &  0.188        & 0.1965    & No  \\
+        intensity & joy     &  0.351        & 0.0134    & Yes \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{t-test (Clip id\_006\_pos)}
+      \label{tab:clip006_pos_ttest}
+      \begin{tabular}{llrrl}
+        \toprule
+        Feature            & Emotion & t & $p$ & Sign \\
+        \midrule
+        pitch     & joy     &  0.331       & 0.7419    & No  \\
+        intensity & joy     &  2.718       & 0.0092    & Yes \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \caption{Statistical results for clip id\_006\_pos}
+    \label{tab:clip006_pos_stats}
+  \end{table}
+  
+  \begin{table}[ht]
+    \centering
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{Clip id\_012\_neg – Pearson Correlation}
+      \label{tab:clip012_pearson}
+      \begin{tabular}{lllrrl}
+        \toprule
+        Feature               & Emotion & $r$ & $p$ & Sign \\
+        \midrule
+        hnr          & anger   & -0.114 & 0.4846 & No \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{Clip id\_012\_neg – t-test}
+      \label{tab:clip012_ttest}
+      \begin{tabular}{lllrrl}
+        \toprule
+        Feature               & Emotion & t & $p$& Sign \\
+        \midrule
+        pitch        & anger   & -0.353 & 0.7259 & No \\
+        hnr          & anger   &  0.880 & 0.3844 & No \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \caption{Statistical results for clip id\_012\_neg}
+    \label{tab:clip012_stats}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{Clip id\_006\_neg – Pearson Correlation}
+      \label{tab:clip006_neg_pearson}
+      \begin{tabular}{lllrrl}
+        \toprule
+        Feature               & Emotion & $r$ & $p$ & Sign \\
+        \midrule
+        pitch       & sadness    &  -0.333 & 0.0722 & No  \\
+        hnr    & sadness    & -0.265 & 0.1567 & No  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[t]{0.48\textwidth}
+      \centering
+      \caption{Clip id\_006\_neg – t-test}
+      \label{tab:clip006_neg_ttest}
+      \begin{tabular}{lllrrl}
+        \toprule
+        Feature               & Emotion & t & $p$& Sign \\
+        \midrule
+
+        pitch       & sadness    &  -2.203 & 0.036 & Yes  \\
+        hnr    & sadness    & -1.289 & 0.2079 & No  \\
+        \bottomrule
+      \end{tabular}
+    \end{subtable}
+    \caption{Statistical results for clip id\_006\_neg}
+    \label{tab:clip006_neg_stats}
+  \end{table}

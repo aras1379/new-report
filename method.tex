@@ -64,6 +64,7 @@ For the third question, participants complete a self-assessment survey after eac
 
 
 \section{Data Analysis}
+\label{sec:method-data-analysis}
 To systematically evaluate the agreement between different emotion detection methods, a combination of statistical analyses and visualizations was applied for speech-based AI, text-based AI, vocal markers, and self-reported emotions. 
 The analysis aimed to assess the alignment with established vocal marker research and subjective human perception, where identification and categorization of differences where analyzed. 
 
@@ -74,8 +75,9 @@ Individual clips are presented with bar charts and diagrams representing changes
 
 
 \subsection{Emotion Categorization from Vocal Markers}
-We analysed each of the 30 clips in several stages to answer the first research question. Extracted vocal features included mean pitch (st, Hz), mean intensity(dB), mean hnr (dB), F1, F2, F3 formants (Hz), jitter and shimmer [CITE THEORETICAL FRAMEWORK].
-First, acoustic features were categorized in five emotion groups based on standardized distances based on [T.F Vocal]. Because of the method yielded near uniform emotion scoring (≈0.20), a rule-based function was developed and refined through four variants (V0-V3), 
+\label{sec:method-data-an-voc}
+We analysed each of the 30 clips in several stages to answer the first research question. Extracted vocal features included mean pitch (st, Hz), mean intensity(dB), mean hnr (dB), F1, F2, F3 formants (Hz), jitter and shimmer see Theoretical Framework~\ref{sec:vocal-markers}.
+First, acoustic features were categorized in five emotion groups based on standardized distances based on Table~\ref{fig:compare-acoustic-parameters}. Because of the method yielded near uniform emotion scoring (≈0.20), a rule-based function was developed and refined through four variants (V0-V3), 
 where threshold adjustions and anchors was applied to each layer.  
 
 \subsubsection{Standardized distance function}
@@ -99,7 +101,7 @@ Analysis of our data yielded every emotion probability around 0.18-0.22 for each
 
 \subsubsection{Rule-based method: V0 (Global K)}
 
-To mark outer values, 90\% confidence interval were used to mark the outer population \autocite{Bruce2017} yielding the critical value Z = $\pm$ 1.645 $\sigma$ [CITE NIST HANDBOOK]. 
+To mark outer values, 90\% confidence interval were used to mark the outer population \autocite{Bruce2017} yielding the critical value Z = $\pm$ 1.645 $\sigma$. 
 Our threshold K\_EXTREME was therefore initialized to 1.6 $\sigma$ for all emotions. For the normal distribution range we used roughly 1.5 standard deviation from mean, as K\_NEAR = 1.25 $\sigma$. 
 Benchmarks from \textcite{Ekberg2023} were applied: 
 \begin{itemize}
@@ -117,7 +119,8 @@ After the functions loop, each emotion has a score and the highest score is assi
 
 V0 resulted in mainly anger and surprise scores. 
 \subsubsection{Rule-based method: V1 (Per-emotion K)}
-K\_EXTREME values were adjusted for all emotions. See [T.F Voc Mark] for justification. 
+K\_EXTREME values were adjusted for all emotions. Justifications is described in Theoretical Framework~\ref{sec:vocal-markers} explaning wide spread acoustic pattern for happiness and similar vocal palette as anger. 
+Therefore, joy was set to a smaller extreme value while heightened for anger. 
 Joy = 0.5 $\sigma$ 
 Anger = 1.6 $\sigma$ 
 Others = 1.0 $\sigma$
@@ -140,9 +143,10 @@ Joy and sadness need one of their individual benchmark. This approach avoids fal
 
 Other emotions skip this gate and can only get their scores from their seperate benchmarks. Each score is worth 1.0 points. 
 
-This gating is motivated by data from \textcite{Ekberg2023}, see [T.F], showing that pitch and intensity are most distinctive for 
-the two high-arousal emotions, while single universal cues caused false positives in the pilot runs [SEE RESULT]. 
+This gating is motivated by data from \textcite{Ekberg2023}, see Theoretical Framework~\ref{sec:vocal-markers}, showing that pitch and intensity are most distinctive for 
+the two high-arousal emotions, while single universal cues caused possibly misjudged positives in the pilot runs Results~\ref{rq1_pilot_tests}. The affected clips were analysed seperately and compared to Table~\ref{fig:compare-acoustic-parameters} for this conclusion. 
 
+In this version, the individual extreme values, k, was tested and changed to 1.0 for all except joy, changed to 0.7. This did not affect the results. 
 Version 3 is the final method that is used for data analysis in results. 
 
 \subsubsection{Analysis rule-based emotion categorisation and Hume AI}
@@ -150,10 +154,11 @@ Alignment and divergence between the rule-based function and Hume AI emotion pro
 Mean rating score for the full dataset is visualised with scatter plots followed by Pearson's correlation coefficients to assess relationships and corresponding significance. 
 
 \subsubsection{Comparison Hume and Vocal Features}
-To explore the relationship between Hume AI Emotion labels and vocal features, without feature based emotion categorisation, further analysis were conducted to assess correlation between each acoustic marker and Hume predefined emotions, presented as a heatmap.
+Analysis that are not including the emotion categorisation function includes the following vocal features: Pitch, Loudness/Intensity, HNR, Shimmer, and Jitter. To explore the relationship between Hume AI Emotion labels and vocal features, without feature based emotion categorisation, further analysis were conducted to assess correlation between each acoustic marker and Hume predefined emotions, presented as a heatmap.
 Further analyses include one-way ANOVA tests, see \ref{sec:theo-stat-analyse} for clarification. 
 
-To track patterns over time and enable more detailed analysis, each audio recording were segmented into timeframes including Hume AI emotion scoring and vocal features for that specific segmment. These were analyzed by tracking Z-score variations, see \ref{sec:theo-stat-analyse}, in key vocal features (pitch, intensity, jitter, and shimmer) throughout each recording. 
+To track patterns over time and enable more detailed analysis, each audio recording were segmented into timeframes including Hume AI emotion scoring and vocal features for that specific segmment. These were analyzed by tracking Z-score variations, see \ref{sec:theo-stat-analyse}, in key vocal features (pitch, intensity, jitter, and shimmer) throughout each recording.
+The general time-segment is set to 2.5 seconds. For case examples \ref{sec:res_rq1_case}, different time-segments were tested to observe correlation differences depending on segment length for executed vocal analysis. 
 Beside correlation measurements, top 30\% and bottom 70\% of emotion probability time-segments are compared to test wheather the mean z-scored feature differs between the high vs. low groups. 
 A large t-statistic value indicate a reliable shift in that feature when Hume rates that emotion high.
 

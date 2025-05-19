@@ -130,7 +130,6 @@ Therefore, the results from the research on Swedish speech will serve as our ref
 
  Figure \ref{fig:compare-acoustic-parameters} \autocite{Ekberg2023} shows a table of comparisons with certain parameters of vocal markers measured for five different emotions in the Swedish language and some explanations for the different parameters. This is used in this thesis as a comparison for the vocal markers collected from the interview data in the conducted experiment, although this thesis does not use all acoustic features to measure emotions.
  
-\clearpage
 \begin{figure}[H]
     \centering
     \includegraphics[width=10cm]{png/theoretical/table-acoustic.pdf}
@@ -140,9 +139,9 @@ Therefore, the results from the research on Swedish speech will serve as our ref
 
 The mean loudness divergencies between different emotions is shown in table \ref{fig:compare-acoustic-parameters} come with a very small standard deviation (e.g. $\sigma$ = 0.66 for anger mean = 7.16, happiness mean = 6.49). Contrasting, pitch differentiates between 2-6 $\sigma$. 
 This suggests that loudness varies far less reliably than pitch across anger, happiness and fear. According to \textcite{Banse1996} is the fundamental frequency (pitch) the most studied and perceptually prominent feature. Happiness is one of the emotions that can be identified from pitch, yet both \textcites{Banse1996}{Ekberg2023} shows this positive emotion a wide overall acoustic spread. 
-Figure \ref{fig:acoustic-variations} shows a table of variations in different emotions measuring the acoustic parameters pitch, intensity, speaking rate and voice quality which are often used to identify emotions \autocite{Khalil2019}. Although figure 3.4 displays a wider variety of more specific acoustic features, figure 3.5 provides a foundational understanding of different acoustic features connected to the different emotions.
+Figure \ref{fig:acoustic-variations} shows a table of variations in different emotions measuring the acoustic parameters pitch, intensity, speaking rate and voice quality which are often used to identify emotions \autocite{Khalil2019}. Additionally, Figure~\ref{fig:acoustic-variations} displays a wider variety of more specific acoustic features, figure 3.5 provides a foundational understanding of different acoustic features connected to the different emotions.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{png/Figure8-AcousticVariations.png}
     \caption{\textit{Acoustic variations in different emotions} \autocite{Khalil2019}.}
@@ -152,10 +151,9 @@ Figure \ref{fig:acoustic-variations} shows a table of variations in different em
 \section{The Experiment}
 
 An experiment will be conducted and will consist of short interviews with voluntary people. These interviews will be recorded for data collection and will be used to extract emotions with a Python application. 
-
 \subsection{Python Application}
 
-The Python application serves as the central system for processing and analyzing emotions in speech and will integrate several tools and frameworks to extract emotions.
+The Python application serves as the central system for processing and analyzing emotions in speech and will integrate several tools and frameworks to extract emotions. The overall structure is illustrated in Figure~\ref{fig:tf-python-app}.
 
 The steps for the process consist of:
 
@@ -170,6 +168,13 @@ The steps for the process consist of:
     \item Convert speech to text and analyze emotions in text with NLP Cloud.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{png/results/rq1_nr3/python-app.pdf}
+    \caption{Overview of the Python application structure.}
+    \label{fig:tf-python-app}
+\end{figure}
+    
 
 \subsection{Interviews and Surveys}
 \label{sec:theo-interviews}
