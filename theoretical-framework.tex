@@ -9,13 +9,12 @@ This chapter will explain how vocal features and speech prosody can help to iden
  Affective computing was introduced by Professor Rosalind Picard in the mid-1990s to early 2000s \autocite{Tian2022}. By exploring the ways in which human emotions are recognized, understood and expressed through different forms of behaviors and communication, the domain of affective computing is a field that merges the principles of artificial intelligence with insights from social and behavioral science \autocite{Tian2022}.
 
 \section{Natural Language Processing and Emotion Recognition}
-
-The first English language lexical database was created in 1998 for Natural Language Processing (NLP) tasks, the term sentiment and emotional analysis came to practice in 2001 to predict the stock market \autocite{Kusal2023}. In 2005, the first article was written on emotion and opinion detection from text. Concept-level sentiment analysis resources were publicly available in 2009. Word embedding is the term to represent words for NLP text analysis and was developed in 2013, the same year as neural network first was adopted in NLP tasks. The field had a massive upwelling when the transformers concept was published in 2017, followed by the evolution of BERT, a pretrained model that automated text analysis and classification in 2018 \autocite{Kusal2023}. 
+The first English language lexical database was created in 1998 for Natural Language Processing (NLP) tasks, the term sentiment and emotional analysis came to practice in 2001 to predict the stock market, and in 2005 the first article was written on emotion and opinion detection from text \autocite{Kusal2023}. Concept-level sentiment analysis resources were publicly available in 2009. Word embedding is the term to represent words for NLP text analysis and was developed in 2013, the same year as neural network first was adopted in NLP tasks. The field had a massive upwelling when the transformers concept was published in 2017, followed by the evolution of BERT, a pretrained model that automated text analysis and classification in 2018 \autocite{Kusal2023}. 
 
 Traditional approaches for sentiment analysis classification have been used since the past few decades, which rely on rule-based methods such as “bag of words” method to process text  \autocite{Kansara2020}. The method represents text based on word frequency without consideration of word order. It can identify sentence structure, negation, emphasis, subjectivity and irony. Recent models leverage deep learning algorithms that process raw text by first cleaning and pre-processing it, including punctation, stop words and markups, as well as applying stemming (the process of reducing words to their root form by removing prefixes or suffixes to simplify text analysis in NLP). 
 
 Deep learning applicate artificial neural networks (ANN) to learn tasks using multiple layers of network. In traditional models only one or two layers could be used, but in deep learning much more learning power of artificial neural networks is exploited \autocite{Zhang2018}. Studies have shown consistently higher accuracy for sentiment analysis using deep learning algorithms compared to traditional machine learning algorithms \autocite{Kansara2020}.
- 
+
 
 \section{Speech-Based Emotion Recognition}
 
@@ -149,7 +148,8 @@ Figure \ref{fig:acoustic-variations} shows a table of variations in different em
 
 \section{The Experiment}
 
-An experiment will be conducted and will consist of short interviews with voluntary people. These interviews will be recorded for data collection and will be used to extract emotions with a Python application. 
+An experiment was be conducted and will consist of short voluntary interviews. These interviews were recorded for data collection and used to extract emotions with a Python application and analysed with a speech-based and text-based AI model.
+
 \subsection{Python Application}
 
 The Python application serves as the central system for processing and analyzing emotions in speech and will integrate several tools and frameworks to extract emotions. The overall structure is illustrated in Figure~\ref{fig:tf-python-app}.
@@ -183,11 +183,11 @@ As the format of the interviews are semi-structured and involve spontaneous spee
 
 For ethical purposes the participants will be given a selection of topics to choose from, minimizing the risk of discomfort or distress. The audio recordings will be anonymous and recorded in a controlled acoustic environment to ensure minimal noise interference.
 
-Questions asked during the interview follow one of many emotion induction techniques, “autobiographical recall”. This is a method used to facilitate the re-experiencing of emotions felt in a previous moment \autocite{Siedlecka2019}, which is what is intended for the interviews to be able to collect emotional data from vocal recordings. By letting the participant think and speak about a memory from the past, emotions felt in that moment reflect in their voice.
+Questions asked during the interview follow one of many emotion induction techniques, known as “autobiographical recall”. This is a method used to facilitate the re-experiencing of emotions felt in a previous moment \autocite{Siedlecka2019}, which is what is intended for the interviews to be able to collect emotional data from vocal recordings. By letting the participant think and speak about a memory from the past, emotions felt in that moment reflect in their voice.
 
 After the interview is done, the participants will answer a survey doing a self-assessment of their emotions felt during the interview. This will enable a comparison between emotion detection and the participants reported emotional experiences.
 
-There are many different methods for self-assessment, and emotional self-assessment is linked to many different theories. Many are connected to emotional intelligence (EI), trait emotional intelligence (trait EI) and Core Self Evaluation (CSE) \autocite{Montasem2013}, but rather than conducting a comprehensive exploration of different psychological theories in self-assessment, this research will use simplified surveys at a basic level for the purpose of fulfilling the technical objectives of the work. 
+There are many different methods for self-assessment, and emotional self-assessment is linked to many different theories. Many are connected to emotional intelligence (EI), trait emotional intelligence (trait EI) and Core Self Evaluation (CSE) \autocite{Montasem2013}, but rather than conducting a comprehensive exploration of different psychological theories in self-assessment, this research will use simplified surveys at a basic level for the purpose of fulfilling the technical objectives of the work and align with the technical focus of the thesis.
 
 The theories behind the interviews are stated in the possibility of detecting emotions in voices. While there are a lot of recognized emotions that can be detected in different AI models and software tools, the interview will focus on bringing out two different basic emotions to maintain a manageable scope, while ensuring ethical feasibility.
 
