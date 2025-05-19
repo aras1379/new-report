@@ -1,57 +1,29 @@
 \section{Result Discussion RQ1}
 
-\textbf{ADD:}
-
-- About categorisation function 
-
-- hur joy + sadness "fick ta plats " 
-
-- Hur och varför och när hume och denna korrelerar 
-
-- gör överlag mer kompakt och kortare 
-
-VIKTIGT: 
-- VILKA VOC FEAT SOM KORRELERAR BÄST - SADNESS - Inkludera varför, nog pga intervju och samtalens natur, låg pitch edtc 
-
-\medskip
-
 For the first research question, this thesis investigated how an AI model for speech recognition
 compare to existing research on vocal markers. More specifically, the goal is to assess whether
-the AI models align with the findings of the Swedish research on vocal markers done by Ekberg
-[EKBERG]. 
+the AI models align with the findings of the Swedish research on vocal markers done by \textcite{Ekberg2023}. 
 
-Comparison between Hume-labelled emotions and single vocal markers of average clip values showed generally weak correlations while some relationships are moderately correlated. 
-Negative recordings show stronger correlations for three out of five emotions, anger is predicted when intensity is increased and sadness ratings are aligned with decreased pitch, intensity, and HNR. 
-Intensity is the singular strong correlation, appearing for joy in positive interviews. These results are aligned with previous research on vocal markers in 
-Swedish speech (EKBERG). This study resulted in anger being related with the second highest pitch of five emotions and uppermost intensity rate, 
-our results align with increased intensity for Hume-labelled anger, while no correlation for pitch occurred. As discussed in THEO FRAMEWORK VOCAL MARKERS, HNR for anger was equivalent with sadness $–$ both lower than joy and fear while higher than surprise. 
-This is one of the patterns that diverges from our findings, where HNR had similar correlation with predicted anger and surprise, representing the strongest relationships for the feature in negative circumstances. Instead of being equally rated with sadness, 
-the direction of these correlations diverges significantly where lower HNR is notable prevalent with sadness. Overall, sadness is the singular Hume-rated emotion considerably aligned with previous research and presents a consistent pattern across sentiments: 
-pitch, intensity, and HNR, is lower than all other emotions. However, jitter and shimmer break this pattern. These correlations are analysed on average vocal values for full recordings and corresponding segmented Hume predicted emotions which have been summarised to mean values for each emotion. 
-Using average values of a full interview is most likely contributing to inconsistent and low correlations in the overall result, by even out segments of higher and lower intervals to a value closer to the baseline.   
+The attempts to categorise emotions based the results on this Swedish study cannot be directly evaluated in terms of how accurate the function yielded emotion labels. Even if the standardised function had better recall against Hume, the divergences between the scores were minimal. 
+The rule-based version got higher recall in addition of feature-based adjusting compared to Hume, which is not a ground truth, still beneficial for relative comparison. 
+The improvement is aligned to prior research \autocites{Banse1996}{Ekberg2023}, minimising the extreme values for joy according to the wide acoustic markers while increasing the weight of pitch, which is stated to be the most prominent feature perceptually. 
+Restricting anger to be required two of its studied characterises lead to slightly fewer recordings being top labelled as anger, which was added by the reason to separate anger from happiness. The final version presented some alignment between the top emotions, negative recordings yielded higher correlation where both models rated anger highest for six clips and sadness for two clips. More confusion occurred for the positive recordings. 
+Fear and surprise were rarely labelled by both methods, Hume distribution is presented in more detail for RQ2. 
+However, even if the results yielded higher recall against Hume, it cannot be benchmarked that these alternations resulted in exactly the emotions that were expressed – a complex question to answer no matter what it is compared to, due to the nature of abstract perception of expressed emotional state, both internally and externally. When formulating the rule-based categorisation function, subjective opinions have an impact about fear and surprise rarely being expressed in the interviews overall, 
+by the reason that the interviews were not designed to evoke these emotions which is complicated to recall in interview circumstances, especially for surprise. 
+The subjective possible impact is a clear limitation as well as utilizing the Swedish research as a foundation for this categorisation since it is based on a small, acted dataset whereas this study analyses semi-structured interviews with spontaneous speech in conversational interview format. 
 
-\medskip
-The categorisation methods implemented to enable direct comparison between Hume and previous research on emotions based on certain acoustic features presented uncertainties, particularly for the approach utilizing standardised distances from the baseline extracted from our dataset. 
-Several factors may have induced the minimal disperse for different emotion scores, including the baseline constructed by the average markers from our full dataset. The average distances were low or similar leading to no notable divergencies between emotions. 
-Utilizing the Swedish research as a foundation for this categorisation is presumably a limitation as it is based on a small, acted dataset whereas this study analyses semi-structured interviews with spontaneous speech in conversational interview format. 
-Not only is the speech spontaneous, but it is also recorded in a setting that may conceal emotion expressions due to questions, designed to provoke emotions through memory recall, yet retrospective narrations of these memories do not always reflect those emotions vocally. 
+Comparison of vocal features against Hume’s emotions probability and our categorisation labelling demonstrates that the methods label emotions based on different data. Only sadness shows a similar vocal pattern between the sources, both negatively correlated with pitch and HNR, for other features, not as strong correlation similarities occur. 
+No other emotion shows similarities, presumably by the reason that Hume has a much more advanced approach to recognising emotions than only using a few vocal features as indicators, as explained in Theoretical Framework~\ref{sec:vocal-markers}.  The fact that average values for a whole recording was used for these analyses, are most likely impacting the results due to low-expressed vs high-expressed segments even out.  
 
-The insights from the standardised categorisation method yielded the use of a rule-based function which resulted in greater variations in emotion ratings and was used for the result analysis presented in this report. Correlations of these emotion labels and vocal features showed stronger relationships than with Hume, 
-yet mainly unaligned with previous research. For example, anger was predicted simultaneously with lower pitch and HNR for both sentiment contexts, opposing theoretical expectations that pitch is increased for this emotion. However, pitch showed strongest correlation with joy and secondly with fear for both sentiments, 
-following the framework of theories. As for Hume, sadness was correlated with lower pitch and again supporting previous findings. 
-Surprise had close negligible relations with all features but intensity in negative settings, contradicting expectations. It is important to acknowledge the interviews were not oriented toward provoke surprise, in addition complexity of inducing surprise in an interview setting. 
-However, surprise was still frequently rated by both Hume and the rule-based approach, Hume with lowest average in both sentiments, yet the rule-based had higher mean for surprise than fear on the full dataset. 
-Despite limitations of the rule-based emotion categorisation, some top-labelled emotions agreed with Hume. Discrepancies was more prevalent in positive recordings where anger-joy confusion occurred while 5 of 15 clips had aligned top rated joy. The negative subset showed eight corresponding top-labels, 
-six of them being anger. However, no significant correlations between complied emotion scoring were revealed. Reasons for the disagreements have several potential factors, the limitations mentioned related to the Swedish study as a hard-labelled reference are relevant in addition to Hume AI analysing both 
-speech prosody and vocal bursts with algorithms based on several studies compared to our rule-based function utilizing eight vocal features categorized by one small, acted, study. 
 
-\medskip 
-Conducting time segmented analyses generated additional insights that reduced the limitation with using mean values from the recordings, revealed by observing feature shifts. Despite that less than half of the feature-emotion group was significant, with most correlations being weak, certain patterns aligned with theoretical expectations was disclosed. 
-Sadness, is as prior correlation results, remained obtaining most prevalent results where pitch, intensity and HNR had consistent lower values. Time segmented results for fear in combination with pitch, intensity, and HNR also supports previous research, despite that intensity shifted more negatively towards fear than surprise. 
-Semantic contents are shown to have an impact, as expected: negatively oriented emotions showing significant correlations in negative interviews where none is found in positives. However, sadness shows significance throughout the interview context, again supporting this emotion being most prominent in vocal shifts and relevant to expectations. 
-However, the interview setting may impact the expression of participants emotions, the reflective nature of answering questions could be expressed as lower pitch, intensity, and HNR. 
+To answer the research question, Time-to-Time analysis reveal what occurred for sadness in the comparison between vocal features and both emotion categorisation methods. Highest correlation values together with shifts for high-emotion occurrence with certain features resulted in sadness being most prominent predicted when pitch and HNR was lower, but also when intensity decreased. 
+All three relationships are aligned to the Swedish research, where these acoustic markers have lower mean than other emotions. 
+Fear was the second emotion with higher correlations, for example being predicted when pitch and HNR was raised, also according to the utilized research results. Joy had the highest intensity shift, that is stated in the research. However, anger had lower results for intensity which contrasts with expectations. 
+When interpreting these results, it is important to acknowledge that the Swedish research do not specify how strongly the emotions are expressed, it is hard to define if anger is perceived as screaming or as a negative tone. 
+Again, the nature of emotions is complex, and it is not possible to compose if the results are good or bad, which was not the purpose of this study. Conducting time segmented analyses generated additional insights that reduced the limitation with using mean values from the recordings, revealed by observing feature shifts. 
 
-While correlations between AI-labelling and vocal markers are generally weak to moderate, it is important to acknowledge that Hume emotion scores are not perfect estimates of true emotional states themselves and should not be considered as ground truth in this study. Although Hume showed varied and generally sentiment-context appropriate emotion outputs, it is important to note that the Hume AI emotion outputs are based on soft scoring. 
-This often produces mixed emotions rather than single emotional states, making comparisons more diﬀicult. A similar approach is conducted in the rule-based function but admitting to the potential impact limitations presumably have. Utilization of a study on acted and structured recordings as main reference may have prominent impacts, since the analyses for this study are based on a collection of semi-structured interviews. 
-These recordings consist of spontaneous and conversational speech which likely do not involve as strong emotional expressions as acted datasets, with tendency of more subtle and reduced level of vocal features. The simplicity regarding the number of applied vocal markers in contrast to the emotion-trained AI model reaching beyond the use of single acoustic features is a certain reason that this study should be interpreted as explanatory and not to benchmark the general efficiency of emotion recognition in Swedish speech.    
- 
+
+Despite that less than half of the feature-emotion group was significant, with most correlations being weak, certain patterns aligned with theoretical expectations was disclosed. The case examples provide a visualisation on both how certain vocal features align with Hume-predicted emotions, presenting similar patterns as prior research. It also shows how the fixed time-segments can have a negative impact on the correlation values, since Hume have clip varying time frames, the segments are not fully aligned.  
+While correlations between AI-labelling and vocal markers are generally weak to moderate, it is important to acknowledge that Hume emotion scores should not be perceived as perfect estimates of true emotional states, even if it probably results in reasonable predictions. 
+These analysed recordings consist of spontaneous and conversational speech which likely do not involve as strong emotional expressions as acted datasets, with tendency of more subtle and reduced level of vocal features. The simplicity regarding the number of applied vocal markers in contrast to the emotion-trained AI model reaching beyond the use of single acoustic features is a certain reason that this study should be interpreted as explanatory and not to benchmark the general efficiency of emotion recognition in Swedish speech.    

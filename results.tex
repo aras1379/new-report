@@ -293,46 +293,57 @@ semi-structured, spontaneous speech in an interview setting.
 
 \subsection{Evaluation of Emotion Categorisation on Vocal Features}
 
-Step-wise alternation of the rule-based function for vocal based emotion probability in Table \ref{tab:rq1_categor.func-stats}. 
-Hume is acting a reference point for these statistics. It is not a ground truth. 
+Step-wise alternation of the rule-based function for vocal based emotion probability in Table \ref{tab:rq1_categor.func-stats} for the tested versions of the category function. 
+Macro F1 scores and UAR (Unweighted Average Recall) uses Hume labels as a relative metrics are prestended in Table \ref{tab:rq1_categor.func-stats}. This should not be seen as ground truth. 
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lrrrrrr}
+    \toprule
+    Variant      &  N & anger & joy & sadness & fear & surprise \\
+    \midrule
+    SdZ-Scores   & 30 &    18 &   7 &       0 &    5 &        0 \\
+    V0\_globalK  & 30 &    29 &   1 &       0 &    0 &        0 \\
+    V1\_perK     & 30 &    27 &   1 &       2 &    0 &        0 \\
+    V2\_featW   & 30 &    16 &   8 &       3 &    1 &        2 \\
+    V3\_benchmark    & 30 &    15 &   8 &       4 &    1 &        2 \\
+    V4\_bonus & 30 &    15 &   11 &       4 &    0 &        0 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Emotion distribution on different versions of categorization function.}
+  \label{tab:rq1_emotion-cat-labels}
+\end{table}
+
 \begin{table}[ht]
     \centering
     \begin{tabular}{lrrrrr}
       \toprule
-      Variant       & Macro–F1 &   UAR  & Joy Rec & Anger Rec & Surp FP \\
+      Variant       & Macro–F1 &   UAR  & Joy Rec & Anger Rec  \\
       \midrule
-      SdZ-Scores    &   0,282  &  0,413 &    0,4  &     0,667 &       0 \\
-      V0\_globalK   &   0,107  &  0,183 &    0    &     0,917 &       0 \\
-      V1\_perK      &   0,103  &  0,167 &    0    &     0,833 &       0 \\
-      V2\_anchor    &   0,204  &  0,197 &    0,4  &     0,583 &       2 \\
-      V3\_bonus     &   0,208  &  0,197 &    0,4  &     0,583 &       2 \\
+      SdZ-Scores    &   0,282  &  0,413 &    0,4  &     0,667 &        \\
+      V0\_globalK   &   0,107  &  0,183 &    0    &     0,917 &        \\
+      V1\_perK      &   0,103  &  0,167 &    0    &     0,833 &        \\
+      V2\_featW    &   0,204  &  0,197 &    0,4  &     0,583 &        \\
+      V3\_benchmark     &   0,208  &  0,197 &    0,4  &     0,583 &        \\
+      V4\_bonus   & 0,211 &    0,21 &   0,467 &  0,583 &  \\
       \bottomrule
     \end{tabular}
     \caption{Performance metrics for each version of vocal-based emotion categorisation.}
     \label{tab:rq1_categor.func-stats}
   \end{table}
-
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{lrrrrrr}
-      \toprule
-      Variant      &  N & anger & joy & sadness & fear & surprise \\
-      \midrule
-      SdZ-Scores   & 30 &    18 &   7 &       0 &    5 &        0 \\
-      V0\_globalK  & 30 &    29 &   1 &       0 &    0 &        0 \\
-      V1\_perK     & 30 &    27 &   1 &       2 &    0 &        0 \\
-      V2\_anchor   & 30 &    16 &   8 &       3 &    1 &        2 \\
-      V3\_bonus    & 30 &    15 &   8 &       4 &    1 &        2 \\
-      \bottomrule
-    \end{tabular}
-    \caption{Emotion distribution on different versions of categorization function.}
-    \label{tab:rq1_emotion-cat-labels}
-  \end{table}
-
+  The standardised z-scores yielded higher F1 and UAR. However, the emotion probabilities were very similar, all around ~0.2 points per emotion. By this reason, it is not used. 
+  First version of the rule-based function, V0 resulted in near uniform anger top-labels, with F1 score 0.107. Implementing individual extreme values in V1 resulted in minimal difference from V0.
+  Decreasing intensity for version V2, see [METHOD], while using the standardised z-scores as a fallback minimised the overestimation of anger swapping to top-labelled joy (8), sadness (3), fear(1), and surprise(2).
   
-
+  However, when inspecting the recordings with surprise as top label, the vocal feature range did not align with the table in Theoretical Framework \ref{sec:vocal-markers}, only shimmer had a aligned value. The second 
+  clip labelled as surprise had the same pattern [SEE APPENDIX]. Therefore, this was percieved as false-labeling. The dispersed emotion-labeling using V2 resulted in F1 = 2.04 and UAR = 1.97, both increased compared to V0 and V1. 
   
+  The benchmark extended V3 with increased feature weight for pitch yielded in slightly higher F1 score, from 0.204 to 0.208, still labelling surprise for two clips. 
+  
+  The loud and HNR bonus implemented in V4 eliminated the two Surprise positives. However, it also reduced fear from 1 to 0. Joy recall increased while anger was persistant. 
+  F1 increased to 0.211 and UAR to 0.21. Compared to the standardised z-score function, this results is still lower, the Anger recall relative to Hume was higher for this non-rule-based version 
+  than V2-V4. 
+
 \subsection{Correlation Between Vocal Features and AI Emotion Scores (Hume AI)}
 Figure \ref{fig:rq1-heatmaps} demonstrates heatmaps of the Pearson correlation coefficients between selected vocal features and Hume AI emotion labels across positive clips in Figure \ref{fig:hume_vocal_positive} and negative clips in Figure \ref{fig:hume_vocal_negative}. The results show generally weak correlations, with slightly stronger correlations for the negative recordings.  
 
@@ -1218,11 +1229,6 @@ However, negative recordings showed significant difference for joy and sadness, 
 \subsubsection{Conclusion Sentiment-Based Analysis}
 In conclusion, Hume AI and NLP Cloud show moderate to strong agreement on anger (r = 0.47) and joy (r = 0.52) across the full dataset, but weak correlations on sadness, fear, and surprise. Paired t-tests showed that fear is the single emotion that exhibits a significant mean difference across the full interview set (Hume > NLP, d = 0.59), while joy and anger showed modality divergencies in positive and negative subsets where NLP overestimated joy in positive interviews (d = 3.01) and Hume overestimated anger (d = 2.82). These results suggest that text and speech modalities agree on certain emotions particularly when considering the full dataset. However, divergencies occur for sentiment-specific analyses, especially for positive interviews. 
 
-\subsubsection{Case Example}
-single clip comparison 
-
-breifly illustrate how speech vs text differ in practice 
-
 \subsection{Conclusion of RQ2 Data Analysis}
 The results of this research question show that even if Hume AI and NLP Cloud partially aligns in detecting emotions, certainly for clearly expressed emotions such as Anger and Joy, 
 they diverge significantly in their predictions of more nuanced emotions such as Fear, Sadness, and Surprise. Statistical tests confirmed a significant difference for Fear. 
@@ -1446,12 +1452,6 @@ The trend where NLP has a higher correlation (r = 0.37, p = 0.149) remain, howev
     \caption{Scatter plot, Hume, NLP vs. Self for Joy.}
     \label{fig:scatter-joy-rq3-neg}
 \end{figure}
-
-\medskip
-
-\subsubsection{Conclusion Correlation and Visual Analysis}
-
-MAYBE INCLUDE TEXT OR DELETE 
 
 \subsection{Statistical Analysis and Effect Sizes}
 
