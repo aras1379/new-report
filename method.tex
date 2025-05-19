@@ -20,7 +20,7 @@ The scenarios have been pilot-tested for effectiveness.
 The interviews are recorded in a quiet room. Each scenario last between 2 and 4 minutes with breaks between them, the order of the scenarios varies to minimize affecting the results because of the possibility of the order influencing the different emotions. Each recording have been edited to delete our questions and any longer silent pauses. 
 
 Participants are asked open-ended questions designed to bring out previously lived through personal experiences of anger and happiness. The questions about anger are focused on previous experiences of unfair treatment and frustration regarding their everyday lives or society, while the questions related to happiness explore moments of pride and unexpected joy through memories. 
-The semi-structured format allows for follow-up questions based on participant responses, to bring out as much emotion as possible. The follow-up questions include "How did that make you feel?", "Can you evaluate on that specific situation?", and "What feelings did you experience?". See appendix for the full set of interview questions. 
+The semi-structured format allows for follow-up questions based on participant responses, to bring out as much emotion as possible. The follow-up questions include "How did that make you feel?", "Can you evaluate on that specific situation?", and "What feelings did you experience?". See Appendix~\ref{list:prompts} for the full list of interviews. 
 
 Audio is recorded and pre-processed to reduce background noise and normalise volume. Vocal markers from each recording are extracted using Parselmouth, a Python library for vocal feature extraction, to answer RQ1. The audio is analysed simultaneously using two emotion recognition models: Hume.ai to extract speech-based emotional labels, and NLP Cloud to transcribe the speech and then analyse the textual content in terms of emotion scores. The same dataset is used for all research questions to ensure consistency. 
 
@@ -78,7 +78,7 @@ Individual clips are presented with bar charts and diagrams representing changes
 \label{sec:method-data-an-voc}
 We analysed each of the 30 clips in several stages to answer the first research question. Extracted vocal features included mean pitch (st, Hz), mean intensity(dB), mean hnr (dB), F1, F2, F3 formants (Hz), jitter and shimmer see Theoretical Framework~\ref{sec:vocal-markers}.
 First, acoustic features were categorized in five emotion groups based on standardized distances based on Table~\ref{fig:compare-acoustic-parameters}. Because of the method yielded near uniform emotion scoring (≈0.20), a rule-based function was developed and refined through four variants (V0-V3), 
-where threshold adjustions and anchors was applied to each layer.  
+where threshold adjustions and anchors was applied to each layer. 
 
 \subsubsection{Standardized distance function}
 \label{sec:method-stand-func}
@@ -147,7 +147,7 @@ This gating is motivated by data from \textcite{Ekberg2023}, see Theoretical Fra
 the two high-arousal emotions, while single universal cues caused possibly misjudged positives in the pilot runs Results~\ref{rq1_pilot_tests}. The affected clips were analysed seperately and compared to Table~\ref{fig:compare-acoustic-parameters} for this conclusion. 
 
 In this version, the individual extreme values, k, was tested and changed to 1.0 for all except joy, changed to 0.7. This did not affect the results. 
-Version 3 is the final method that is used for data analysis in results. 
+Version 3 is the final method that is used for data analysis in results. The full code is listed in Appendix~\ref{lst:categorise_emotion}.
 
 \subsubsection{Analysis rule-based emotion categorisation and Hume AI}
 Alignment and divergence between the rule-based function and Hume AI emotion probability is analysed with confusion matrices including both sources top-label for each interview. 
@@ -156,13 +156,12 @@ Mean rating score for the full dataset is visualised with scatter plots followed
 \subsubsection{Comparison Hume and Vocal Features}
 Analysis that are not including the emotion categorisation function includes the following vocal features: Pitch, Loudness/Intensity, HNR, Shimmer, and Jitter. To explore the relationship between Hume AI Emotion labels and vocal features, without feature based emotion categorisation, further analysis were conducted to assess correlation between each acoustic marker and Hume predefined emotions, presented as a heatmap.
 Further analyses include one-way ANOVA tests, see \ref{sec:theo-stat-analyse} for clarification. 
-
 To track patterns over time and enable more detailed analysis, each audio recording were segmented into timeframes including Hume AI emotion scoring and vocal features for that specific segmment. These were analyzed by tracking Z-score variations, see \ref{sec:theo-stat-analyse}, in key vocal features (pitch, intensity, jitter, and shimmer) throughout each recording.
-The general time-segment is set to 2.5 seconds. For case examples \ref{sec:res_rq1_case}, different time-segments were tested to observe correlation differences depending on segment length for executed vocal analysis. 
+The general time-segment is set to 1.25 seconds. For case examples \ref{sec:res_rq1_case}, different time-segments were tested to observe correlation differences depending on segment length for executed vocal analysis. 
 Beside correlation measurements, top 30\% and bottom 70\% of emotion probability time-segments are compared to test wheather the mean z-scored feature differs between the high vs. low groups. 
-A large t-statistic value indicate a reliable shift in that feature when Hume rates that emotion high.
+A large t-statistic value indicate a reliable shift in that feature when Hume rates that emotion high. For the time-segmented analysis, the baseline was set to the average vocal value for our dataset. 
 
-Output from Hume AI include segmented results with individual time stamps, varying for each clip. Vocal feature extraction is set to a fixed 2.5s window, therefore, the segments are not fully aligned. 
+Output from Hume AI include segmented results with individual time stamps, varying for each clip. Vocal feature extraction is set to a fixed 1.25s window, therefore, the segments are not fully aligned. 
 By this reason, individual recordings from two interviews are included to visualise how pitch and intensity behaves for Hume labelled joy and sadness. 
 
 \subsection{RQ2 and RQ3: Speech-Based AI vs. Text-Based AI, AI-labels vs. Self-Assessed Emotions}
