@@ -360,59 +360,54 @@ def categorise_emotion_all_scores(
   
 
 \begin{table}[ht]
-    \centering
-    \begin{subtable}[t]{0.48\textwidth}
+
        \centering
-  \caption{Pearson correlations for Joy, 1 and 2s segment.}
-  \label{tab:pearson_joy_1s}
+
   \begin{tabular}{l l l l r r l}
     \toprule
-    T(s) & Clip           & Feat             & Emo & $r$ & $p$ & Sign\\
+    T(s) & Clip           & Feat             & Emo & $r$ & $p$ \\
     \midrule
-    1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.188      & 0.1965    & FALSE       \\
-    1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 0.351      & 0.0134    & TRUE        \\
-    1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.043      & 0.7674    & FALSE       \\
-    1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.033      & 0.8244    & FALSE       \\
-    1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.002      & 0.9888    & FALSE       \\
-    2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     &  0.078 & 0.6103 & FALSE \\
-    2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  0.329 & 0.0272 & TRUE  \\
-    2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.014 & 0.9248 & FALSE \\
-    2.0  & id\_006\_pos   & jitter\_local       & joy     &  0.063 & 0.6803 & FALSE \\
-    2.0  & id\_006\_pos   & shimmer\_local      & joy     &  0.115 & 0.4528 & FALSE \\
+    1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.188      & 0.1965          \\
+    1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 0.351      & 0.0134            \\
+    1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.043      & 0.7674           \\
+    1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.033      & 0.8244          \\
+    1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.002      & 0.9888          \\
+    2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     &  0.078 & 0.6103  \\
+    2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  0.329 & 0.0272   \\
+    2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.014 & 0.9248  \\
+    2.0  & id\_006\_pos   & jitter\_local       & joy     &  0.063 & 0.6803  \\
+    2.0  & id\_006\_pos   & shimmer\_local      & joy     &  0.115 & 0.4528  \\
     \bottomrule
   \end{tabular}
-    \end{subtable}
-    \hfill
-    \begin{subtable}[t]{0.48\textwidth}
-        \centering
-        \caption{T-statistics for Joy 1 and 2s segment.}
-        \label{tab:ttest_joy_1s}
-        \begin{tabular}{l l l l r r l}
-          \toprule
-          T(s) & Clip           & Feat            & Emo & t & $p$ & Sign \\
-          \midrule
-          1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.331        & 0.7419    & FALSE       \\
-          1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 2.718        & 0.0092    & TRUE        \\
-          1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.958        & 0.3427    & FALSE       \\
-          1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.062        & 0.9506    & FALSE       \\
-          1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.178        & 0.8598    & FALSE       \\
-          2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     & –0.237  & 0.8136 & FALSE \\
-    2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  1.162  & 0.2517 & FALSE \\
-    2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.562  & 0.5768 & FALSE \\
-    2.0  & id\_006\_pos   & jitter\_local       & joy     &  1.210  & 0.2329 & FALSE \\
-    2.0  & id\_006\_pos   & shimmer\_local      & joy     &  1.918  & 0.0617 & FALSE \\
-          \bottomrule
-        \end{tabular}
-    \end{subtable}
-    \caption{Statistical results for clip id\_006\_pos}
+  \caption{Statistical results for clip id\_006\_pos}
     \label{tab:clip006_pos_stats}
-  \end{table}
+    \end{table}
   
-
+  
+  \begin{table}[h]
+    \centering
+    \caption{T-statistics for Joy 1 and 2s segment.}
+    \label{tab:ttest_joy_1s}
+    \begin{tabular}{l l l l r r l}
+      \toprule
+      T(s) & Clip           & Feat            & Emo & t & $p$  \\
+      \midrule
+      1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.331        & 0.7419       \\
+      1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 2.718        & 0.0092            \\
+      1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.958        & 0.3427          \\
+      1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.062        & 0.9506          \\
+      1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.178        & 0.8598           \\
+      2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     & –0.237  & 0.8136  \\
+2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  1.162  & 0.2517  \\
+2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.562  & 0.5768  \\
+2.0  & id\_006\_pos   & jitter\_local       & joy     &  1.210  & 0.2329  \\
+2.0  & id\_006\_pos   & shimmer\_local      & joy     &  1.918  & 0.0617  \\
+      \bottomrule
+    \end{tabular}
+\end{table}
   \begin{table}[ht]
     \centering
-    \begin{subtable}[t]{0.48\textwidth}
-      \centering
+    
       \caption{Pearson correlations for Anger, 1.25 and 2.25s segments.}
       \label{tab:pearson_anger_125_225s}
       \begin{tabular}{l l l l r r l}
@@ -432,9 +427,11 @@ def categorise_emotion_all_scores(
         2.25  & id\_012\_neg & shimmer\_local      & anger   &  0.180      & 0.2717    & no  \\
         \bottomrule
       \end{tabular}
-    \end{subtable}%
+    \end{table}%
     \hfill
-    \begin{subtable}[t]{0.48\textwidth}
+    \begin{table}
+        
+ 
       \centering
       \caption{T-statistics for Anger, 1.25 and 2.25\,s segments.}
       \label{tab:ttest_anger_125_225s}
@@ -455,14 +452,13 @@ def categorise_emotion_all_scores(
         2.25  & id\_012\_neg & shimmer\_local      & anger   &  1.055      & 0.2982    & no  \\
         \bottomrule
       \end{tabular}
-    \end{subtable}
+    
     \caption{Statistical results for clip id\_012\_neg}
     \label{tab:clip012_stats}
   \end{table}
 
   \begin{table}[ht]
-    \centering
-    \begin{subtable}[t]{0.48\textwidth}
+   
       \centering
       \caption{Pearson correlations for Sadness, 2.0\,s segment.}
       \label{tab:pearson_sadness_2s}
@@ -482,9 +478,9 @@ def categorise_emotion_all_scores(
         2.0 & id\_006\_neg & shimmer\_local      & sadness & –0.050 & 0.7943 & no \\
         \bottomrule
       \end{tabular}
-    \end{subtable}%
-    \hfill
-    \begin{subtable}[t]{0.48\textwidth}
+    \end{table}%
+    
+    \begin{table}
       \centering
       \caption{T-statistics for Sadness, 2.0\,s segment.}
       \label{tab:ttest_sadness_2s}
@@ -504,41 +500,9 @@ def categorise_emotion_all_scores(
         2.0 & id\_006\_neg & shimmer\_local      & sadness &  0.157 & 0.8766 & no  \\
         \bottomrule
       \end{tabular}
-    \end{subtable}
+
     \caption{Statistical results for Sadness, clip \texttt{id\_006\_neg}, 2.0\,s segment}
-    \label{tab:clip006_neg_stats}
+    \label{tab:clip006_neg_stats2}
   \end{table}
   
-  \begin{table}[H]
-    \centering
-    \begin{subtable}[t]{0.48\textwidth}
-      \centering
-      \caption{Clip id\_006\_neg – Pearson Correlation}
-      \label{tab:clip006_neg_pearson}
-      \begin{tabular}{lllrrl}
-        \toprule
-        Feature               & Emotion & $r$ & $p$ & Sign \\
-        \midrule
-        pitch       & sadness    &  -0.333 & 0.0722 & No  \\
-        hnr    & sadness    & -0.265 & 0.1567 & No  \\
-        \bottomrule
-      \end{tabular}
-    \end{subtable}
-    \hfill
-    \begin{subtable}[t]{0.48\textwidth}
-      \centering
-      \caption{Clip id\_006\_neg – t-test}
-      \label{tab:clip006_neg_ttest}
-      \begin{tabular}{lllrrl}
-        \toprule
-        Feature               & Emotion & t & $p$& Sign \\
-        \midrule
-
-        pitch       & sadness    &  -2.203 & 0.036 & Yes  \\
-        hnr    & sadness    & -1.289 & 0.2079 & No  \\
-        \bottomrule
-      \end{tabular}
-    \end{subtable}
-    \caption{Statistical results for clip id\_006\_neg}
-    \label{tab:clip006_neg_stats}
-  \end{table}
+  
