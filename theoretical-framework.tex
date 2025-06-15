@@ -49,7 +49,7 @@ In figure \ref{fig:hume-ai-speech-prosody}, a visual presentation of Hume AI’s
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=10cm]{png/theoretical/hume-prosody.pdf}
+    \includegraphics[width=0.75\textwidth]{png/theoretical/hume-prosody.pdf}
     \caption{\textit{Visual representation of Hume AI’s speech prosody model} \autocite{HumeAIProsody}}
     \label{fig:hume-ai-speech-prosody}
 \end{figure}
@@ -64,7 +64,7 @@ Figure \ref{fig:hume-ai-vocal-burst} shows Hume AI’s mapping of non-verbal com
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=10cm]{png/theoretical/hume-vocal.pdf}
+    \includegraphics[width=0.75\textwidth]{png/theoretical/hume-vocal.pdf}
     \caption{\textit{Visual representation of Hume AI’s vocal burst model} \autocite{HumeAIVocalExpression}}
     \label{fig:hume-ai-vocal-burst}
 \end{figure}
@@ -100,22 +100,21 @@ The first approach is keyword-based, which matches words in a text with predefin
 Machine learning classifiers are significantly used in text-based classification, since they use labelled datasets and are therefore data driven. Machine learning models are trained on large number of datasets and learn from experience, with classifiers that contain labels for input and desired output. Transformer-based models, such as BERT, are based on machine learning models which are trained on vast amounts of data and can be fined-tuned for specific tasks. BERT is a deep learning model based on attention processing. It gains a thorough text-understanding through considering left and right contexts equally. The model solves NLP issues and is used to train general language models on large datasets \autocite{Kusal2024}.
 
 \subsection{NLP Cloud}
+\label{sec:theo-nlp-cloud}
 
 There are limited publicly available APIs for text-based emotion detection (TBED). The decision to use NLP Cloud for this study consists of several reasons as following. NLP Cloud was selected for this study because of its extensive model offering, multilingual support, transparent documentation, and available support for data privacy and security \autocite{NLPCloud}.  Compared to other alternatives such as Vern AI (AI, u.d.) or TwinWord \autocite{TwinWord}, both either lacked comprehensive documentation and information about the models the API used, NLP Cloud had technical transparency and many different API endpoints which was most compatible with this research. 
-
 Additionally, NLP Cloud also provides speech to text transcription, based on OpenAI’s Whisper model \autocite{NLPCloud}. OpenAI provides a research report on the model, which is a speech recognition system designed to process and transcribe audio with robustness and generalization \autocite{Radford2022}. Contrasting traditional models that heavily rely on unsupervised pre-training or dataset-specific fine-tuning, Whisper leverages large-scale weakly supervised training from over 600,000 hours of multilingual audio data. This includes 96 languages beyond English. Whisper handles several tasks, for instance speech recognition, language identification, and translation.  
 
 \medskip
 For text-based emotion recognition, NLP Cloud offers different models, including DistilBERT Base Uncased Emotion and Llama 3. DistilBERT is a compressed version of the original BERT (Bidirectional Encoder Representations from Transformers), developed to reduce model size and gain faster results while remaining the language understanding capacity. \autocite {Qazi2025}. DistilBERT has demonstrated high accuracy, from 95.7\% to 96.6\% on benchmark datasets \autocite{Areshey2024}. However, the model does not natively support Swedish and using it for this study would require translation of the transcripts, potentially leading to translation bias or loss of linguistic nuance. 
 
-Regarding multiple language performance, a study examined Llama 3 vs. State-of-the-Art Large Language Models on their ability to detect fake news \autocite{Repede2024}. Two datasets were tested, one Romanian and one English. Their proposed Llama 3 model accomplished higher precision and accuracy across several metrics in fake news detection. For the English dataset, the fine-tuned Llama 3 model had lower accuracy compared to ChatGPT 4 and Gemini. Yet, it outperformed these models for the Romanian dataset, which is noteworthy considering both Romanian and Swedish are underrepresented languages in fields of LLM’s and NLP relative to English for example. The study \textcite{Repede2024} also explored their fine-tuned Llama model compared to its base version. The fine-tuned model outperformed earlier models in distinguishing nuanced categories, particularly for the Romanian dataset where it achieved a remarkably high accuracy of 68\% in one category. 
+Regarding multiple language performance, a study examined Llama 3 vs. State-of-the-Art Large Language Models on their ability to detect fake news \autocite{Repede2024}. Two datasets were tested, one Romanian and one English. Their proposed Llama 3 model accomplished higher precision and accuracy across several metrics in fake news detection. For the English dataset, the fine-tuned Llama 3 model had lower accuracy compared to ChatGPT 4 and Gemini. Yet, it outperformed these models for the Romanian dataset, which is noteworthy considering both Romanian and Swedish are underrepresented languages in fields of LLM’s and NLP relative to English for example. The study by \textcite{Repede2024} also explored their fine-tuned Llama model compared to its base version. The fine-tuned model outperformed earlier models in distinguishing nuanced categories, particularly for the Romanian dataset where it achieved a remarkably high accuracy of 68\% in one category. 
 
 Comparing these two alternatives for text-based emotion detection in Swedish, the fine-tuned Llama 3 model shows promise as the most suitable choice. Although the exact fine-tuned version of the model available on NLP Cloud has not been publicly researched, its built-in compatibility with Swedish, combined with research on a Romanian dataset, makes it a stronger candidate than DistilBERT. Both models have achieved high accuracy for TBED. Nevertheless, given this study is aimed to focus on emotion recognition models for Swedish speech, the Llama model without need for prior translation is a more valuable choice.
 
 \medskip
 In the beginning of the data analysis, the sentiment analysis endpoint from NLP Cloud with the fine-tuned Llama 3-70b model was considered and applied for textual emotion detection. However, the model returns a wide range of emotion classes without sufficient control over which emotions should be included in the output. In this study, a set of five emotions – anger, joy, sadness, fear, and surprise – were used to align with previous research on vocal markers in emotion expressions explained in \ref{sec:vocal-markers} Vocal Markers.  
-
-Therefore, the decision to utilize NLP Cloud’s text generation endpoint instead was made, using their fine-tuned Llama 3-70b model but with prompting instead of direct emotion classification output AUTOCITE NEW NLP CLOUD!. This model operates as an instruction-following generative language model with ability to respond to natural language prompts and generate emotions classifications based on how the request is phrased. This provided more flexibility and allowed control of which emotions should be included in the output as well as the format by prompting with instructions. 
+Therefore, the decision to utilize NLP Cloud’s text generation endpoint instead was made, using their fine-tuned Llama 3-70b model but with prompting instead of direct emotion classification output \autocite{NLPCloudGeneration2025}. This model operates as an instruction-following generative language model with ability to respond to natural language prompts and generate emotions classifications based on how the request is phrased. This provided more flexibility and allowed control of which emotions should be included in the output as well as the format by prompting with instructions. 
 
 For the aim of this study where emotion detection from Swedish interview transcripts is explored, the fine-tuned Llama 3 model through NLP Cloud’s text generation endpoint was determined to be the most suitable approach due to its language support, flexibility through prompting, and ability to control the emotion categories included in the output. 
 
@@ -132,14 +131,13 @@ Sadness is predicted by lower intensity and pitch with slower speech rate, align
 Vocalised fear is associated with panic in \autocite{Banse1996}, where pitch and frequency formants are heightened with increased rate of articulation. The Swedish report does not describe fear aligned with panic, although the opposite is not mentioned. The results showed second highest pitch, third highest loudness, and top HNR value. Frequency related jitter distinguished fear with the lowest value of the emotions. 
 Jitter alongside amplitude associated shimmer characterised surprise in the Swedish results, with lower loudness and pitch than anger and happiness. Surprise is not included with listed values in the other studies referred to in this subsection. 
 
+\medskip
 The results from the Swedish study \autocite{Ekberg2023} on emotional acoustic features are presented in Figure \ref{fig:compare-acoustic-parameters} with mean and standard deviation values for the five emotions. Other studies mentioned \autocites{Banse1996}{Kamilolu2020}{Scherer2003} and additionally Figure \ref{fig:acoustic-variations} \autocite{Khalil2019} demonstrate similar vocal expression patterns, but are mainly studied on English. 
-Therefore, the results from the research on Swedish speech will serve as our reference when categorising emotions based on vocal markers in this study. 
+Therefore, the results from the research on Swedish speech will serve as our reference when categorising emotions based on vocal markers in this study, although this thesis does not use all acoustic features to measure emotions.
 
- Figure \ref{fig:compare-acoustic-parameters} \autocite{Ekberg2023} shows a table of comparisons with certain parameters of vocal markers measured for five different emotions in the Swedish language and some explanations for the different parameters. This is used in this thesis as a comparison for the vocal markers collected from the interview data in the conducted experiment, although this thesis does not use all acoustic features to measure emotions.
- 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{png/theoretical/table-acoustic.pdf}
+    \includegraphics[width=\textwidth]{png/theoretical/table-acoustic.pdf}
     \caption{\textit{Table comparing acoustic parameters between emotions} \autocite{Ekberg2023}}
     \label{fig:compare-acoustic-parameters}
 \end{figure}
@@ -150,10 +148,12 @@ Figure \ref{fig:acoustic-variations} shows a table of variations in different em
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{png/Figure8-AcousticVariations.png}
+    \includegraphics[width=10cm]{png/Figure8-AcousticVariations.png}
     \caption{\textit{Acoustic variations in different emotions} \autocite{Khalil2019}.}
     \label{fig:acoustic-variations}
 \end{figure}
+
+These findings will serve as a reference point for the comparison between vocal markers and speech-based emotion recognition, not only for the categorisation function but also for exploring patterns between extracted vocal features and previous research. 
 
 \section{The Experiment}
 
@@ -163,25 +163,14 @@ An experiment was be conducted and will consist of short voluntary interviews. T
 
 The Python application serves as the central system for processing and analysing emotions in speech and will integrate several tools and frameworks to extract emotions. The overall structure is illustrated in Figure~\ref{fig:tf-python-app}.
 
-The steps for the process consist of:
-
-\begin{enumerate}
-    \item Audio recording
-    \item Feature extraction
-\end{enumerate}
-
-\begin{itemize}
-    \item Prosody and vocal bursts will be analysed with Hume AI to detect emotional cues from pitch, intonation and vocal bursts using Hume AI’s models.
-    \item Extracting vocal features such as jitter, shimmer and frequency with Praat Parselmouth.
-    \item Convert speech to text and analyse emotions in text with NLP Cloud.
-\end{itemize}
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{png/results/rq1_nr3/python-app.pdf}
     \caption{Overview of the Python application structure.}
     \label{fig:tf-python-app}
 \end{figure}
+
+Recorded audio is processed through the application, including feature extraction with Praat Parselmouth, and manual categorisation of emotions based on these features, explained further in \ref{sec:method-data-an-voc} Method. The audio is processed through both Hume AI and NLP Cloud, where prosody and vocal bursts are analysed with Hume to detect emotional cues from pitch, intonation and vocal bursts. NLP Cloud is used to transcribe the audio to text and analyse the textual content with a text classifier model fine-tuned for sentiment analysis, described in \ref{sec:theo-nlp-cloud} NLP Cloud. The application includes statistical analysis for an simple interpretation of different measurements and output correlations, specified in \ref{sec:theo-stat-analyse} Statistical Analysis. 
     
 
 \subsection{Interviews and Surveys}
@@ -189,15 +178,11 @@ The steps for the process consist of:
 
 The semi-structured interviews involve voluntary participants engaging in short audio-recorded interviews, designed to draw out natural emotional responses. The participants will be asked questions to prompt them to recall and reflect on past experiences which encourages them to revisit emotions they felt at that time. 
 As the format of the interviews are semi-structured and involve spontaneous speech unlike acted datasets, a well-known challenge emerges. Spontaneous vocal data tends to involve more neutral expressions, and research have shown some emotional classifiers to have a lower accuracy in detecting neutral statements \autocite{Cao2015}. This is also supported by other research, stating that acted speech shows higher levels of intensity \autocite{Chakraborty2016}. While spontaneous speech presents some documented challenges, it also reflects real word conditions.
-
 For ethical purposes the participants will be given a selection of topics to choose from, minimizing the risk of discomfort or distress. The audio recordings will be anonymous and recorded in a controlled acoustic environment to ensure minimal noise interference.
 
 Questions asked during the interview follow one of many emotion induction techniques, known as “autobiographical recall”. This is a method used to facilitate the re-experiencing of emotions felt in a previous moment \autocite{Siedlecka2019}, which is what is intended for the interviews to be able to collect emotional data from vocal recordings. By letting the participant think and speak about a memory from the past, emotions felt in that moment reflect in their voice.
-
 After the interview is done, the participants will answer a survey doing a self-assessment of their emotions felt during the interview. This will enable a comparison between emotion detection and the participants reported emotional experiences.
-
 There are many different methods for self-assessment, and emotional self-assessment is linked to many different theories. Many are connected to emotional intelligence (EI), trait emotional intelligence (trait EI) and Core Self Evaluation (CSE) \autocite{Montasem2013}, but rather than conducting a comprehensive exploration of different psychological theories in self-assessment, this research will use simplified surveys at a basic level for the purpose of fulfilling the technical objectives of the work and align with the technical focus of the thesis.
-
 The theories behind the interviews are stated in the possibility of detecting emotions in voices. While there are a lot of recognized emotions that can be detected in different AI models and software tools, the interview will focus on bringing out two different basic emotions to maintain a manageable scope, while ensuring ethical feasibility.
 
 Research has stated that there are different levels of unique universal signs for different affective states and while there are evidence supporting the universality for certain emotions such as anger, fear, surprise, sadness, happiness and more, there are also emotions that do not include all characteristics that distinguish them from other mental states, two examples being guilt and shame \autocite{Ekman2011}. Research of this nature supports the rationale for having the focus solely on two of the basic emotions for this thesis. The questions in the interviews will focus on bringing out two separate emotions, one on the positive spectrum, joy, and one on the negative spectrum, anger.

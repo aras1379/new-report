@@ -43,12 +43,12 @@ Table~\ref{tab:interview_table} presents the participants ID, gender, age, and s
 \end{table}
 
 \subsection{Data Collection for RQ1: Vocal Features \& Speech}
-The collected audio recordings from the interviews was processed for research questions 1 to specifically focus on vocal features and speech-based emotion recognition. 
+The collected audio recordings from the interviews were processed for research questions 1 to specifically focus on vocal features and speech-based emotion recognition. 
 See \ref{sec:method-data-analysis} for specification and data normalization. 
 
 \subsubsection{Overview Collected Data}
 The extracted vocal features, custom emotion categorizations of vocal features, and Hume AI outputs were combined for each recording and stored in JSON format, to enable direct comparison and further analysis. All data is normalized to sum up to 1 before loaded into the JSON files. 
-Table \ref{tab:summary_vocal_features_by_sentiment} includes the mean values and standard diversion for the analysed features (pitch, intensity, HNR, jitter, shimmer) seperated by sentiment. 
+Table \ref{tab:summary_vocal_features_by_sentiment} includes the mean values and standard diversion for the analysed features (pitch, intensity, HNR, jitter, shimmer) separated by sentiment. 
 Filtered Hume probabilities are presented in Table \ref{tab:summary_hume_by_sentiment} as mean values with standardized diversion for positive and negative recordings.
 The custom categorization of emotion based on vocal features are presented as mean values including standard diversions for positive and negative sentiments in Table~\ref{tab:summary_praat_by_sentiment}. 
 
@@ -199,12 +199,10 @@ In the data analysis, we extract the same set of acoustic features from time-seg
 \subsection{Data Collection for RQ2 and RQ3: Text, Speech and Self-Assessment}
 \label{sec:datacoll_rq2_rq3}
 
-
 The data collection for RQ2 and RQ3 is based on the same audio recordings as for RQ1. 
-Each recording was transcribed and analyzed with NLP Cloud (text-based), to extract emotion probabilities from the transcription. The same audio was analyzed using Hume AI for speech-based emotion detection, resulting in paired emotion probability scores alongside self-reported emotion ratings. All scores were normalized for comparison.
+Each recording was transcribed and analysed with NLP Cloud (text-based), to extract emotion probabilities from the transcription. The same audio was analysed using Hume AI for speech-based emotion detection, resulting in paired emotion probability scores alongside self-reported emotion ratings. All scores were normalized for comparison.
 
 The data was structured in JSON format, each audio object consists of five emotion labels from each data type (Hume, NLP, Self). 
-
 
 Table~\ref{tab:rq3_emotion-stats-combined} summarize the average emotion scores and standard deviations for both speech-based (Hume AI) and text-based (NLP Cloud) 
 models across all clips in the dataset. 
@@ -268,6 +266,8 @@ models across all clips in the dataset.
   \end{table}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         %%%%%%%%%%%%%%%%% RQ1 %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
@@ -282,7 +282,7 @@ semi-structured, spontaneous speech in an interview setting.
 \label{rq1_pilot_tests}
 
 Step-wise alternation of the rule-based function for vocal based emotion probability in Table \ref{tab:rq1_categor.func-stats} for the tested versions of the category function. 
-Macro F1 scores and UAR (Unweighted Average Recall) uses Hume labels as a relative metrics are prestended in Table \ref{tab:rq1_categor.func-stats}. This should not be seen as ground truth. 
+Macro F1 scores and UAR (Unweighted Average Recall) uses Hume labels as a relative metrics are pretended in Table \ref{tab:rq1_categor.func-stats}. This should not be seen as ground truth. 
 
 \begin{table}[ht]
   \centering
@@ -321,8 +321,8 @@ Macro F1 scores and UAR (Unweighted Average Recall) uses Hume labels as a relati
   \end{table}
   The standardised z-scores yielded higher F1 and UAR. However, the emotion probabilities were very similar, all around ~0.2 points per emotion. By this reason, it is not used. 
   First version of the rule-based function, V0 resulted in near uniform anger top-labels, with F1 score 0.107. Implementing individual extreme values in V1 resulted in minimal difference from V0.
-  Decreasing intensity for version V2, see Method \ref{sec:method-data-an-voc}, while using the standardised z-scores as a fallback minimised the overestimation of anger swapping to top-labelled joy (8), sadness (3), fear(1), and surprise(2).
-   The dispersed emotion-labeling using V2 resulted in F1 = 2.04 and UAR = 1.97, both increased compared to V0 and V1. 
+  Decreasing intensity for version V2, see Method \ref{sec:method-data-an-voc}, while using the standardised z-scores as a fallback minimised the overestimation of anger swapping to top-labelled joy (8), sadness (3), fear (1), and surprise (2).
+   The dispersed emotion-labelling using V2 resulted in F1 = 2.04 and UAR = 1.97, both increased compared to V0 and V1. 
   The benchmark extended V3 with increased feature weight for pitch yielded in slightly higher F1 score, from 0.204 to 0.208, still labelling surprise for two clips. This version is used for the further analysis. 
   
 
@@ -345,7 +345,7 @@ Figure \ref{fig:rq1-heatmaps} demonstrates heatmaps of the Pearson correlation c
     \label{fig:rq1-heatmaps}     
 \end{figure}
 Correlation values for positive interviews in Figure \ref{fig:hume_vocal_positive} ranging roughly between -0.7 and 0.5, most values suggest generally weaker correlations than the highest values. Stronger positive correlations 
-suggests that certain feature is higher when Hume rates the correlating emotion. Negative correlations implies the opposite, low value of a certain feature for the correlated emotion. 
+suggests that certain feature is higher when Hume rates the correlating emotion. Negative correlations imply the opposite, low value of a certain feature for the correlated emotion. 
 Mean intensity stands out from other vocal features with a moderate positive correlation with Hume Joy (r = 0.50), a moderate negative correlation with Hume Anger (r = -0.39), a moderate negative relationship with Hume sadness (r = -0.37) and a strong negative correlation with Hume Surprise (r = -0.68). 
 Mean pitch shows strongest effect on Hume Fear (r = 0.30) and a moderate negative link with Hume Sadness (r = -0.21). 
 Mean HNR has a moderate negative correlation with Hume Sadness (r = -0.30) as well it is moderately positively correlated with Hume Fear (r = 0.27). 
@@ -383,11 +383,11 @@ Correlations between pitch and emotions predicted by Hume is generally weak and 
 \end{figure}
 Figure~\ref{fig:rq1_heatmaps_custom} presents heatmaps of Pearson’s correlation r between selected vocal features and the emotion scores obtained from the custom emotion categorization 
 function for Figure \ref{fig:custom_vocal_positive} positive oriented clips and Figure \ref{fig:custom_vocal_negative} negative clips. In contrast to the correlation results between Hume AI and vocal markers, these heatmaps present similar values and orientations for both negative and positive recordings, with values roughly ranging from -0.9 to 0.8 that implies strong correlations. 
-Pitch, HNR, and shimmer has highly related patterns where the rule-based function show a strong negative correlation for anger with pitch and HNR (r$(\approx -0.87)$), joy have significant relationships with pitch and HNR as well, slighly higher in negatives(r = 0.78). Additionally, these features show a strong negative link with sadness, approximately r = 0.81 for HNR and r = -0.73 for both sentiments. Strong positive correlations is found with fear that are corresponding in negatives ($r (\approx 0.77)$), but slighly more dispersed in positives (pitch r = 0.67, HNR r = 0.76). 
+Pitch, HNR, and shimmer has highly related patterns where the rule-based function shows a strong negative correlation for anger with pitch and HNR (r$(\approx -0.87)$), joy have significant relationships with pitch and HNR as well, slightly higher in negatives (r = 0.78). Additionally, these features show a strong negative link with sadness, approximately r = 0.81 for HNR and r = -0.73 for both sentiments. Strong positive correlations are found with fear that are corresponding in negatives ($r (\approx 0.77)$), but slightly more dispersed in positives (pitch r = 0.67, HNR r = 0.76). 
 Shimmer has the strongest positive correlation with sadness for both sentiments ($(r \approx 0.57)$ respectively) and a strong negative relation with joy ($(r \approx -0.57)$). 
 
 Intensity reveals weak correlation across all features in both sentiment contexts except for a moderate positive relation with surprise in the negative subset (r = 0.38). Beside intensity, appear only weak correlations for surprise in both subsets (|r| < 0.27). 
-Jitter has slighly stronger correlations in negative recordings, where sadness (r = 0.59) and joy (r = -0.63) is most distinct. 
+Jitter has somewhat stronger correlations in negative recordings, where sadness (r = 0.59) and joy (r = -0.63) is most distinct. 
 
 The similar values for pitch and HNR vocal features with strong correlation coefficients, implies that harmonic clarity is weighted almost
 identically to pitch in the categorization function, both with a dominant impact on the outcomes of the emotion categorisation. 
@@ -396,11 +396,10 @@ identically to pitch in the categorization function, both with a dominant impact
 
 To explore the alignment of top-labelled emotion by Hume AI and customised categorization based on vocal features, Figure~\ref{fig:rq1_conf_matx_full} illustrates the correlations in a confusion matrix, treating Hume labels as ground truth and comparing these to emotions grouped by the custom function.  
 For positive recordings, Hume and the custom function agree on anger for one clip, while Hume rates joy highest in four cases where the rule-based function selects anger. 
-Both methods rate joy as the top emotion for four postive oriented clips. Divergencies occur for fear-joy, sadness-anger, anger-joy, anger-sadness, and joy-sadness pairs. 
+Both methods rate joy as the top emotion for four positive oriented clips. Divergencies occur for fear-joy, sadness-anger, anger-joy, anger-sadness, and joy-sadness pairs. 
  
 In negative contexts, the methods agree on anger as the top emotion for six recordings and agree on joy for two clips. 
-Beside these, the top-rated emotion is discrepant where Hume labels two clips as joy that the custom function rates as sadness, and two anger-rated clips by Hume are rated as 
-joy by the customized categorization. Other divergences occur for joy-anger, sadness-anger, and anger-sadness in single-pairs. 
+Beside these, the top-rated emotion is discrepant where Hume labels two clips as joy that the custom function rates as sadness, and two anger-rated clips by Hume are rated as joy by the customized categorization. Other divergences occur for joy-anger, sadness-anger, and anger-sadness in single-pairs. 
 
 \begin{figure}[H]
     \centering 
@@ -422,15 +421,15 @@ The mean rated scores for Hume versus custom categorized emotion labels for posi
 Figure~\ref{fig:rq1_scatter_custom_hume_pos}, negative in Figure~\ref{fig:rq1_scatter_custom_hume_neg}. As shown, several ratings follow the same 
 pattern while other emotions diverge, as Hume joy are significantly higher for both sentiment categories while the rule-based approach overestimated surprise compared to the Hume ranking. 
 
-
 Rule-based labelled joy, fear, and surprise are ranked similarly in both positive and negative contexts. This pattern aligns with Hume probabilities that are relatively similar for these emotions in both subsets, including sadness as well. 
 Anger is the most divergent emotion label across sentiments, with higher ratings in negative clips that are relatively corresponding in the diagrams. Significant divergencies between the methods appear for joy, sadness and surprise, marginally wider dispersed for negative recordings. 
 
-
 Pearson's correlation coefficients between Hume and rule-based emotion labels are presented in Appendix Table~\ref{tab:rq1_corr_pos_neg_side_by_side}, measuring the correlation between each emotion score. 
-No significant correlation occurs for either of the sentiments. Moderate, yet unsignificant, correlation are revealed as diverged for anger (r = -0.320, p = 0.2451) where Hume predicts the emotion 
+No significant correlation occurs for either of the sentiments. Moderate, yet unsignificant, correlation is revealed as diverged for anger (r = -0.320, p = 0.2451) where Hume predicts the emotion 
 higher while rule-based results in lower score for anger in positive contexts. Sadness has a weak positive correlation between the sources for both subsets (r = 0.265, r = 0.222), suggesting that the output is correlated, yet unsignificant (p > 0.2). 
-The correlations for the remaining emotions are percieved weak (|r| < 0.24). 
+The correlations for the remaining emotions are perceived weak (|r| < 0.24). 
+  
+
 
 \begin{figure}[H]
   \centering
@@ -454,8 +453,8 @@ The correlations for the remaining emotions are percieved weak (|r| < 0.24).
 \subsection{Limitations of the Custom Vocal Emotion Categorization Method}
 
 The rule-based function, customised to group emotions by vocal features, assigns equal top scores to multiple emotions for the same clip in 27\% cases.
-By contrast, Hume has one singular top label for 29 of 30 clips. Furthermore, the function can not seen a reliable measurement for comparison of Hume with vocal markers. 
-Therefore, the following analysis consists of single vocal marker behavior in contrast to Hume emotion probabilities. 
+By contrast, Hume has one singular top label for 29 of 30 clips. Furthermore, the function cannot see a reliable measurement for comparison of Hume with vocal markers. 
+Therefore, the following analysis consists of single vocal marker behaviour in contrast to Hume emotion probabilities. 
     
 
 \subsection{ANOVA Tables of Vocal Features Across Emotions}
@@ -466,10 +465,9 @@ These results imply that within our dataset of spontaneous speech during intervi
 
 \subsection{Time-to-Time Analysis}
 
-
 \subsubsection{Time-to-Time Analysis: Full Dataset}
-To understand both if acoustic cues correlates with emotion probability by Hume and when they produce clear categorical shifts, two analyses were conducted at time segmened level. 
-These effects were observed further with sentiment seperations of all, negative, and positive contexts to see if the emotion-acoustic feature relationship are dependent on positive vs. negative sentiment. 
+To understand both if acoustic cues correlates with emotion probability by Hume and when they produce clear categorical shifts, two analyses were conducted at time segmented level. 
+These effects were observed further with sentiment separations of all, negative, and positive contexts to see if the emotion-acoustic feature relationship are dependent on positive vs. negative sentiment. 
 Table \ref{tab:rq1_time_all_correlations} presents the significant correlations between z-scored acoustic features and Hume emotions.
 \begin{table}[H]
     \centering
@@ -501,8 +499,9 @@ Table \ref{tab:rq1_time_all_correlations} presents the significant correlations 
   Jitter had a single significant, yet weak correlation with sadness (r = 0.084). Shimmer showed no significant correlations. 
 
 \medskip
-Table \ref{tab:ttest_full_features} compares the top 30\% and bottom 70\% of emotion-probability time-segments, and tests wheather the mean z-scored feature differs between the high vs. low groups. 
-A large t-statistic value indicate a reliable shift in that feature when Hume rates that emotion high. 
+Table \ref{tab:ttest_full_features} compares the top 30\% and bottom 70\% of emotion-probability time-segments, and tests whether the mean z-scored feature differs between the high vs. low groups. 
+A large t-statistic value indicates a reliable shift in that feature when Hume rates that emotion high. 
+
 \begin{table}[H]
     \centering
     \begin{tabular}{l l r r l}
@@ -529,11 +528,12 @@ A large t-statistic value indicate a reliable shift in that feature when Hume ra
     \label{tab:ttest_full_features}
   \end{table}
   
-  High-anger predictions of segmented recordings shifted towards higher pitch (t = 2.529), intensity (t = 1.975) and HNR (t = 2.709), none of these associations (*) was significant in the data for Table~\ref{tab:rq1_time_all_correlations}. 
-  Joy segments had increased shifts in pitch (t = 2.293) and intensity (t = 4.602), while fear segments have lower intensity (t = -3.567) and increased pitch (t = 5.185) and HNR (t = 4.914). 
-  High-sadness segments showed notable decreased pitch (t = -7.769), intensity (t = -3.981), HNR (t = -7.506), and a small, not significant increase in jitter (**) (t = 1.811, p = 0.0705) that showed a significant correlation in Table~\ref{tab:rq1_time_all_correlations}.
-  Segments with high surprise predictions has the moderately low intensity (t = -2.949) and a modest positive differention for HNR (*) (t = 2.287) with no significant correlation in Table~\ref{tab:rq1_time_all_correlations}. 
+High-anger predictions of segmented recordings shifted towards higher pitch (t = 2.529), intensity (t = 1.975) and HNR (t = 2.709), none of these associations (*) was significant in the data for Table~\ref{tab:rq1_time_all_correlations}. 
+Joy segments had increased shifts in pitch (t = 2.293) and intensity (t = 4.602), while fear segments have lower intensity (t = -3.567) and increased pitch (t = 5.185) and HNR (t = 4.914). 
+High-sadness segments showed notable decreased pitch (t = -7.769), intensity (t = -3.981), HNR (t = -7.506), and a small, not significant increase in jitter (**) (t = 1.811, p = 0.0705) that showed a significant correlation in Table~\ref{tab:rq1_time_all_correlations}.
+Segments with high surprise predictions has the moderately low intensity (t = -2.949) and a modest positive differentiation for HNR (*) (t = 2.287) with no significant correlation in Table~\ref{tab:rq1_time_all_correlations}. 
   
+
 
   \subsubsection{Time-to-Time Analysis by Sentiment}
   \begin{table}[H]
@@ -644,7 +644,7 @@ Together with pitch, HNR appears to be the most prevalent features correlated wi
     \caption{Intensity–Joy correlations and t-test results by sentiment.}
     \label{tab:rq1_intensity_joy_side_by_side}
   \end{table}
-Table \ref{tab:rq1_intensity_joy_side_by_side} demonstrates the correlation between intensity and joy, the most prominent feature for the emotion.. 
+Table \ref{tab:rq1_intensity_joy_side_by_side} demonstrates the correlation between intensity and joy, the most prominent feature for the emotion.
 All contexts show a positive relationship, strongest for positive clips (r = 0.175, p = 0.0002) with significant mean differences where the full dataset has highest significance (t = 4.602, p < 0.001). 
 Pitch and joy correlations is presented in Table~\ref{tab:rq1_time_all_correlations}, showing unlike anger, a weak correlation for the full dataset (r = 0.065, p = 0.0448). 
 Pitch reaches a weak correlation with joy in positive recordings (r = 0.110, p = 0.0210) and no significance in the negative subset. 
@@ -688,9 +688,9 @@ These results suggests that intensity is a reasonably stable cue to joy regardle
   
   Table \ref{tab:rq1_pitch_sadness_side_by_side} display sentiment correlations for pitch and Hume predicted sadness, with significant difference between high and low groups indicating prominent shifts in pitch when Hume rates sadness high. 
   Correlations are weak, but significant for all sentiment contexts. Positive recordings show the largest negative correlation (r = -0.275, p < 0.001), although the full dataset reveals greater diverge in variations (t = -7.769, p < 0.001) which is the 
-  largest t-statistic for all emotion-feature groups. Intensity have a weaker shift than pitch for high-sadness segments (t = -3.981) while HNR demonstrates a similar pattern as pitch (t = -7.506). 
+  largest t-statistic for all emotion-feature groups. Intensity has a weaker shift than pitch for high-sadness segments (t = -3.981) while HNR demonstrates a similar pattern as pitch (t = -7.506). 
   These prominent feature-shifts suggests that reduced pitch and HNR are indicators of sadness independent from sentiment orientation.
-  
+
 %   \begin{table}[H]
 %     \centering
   
@@ -730,13 +730,11 @@ These results suggests that intensity is a reasonably stable cue to joy regardle
 
 \subsubsection{Case Examples}
 \label{sec:res_rq1_case}
-For a more concrete illustration of the prior tendencies , three interview recordings were analyzed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
+For a more concrete illustration of the prior tendencies, three interview recordings were analysed in detail. The purpose was to examine whether emotional shifts become more apparent when evaluating shorter time segments within individual speakers, compared to the weaker correlations observed at the dataset level.
 The navy dashed trace represents the probability of the emotion estimated by Hume, scaled to 0-1 on the right y-axis. 
-The solid blue and orange curves shows mean vocal features for time-segments, plotted as Z-scores against the left y-axis. The x-axis represents time given in seconds.
-
+The solid blue and orange curves show mean vocal features for time-segments, plotted as Z-scores against the left y-axis. The x-axis represents time given in seconds.
 
 \medskip
-
 
 \begin{figure}[H]
     \centering
@@ -746,14 +744,13 @@ The solid blue and orange curves shows mean vocal features for time-segments, pl
     \label{fig:006_pos-joy}
 \end{figure}
 
-
   Figure \ref{fig:006_pos-joy} illustrates some similar patterns between high-predicted Hume joy, pitch and intensity that show similar magnitude as the emotion trace. Segment time for analysis was 1s.
-  Corresponding low values occur around ~10s, 50-55s, 75s, while aligned raises appear around ~20s and 45s. Statistical tests in Appendix Table~\ref{tab:clip006_pos_stats} confirm the visual trend, where peaks in joy trace often coincide with rises in the orange intensity curve. 
+  Corresponding low values occur around ~10s, 50-55s, 75s, while aligned raises appear around ~20s and 45s. Statistical tests in Appendix Table~\ref{tab:clip006_pos_stats_pear} and \ref{tab:ttest_joy_1s_006pos} confirm the visual trend, where peaks in joy trace often coincide with rises in the orange intensity curve. 
   A significant, moderate correlation between joy and intensity is evident (r = 0.351, p = 0.0134), visualised in Figure~\ref{fig:006_pos-joy}, aligning with the pattern for these curves. 
   Pitch shows no significant correlation (r = 0.188, p = 0.1965) and is weaker than that with intensity, which is consistent with the figure.
-  Table~\ref{tab:clip006_pos_stats}, Appendix further suggests a moderate shift toward higher intensity when Hume labels joy with t = 2.718 for the top-30\% joy frames. Therefore, t-tests reveals that the highest-joy segments are associated with higher intensity than the remaining segments of the clip.
+  Table~\ref{tab:ttest_joy_1s_006pos} in Appendix further suggests a moderate shift toward higher intensity when Hume labels joy with t = 2.718 for the top-30\% joy frames. Therefore, t-tests reveals that the highest-joy segments are associated with higher intensity than the remaining segments of the clip.
 
-  The same clip with fixed time-segments for vocal analysis using 2 second frames yielded weaker correlation for pitch (r = 0.078, p = 0.6103), but higher for intensity (r = 0.329, p = 0.0272), listed in appendix Table~\ref{tab:clip006_pos_stats}. 
+  The same clip with fixed time-segments for vocal analysis using 2 second frames yielded weaker correlation for pitch (r = 0.078, p = 0.6103), but higher for intensity (r = 0.329, p = 0.0272), listed in appendix Table~\ref{tab:clip006_pos_stats_pear}. 
 
 
 % ----------------- Clip ID 006 -----------------
@@ -797,8 +794,8 @@ The solid blue and orange curves shows mean vocal features for time-segments, pl
     \label{fig:012_neg-anger}
 \end{figure}
 
-Anger correlation with pitch and HNR is presented for one negative recording in Figure~\ref{fig:012_neg-anger}, vocal features segmented into 1.25s windows. The vocal features show a similar pattern as the emotion probability in certain time segments, where both pitch and HNR have relaively aligned 
-magnitude and direction. Correlation values and t-statistics is listed in Appendix Table~\ref{tab:clip012_stats}, no significant correlation is found for either feature. 
+Anger correlation with pitch and HNR is presented for one negative recording in Figure~\ref{fig:012_neg-anger}, vocal features segmented into 1.25s windows. The vocal features show a similar pattern as the emotion probability in certain time segments, where both pitch and HNR have relatively aligned 
+magnitude and direction. Correlation values and t-statistics is listed in Appendix Table~\ref{tab:clip012_stats_pears} and \ref{tab:clip012_stats_t_test}, no significant correlation is found for either feature. 
 
 \begin{figure}[H]
     \centering
@@ -807,18 +804,18 @@ magnitude and direction. Correlation values and t-statistics is listed in Append
     \label{fig:006_neg-sadness}
 \end{figure}
 
-The opposing pattern for sadness shown in prior results, see Table \ref{tab:ttest_full_features},  are demonstrated in Figure \ref{fig:006_neg-sadness} with 2s segments. Clear fluctuations in magnitude where the Hume labelled emotion have adverse direction. 
-Low sadness (dashed navy trace) occur in time frames where both acoustic markers tends to raise (e.g. ~5s, ~20s, ~45s, ~60s, ~90s). 
+The opposing pattern for sadness shown in prior results, see Table \ref{tab:ttest_full_features}, are demonstrated in Figure \ref{fig:006_neg-sadness} with 2s segments. Clear fluctuations in magnitude where the Hume labelled emotion have adverse direction. 
+Low sadness (dashed navy trace) occurs in time frames where both acoustic markers tend to raise (e.g. ~5s, ~20s, ~45s, ~60s, ~90s). 
 Reversed pattern with high sadness segments are resembled as well (e.g. ~45s, ~70s, ~80s). 
-Analysis data is listed in Appendix Table \ref{tab:clip006_neg_stats}, sadness-pitch showed a negative moderate correlation (r = -0.333, p = 0.072), yet unsignificant. These table includes differences when segmenting at 2s compared to 1s. 
+Analysis data is listed in Appendix Table \ref{tab:pearson_sadness_2s_006neg} and \ref{tab:ttest_sadness_2s_006neg}, sadness-pitch showed a negative moderate correlation (r = -0.333, p = 0.072), yet unsignificant. These table includes differences when segmenting at 2s compared to 1s. 
 T-statistic in pitch shifts for high-sadness showed significance (r = -2.203, p = 0.036), implying pitch was low in high-sadness segments. These statistics endorse the visual interpretation with negative correlation coefficients for both pitch and HNR even if statistical significance is absent. 
-
 
 \subsection{Conclusion RQ1 Data Analysis}
 The results revealed only weak to moderate correlations for the analysis between individual vocal features and how Hume AI predicted emotions, where intensity and pitch showed most patterns consistently. 
 The custom vocal categorization method did not function well in this context and resulted in very uniform results. This method was built on a basic group of vocal features which may overlooked important indicators for certain emotions. 
-ANOVA tests found no significant differences in vocal features across AI-labeled emotions. However, examining pitch and intensity fluctuations over time segments in individual clips gave more promising results. This implies that dynamic changes in vocal features 
+ANOVA tests found no significant differences in vocal features across AI-labelled emotions. However, examining pitch and intensity fluctuations over time segments in individual clips gave more promising results. This implies that dynamic changes in vocal features 
 can offer more insights than static averages when analysing conversational, yet spontaneous speech during interviews. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         %%%%%%%%%%%% RQ2 %%%%%%%%%%%%%%%%%%

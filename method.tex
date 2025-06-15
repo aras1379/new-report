@@ -74,7 +74,7 @@ Individual clips are presented with bar charts and diagrams representing changes
 
 
 
-\subsection{Emotion Categorization from Vocal Markers}
+\subsection{RQ1: Emotion Categorization from Vocal Markers}
 \label{sec:method-data-an-voc}
 We analysed each of the 30 clips in several stages to answer the first research question. Extracted vocal features included mean pitch (st, Hz), mean intensity(dB), mean hnr (dB), F1, F2, F3 formants (Hz), jitter and shimmer see Theoretical Framework~\ref{sec:vocal-markers}.
 First, acoustic features were categorized in five emotion groups based on standardized distances based on Table~\ref{fig:compare-acoustic-parameters}. Because of the method yielded near uniform emotion scoring (≈0.20), a rule-based function was developed and refined through four variants (V0-V3), 
@@ -153,7 +153,7 @@ Version 3 is the final method that is used for data analysis in results. The ful
 Alignment and divergence between the rule-based function and Hume AI emotion probability is analysed with confusion matrices including both sources top-label for each interview. 
 Mean rating score for the full dataset is visualised with scatter plots followed by Pearson's correlation coefficients to assess relationships and corresponding significance. 
 
-\subsubsection{Comparison Hume and Vocal Features}
+\subsection{RQ1: Comparison Speech-Based AI and Vocal Features}
 Analysis that are not including the emotion categorisation function includes the following vocal features: Pitch, Loudness/Intensity, HNR, Shimmer, and Jitter. To explore the relationship between Hume AI Emotion labels and vocal features, without feature based emotion categorisation, further analysis were conducted to assess correlation between each acoustic marker and Hume predefined emotions, presented as a heatmap.
 Further analyses include one-way ANOVA tests, see \ref{sec:theo-stat-analyse} for clarification. 
 To track patterns over time and enable more detailed analysis, each audio recording were segmented into timeframes including Hume AI emotion scoring and vocal features for that specific segmment. These were analyzed by tracking Z-score variations, see \ref{sec:theo-stat-analyse}, in key vocal features (pitch, intensity, jitter, and shimmer) throughout each recording.
@@ -165,11 +165,8 @@ Output from Hume AI include segmented results with individual time stamps, varyi
 By this reason, individual recordings from two interviews are included to visualise how pitch and intensity behaves for Hume labelled joy and sadness. 
 
 \subsection{RQ2 and RQ3: Speech-Based AI vs. Text-Based AI, AI-labels vs. Self-Assessed Emotions}
-For both RQ2 and RQ3, statistical analyses were used to evaluate the alignment between AI-generated emotion scores and self-reported emotions. The following methods were applied across both research questions:
-\begin{itemize}
-    \item Pearson correlation coefficients and associated p-values for measurement both for single clips and the full dataset. 
-    \item T-tests and calculation of Cohen's d to evaluate statistical significance and effect sizes. 
-\end{itemize}
+For both RQ2 and RQ3, statistical analyses were used to evaluate the alignment between AI-generated emotion scores and self-reported emotions. This includes Pearson correlation coefficients and associated p-values, t-tests and calculations of Cohen's d to evaluate statistical significance and effect sizes, see Theoretical Framework~\ref{sec:theo-stat-analyse}. 
+
 For all statistical tests, a p-value below 0.05 was considered as statistical significant, implying that the observed correlations or differences were unlikely to have occurred by chance. 
 These statistical methods were applied to the entire dataset, and separately for negatively and positively oriented interview scenarios to identify potential contextual differences.
 For RQ2, comparisons focused on speech-based vs. text-based AI results, and RQ3 extended the comparison to include self-reported emotions as a subjective component.
@@ -200,7 +197,7 @@ Given the limited dataset size and timeframe, a combination of statistical metho
 \subsection{NLP Cloud}
 \label{sec:method-nlp}
 The text-based emotion recognition is classified with NLP Clouds finetuned-llama-3-70b model
-through prompting, which allows a more flexible approach.
+through prompting, which allows a more flexible approach than their sentiment analysis endpoint, explained further in \ref{sec:theo-nlp-cloud}.
 Each text input uses the following prompt:
 \begin{center}
     \begin{minipage}{0.7\textwidth} 

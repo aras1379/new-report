@@ -1,6 +1,6 @@
 \newpage
 %%% ABSTRACT
-\chapter*{Appendix}
+\chapter{Appendix}
 
 \begin{table}[ht]
     \centering
@@ -85,14 +85,15 @@
   breaklines=true,
   frame=single,
   caption={Emotion categorization code},
-  label={lst:categorise_emotion}
+  label={lst:categorise_emotion},
+  captionpos=b
 ]
 
 BENCHMARKS = {
     "anger":    [("hnr","below"), ("jit","below"), ("loud","above")],
     "joy":      [("pitch","above"), ("hnr","above"), ("loud","above")],
     "sadness":  [("pitch","below"), ("hnr","below"), ("loud","below")],
-    "fear":     [("hnr","above"), ("jit","below"), ("shim","below"), ("pitch","above")],
+    "fear":     [("hnr","above"), ("jit","below")],
     "surprise": [("jit","above"), ("shim","above")],
 }
 
@@ -360,149 +361,139 @@ def categorise_emotion_all_scores(
   
 
 \begin{table}[ht]
-
-       \centering
-
+  \centering
   \begin{tabular}{l l l l r r l}
     \toprule
-    T(s) & Clip           & Feat             & Emo & $r$ & $p$ \\
+    T(s) & Clip           & Feat             & Emo & $r$ & $p$ & Sign \\
     \midrule
-    1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.188      & 0.1965          \\
-    1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 0.351      & 0.0134            \\
-    1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.043      & 0.7674           \\
-    1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.033      & 0.8244          \\
-    1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.002      & 0.9888          \\
-    2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     &  0.078 & 0.6103  \\
-    2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  0.329 & 0.0272   \\
-    2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.014 & 0.9248  \\
-    2.0  & id\_006\_pos   & jitter\_local       & joy     &  0.063 & 0.6803  \\
-    2.0  & id\_006\_pos   & shimmer\_local      & joy     &  0.115 & 0.4528  \\
+    1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.188      & 0.1965 & No \\
+    1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 0.351      & 0.0134 & Yes \\
+    1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.043      & 0.7674 & No \\
+    1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.033      & 0.8244 & No \\
+    1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.002      & 0.9888 & No \\
+    2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     &  0.078 & 0.6103 & No \\
+    2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  0.329 & 0.0272 & Yes \\
+    2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.014 & 0.9248 & No \\
+    2.0  & id\_006\_pos   & jitter\_local       & joy     &  0.063 & 0.6803 & No \\
+    2.0  & id\_006\_pos   & shimmer\_local      & joy     &  0.115 & 0.4528 & No \\
     \bottomrule
   \end{tabular}
-  \caption{Statistical results for clip id\_006\_pos}
-    \label{tab:clip006_pos_stats}
-    \end{table}
-  
-  
-  \begin{table}[h]
-    \centering
-    \caption{T-statistics for Joy 1 and 2s segment.}
-    \label{tab:ttest_joy_1s}
-    \begin{tabular}{l l l l r r l}
-      \toprule
-      T(s) & Clip           & Feat            & Emo & t & $p$  \\
-      \midrule
-      1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.331        & 0.7419       \\
-      1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 2.718        & 0.0092            \\
-      1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.958        & 0.3427          \\
-      1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.062        & 0.9506          \\
-      1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.178        & 0.8598           \\
-      2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     & –0.237  & 0.8136  \\
-2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  1.162  & 0.2517  \\
-2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.562  & 0.5768  \\
-2.0  & id\_006\_pos   & jitter\_local       & joy     &  1.210  & 0.2329  \\
-2.0  & id\_006\_pos   & shimmer\_local      & joy     &  1.918  & 0.0617  \\
-      \bottomrule
-    \end{tabular}
+  \caption{Clip 006 pos. Pearson correlation for Joy, 1 and 2s segment}
+  \label{tab:clip006_pos_stats_pear}
 \end{table}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l l l l r r l}
+    \toprule
+    T(s) & Clip           & Feat            & Emo & t & $p$ & Sign \\
+    \midrule
+    1.0  & id\_006\_pos   & mean\_pitch\_hz       & joy     & 0.331        & 0.7419 & No \\
+    1.0  & id\_006\_pos   & mean\_intensity\_db   & joy     & 2.718        & 0.0092 & Yes \\
+    1.0  & id\_006\_pos   & mean\_hnr\_db         & joy     & 0.958        & 0.3427 & No \\
+    1.0  & id\_006\_pos   & jitter\_local         & joy     & 0.062        & 0.9506 & No \\
+    1.0  & id\_006\_pos   & shimmer\_local        & joy     & 0.178        & 0.8598 & No \\
+    2.0  & id\_006\_pos   & mean\_pitch\_hz     & joy     & –0.237  & 0.8136 & No \\
+    2.0  & id\_006\_pos   & mean\_intensity\_db & joy     &  1.162  & 0.2517 & No \\
+    2.0  & id\_006\_pos   & mean\_hnr\_db       & joy     & –0.562  & 0.5768 & No \\
+    2.0  & id\_006\_pos   & jitter\_local       & joy     &  1.210  & 0.2329 & No \\
+    2.0  & id\_006\_pos   & shimmer\_local      & joy     &  1.918  & 0.0617 & No \\
+    \bottomrule
+  \end{tabular}
+  \caption{Clip 006 pos. T-statistics for Joy, 1 and 2s segment.}
+  \label{tab:ttest_joy_1s_006pos}
+\end{table}
+
   \begin{table}[ht]
     \centering
-    
-      \caption{Pearson correlations for Anger, 1.25 and 2.25s segments.}
-      \label{tab:pearson_anger_125_225s}
+  
       \begin{tabular}{l l l l r r l}
         \toprule
         T(s) & Clip           & Feat             & Emo & $r$ & $p$ & Sign\\
         \midrule
-        1.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –0.097      & 0.5496    & no  \\
-        1.25  & id\_012\_neg & mean\_intensity\_db & anger   &  0.257      & 0.1091    & no  \\
-        1.25  & id\_012\_neg & mean\_hnr\_db       & anger   & –0.114      & 0.4846    & no  \\
-        1.25  & id\_012\_neg & jitter\_local       & anger   &  0.173      & 0.2862    & no  \\
-        1.25  & id\_012\_neg & shimmer\_local      & anger   &  0.284      & 0.0762    & no  \\
+        1.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –0.097      & 0.5496    & No  \\
+        1.25  & id\_012\_neg & mean\_intensity\_db & anger   &  0.257      & 0.1091    & No  \\
+        1.25  & id\_012\_neg & mean\_hnr\_db       & anger   & –0.114      & 0.4846    & No  \\
+        1.25  & id\_012\_neg & jitter\_local       & anger   &  0.173      & 0.2862    & No  \\
+        1.25  & id\_012\_neg & shimmer\_local      & anger   &  0.284      & 0.0762    & No  \\
         \addlinespace
-        2.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –0.217      & 0.1839    & no  \\
-        2.25  & id\_012\_neg & mean\_intensity\_db & anger   &  0.094      & 0.5707    & no  \\
-        2.25  & id\_012\_neg & mean\_hnr\_db       & anger   & –0.112      & 0.4955    & no  \\
-        2.25  & id\_012\_neg & jitter\_local       & anger   &  0.221      & 0.1761    & no  \\
-        2.25  & id\_012\_neg & shimmer\_local      & anger   &  0.180      & 0.2717    & no  \\
+        2.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –0.217      & 0.1839    & No  \\
+        2.25  & id\_012\_neg & mean\_intensity\_db & anger   &  0.094      & 0.5707    & No  \\
+        2.25  & id\_012\_neg & mean\_hnr\_db       & anger   & –0.112      & 0.4955    & No  \\
+        2.25  & id\_012\_neg & jitter\_local       & anger   &  0.221      & 0.1761    & No  \\
+        2.25  & id\_012\_neg & shimmer\_local      & anger   &  0.180      & 0.2717    & No  \\
         \bottomrule
       \end{tabular}
+      \caption{Clip 012 neg. Pearson correlations for Anger, 1.25 and 2.25\,s segments.}
+    \label{tab:clip012_stats_pears}
     \end{table}%
     \hfill
     \begin{table}
-        
- 
-      \centering
-      \caption{T-statistics for Anger, 1.25 and 2.25\,s segments.}
-      \label{tab:ttest_anger_125_225s}
-      \begin{tabular}{l l l l r r l}
-        \toprule
-        T(s) & Clip           & Feat            & Emo & t & $p$ & Sign \\
-        \midrule
-        1.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –0.353      & 0.7259    & no  \\
-        1.25  & id\_012\_neg & mean\_intensity\_db & anger   &  2.255      & 0.0300    & yes \\
-        1.25  & id\_012\_neg & mean\_hnr\_db       & anger   &  0.880      & 0.3844    & no  \\
-        1.25  & id\_012\_neg & jitter\_local       & anger   &  0.223      & 0.8249    & no  \\
-        1.25  & id\_012\_neg & shimmer\_local      & anger   &  1.839      & 0.0737    & no  \\
-        \addlinespace
-        2.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –1.498      & 0.1427    & no  \\
-        2.25  & id\_012\_neg & mean\_intensity\_db & anger   &  0.705      & 0.4852    & no  \\
-        2.25  & id\_012\_neg & mean\_hnr\_db       & anger   &  0.656      & 0.5156    & no  \\
-        2.25  & id\_012\_neg & jitter\_local       & anger   &  1.087      & 0.2841    & no  \\
-        2.25  & id\_012\_neg & shimmer\_local      & anger   &  1.055      & 0.2982    & no  \\
-        \bottomrule
-      \end{tabular}
-    
-    \caption{Statistical results for clip id\_012\_neg}
-    \label{tab:clip012_stats}
-  \end{table}
+  \centering
+  \begin{tabular}{l l l l r r l}
+    \toprule
+    T(s) & Clip           & Feat            & Emo & t & $p$ & Sign \\
+    \midrule
+    1.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –0.353      & 0.7259    & No  \\
+    1.25  & id\_012\_neg & mean\_intensity\_db & anger   &  2.255      & 0.0300    & Yes \\
+    1.25  & id\_012\_neg & mean\_hnr\_db       & anger   &  0.880      & 0.3844    & No  \\
+    1.25  & id\_012\_neg & jitter\_local       & anger   &  0.223      & 0.8249    & No  \\
+    1.25  & id\_012\_neg & shimmer\_local      & anger   &  1.839      & 0.0737    & No  \\
+    \addlinespace
+    2.25  & id\_012\_neg & mean\_pitch\_hz     & anger   & –1.498      & 0.1427    & No  \\
+    2.25  & id\_012\_neg & mean\_intensity\_db & anger   &  0.705      & 0.4852    & No  \\
+    2.25  & id\_012\_neg & mean\_hnr\_db       & anger   &  0.656      & 0.5156    & No  \\
+    2.25  & id\_012\_neg & jitter\_local       & anger   &  1.087      & 0.2841    & No  \\
+    2.25  & id\_012\_neg & shimmer\_local      & anger   &  1.055      & 0.2982    & No  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Clip 012 neg. T-statistics for Anger, 1.25 and 2.25\,s segments.}
+  \label{tab:clip012_stats_t_test}
+\end{table}
 
-  \begin{table}[ht]
-   
-      \centering
-      \caption{Pearson correlations for Sadness, 2.0\,s segment.}
-      \label{tab:pearson_sadness_2s}
-      \begin{tabular}{l l l l r r l}
-        \toprule
-        T(s) & Clip           & Feature             & Emotion & Pearson $r$ & $p$-value & Significant \\
-        \midrule
-        1.0 & id\_006\_neg & mean\_pitch\_hz     & sadness & –0.069 & 0.7073 & no  \\
-      1.0 & id\_006\_neg & mean\_intensity\_db & sadness &  0.210 & 0.2495 & no  \\
-      1.0 & id\_006\_neg & mean\_hnr\_db       & sadness &  0.365 & 0.0398 & yes \\
-      1.0 & id\_006\_neg & jitter\_local       & sadness & –0.312 & 0.0816 & no  \\
-      1.0 & id\_006\_neg & shimmer\_local      & sadness & –0.326 & 0.0683 & no  \\
-        2.0 & id\_006\_neg & mean\_pitch\_hz     & sadness & –0.333 & 0.0722 & no \\
-        2.0 & id\_006\_neg & mean\_intensity\_db & sadness & –0.213 & 0.2585 & no \\
-        2.0 & id\_006\_neg & mean\_hnr\_db       & sadness & –0.265 & 0.1567 & no \\
-        2.0 & id\_006\_neg & jitter\_local       & sadness &  0.092 & 0.6285 & no \\
-        2.0 & id\_006\_neg & shimmer\_local      & sadness & –0.050 & 0.7943 & no \\
-        \bottomrule
-      \end{tabular}
-    \end{table}%
-    
-    \begin{table}
-      \centering
-      \caption{T-statistics for Sadness, 2.0\,s segment.}
-      \label{tab:ttest_sadness_2s}
-      \begin{tabular}{l l l l r r l}
-        \toprule
-        T(s) & Clip           & Feature             & Emotion & t-statistic & $p$-value & Significant \\
-        \midrule
-        1.0 & id\_006\_neg & mean\_pitch\_hz     & sadness &  0.556 & 0.5826 & no  \\
-      1.0 & id\_006\_neg & mean\_intensity\_db & sadness &  0.818 & 0.4196 & no  \\
-      1.0 & id\_006\_neg & mean\_hnr\_db       & sadness &  2.565 & 0.0156 & yes \\
-      1.0 & id\_006\_neg & jitter\_local       & sadness & –1.891 & 0.0683 & no  \\
-      1.0 & id\_006\_neg & shimmer\_local      & sadness & –1.663 & 0.1068 & no  \\
-        2.0 & id\_006\_neg & mean\_pitch\_hz     & sadness & –2.203 & 0.0360 & yes \\
-        2.0 & id\_006\_neg & mean\_intensity\_db & sadness & –1.307 & 0.2018 & no  \\
-        2.0 & id\_006\_neg & mean\_hnr\_db       & sadness & –1.289 & 0.2079 & no  \\
-        2.0 & id\_006\_neg & jitter\_local       & sadness &  1.009 & 0.3215 & no  \\
-        2.0 & id\_006\_neg & shimmer\_local      & sadness &  0.157 & 0.8766 & no  \\
-        \bottomrule
-      \end{tabular}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{l l l l r r l}
+    \toprule
+    T(s) & Clip           & Feature             & Emotion & Pearson $r$ & $p$-value & Significant \\
+    \midrule
+    1.0 & id\_006\_neg & mean\_pitch\_hz     & sadness & –0.069 & 0.7073 & No  \\
+    1.0 & id\_006\_neg & mean\_intensity\_db & sadness &  0.210 & 0.2495 & No  \\
+    1.0 & id\_006\_neg & mean\_hnr\_db       & sadness &  0.365 & 0.0398 & Yes \\
+    1.0 & id\_006\_neg & jitter\_local       & sadness & –0.312 & 0.0816 & No  \\
+    1.0 & id\_006\_neg & shimmer\_local      & sadness & –0.326 & 0.0683 & No  \\
+    2.0 & id\_006\_neg & mean\_pitch\_hz     & sadness & –0.333 & 0.0722 & No \\
+    2.0 & id\_006\_neg & mean\_intensity\_db & sadness & –0.213 & 0.2585 & No \\
+    2.0 & id\_006\_neg & mean\_hnr\_db       & sadness & –0.265 & 0.1567 & No \\
+    2.0 & id\_006\_neg & jitter\_local       & sadness &  0.092 & 0.6285 & No \\
+    2.0 & id\_006\_neg & shimmer\_local      & sadness & –0.050 & 0.7943 & No \\
+    \bottomrule
+  \end{tabular}
+  \caption{Clip 006 neg. Pearson correlations for Sadness, 1.0 and 2.0\,s segment.}
+  \label{tab:pearson_sadness_2s_006neg}
+\end{table}
 
-    \caption{Statistical results for Sadness, clip \texttt{id\_006\_neg}, 2.0\,s segment}
-    \label{tab:clip006_neg_stats2}
-  \end{table}
+\begin{table}
+  \centering
+  \begin{tabular}{l l l l r r l}
+    \toprule
+    T(s) & Clip           & Feature             & Emotion & t-statistic & $p$-value & Significant \\
+    \midrule
+    1.0 & id\_006\_neg & mean\_pitch\_hz     & sadness &  0.556 & 0.5826 & No  \\
+    1.0 & id\_006\_neg & mean\_intensity\_db & sadness &  0.818 & 0.4196 & No  \\
+    1.0 & id\_006\_neg & mean\_hnr\_db       & sadness &  2.565 & 0.0156 & Yes \\
+    1.0 & id\_006\_neg & jitter\_local       & sadness & –1.891 & 0.0683 & No  \\
+    1.0 & id\_006\_neg & shimmer\_local      & sadness & –1.663 & 0.1068 & No  \\
+    2.0 & id\_006\_neg & mean\_pitch\_hz     & sadness & –2.203 & 0.0360 & Yes \\
+    2.0 & id\_006\_neg & mean\_intensity\_db & sadness & –1.307 & 0.2018 & No  \\
+    2.0 & id\_006\_neg & mean\_hnr\_db       & sadness & –1.289 & 0.2079 & No  \\
+    2.0 & id\_006\_neg & jitter\_local       & sadness &  1.009 & 0.3215 & No  \\
+    2.0 & id\_006\_neg & shimmer\_local      & sadness &  0.157 & 0.8766 & No  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Clip 006 neg. T-statistics for Sadness, 1.0 and 2.0\,s segment.}
+  \label{tab:ttest_sadness_2s_006neg}
+\end{table}
+
   
   

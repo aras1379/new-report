@@ -1,8 +1,11 @@
 
 \section{Result Discussion RQ2}
+\label{subsec:RQ2interpretation}
 For the second research question in this thesis, the aim was to investigate the similarities and differences between the two AI models Hume AI, a speech-based model, and NLP Cloud, a text-based model. This was measured when labelling five different emotions in semi-structured interviews.
 
-\label{subsec:RQ2interpretation}
+The decision to shift from the initial sentiment analysis model to the text generation endpoint provided necessary control to target the five emotion categories of this study, explained in \ref{sec:theo-nlp-cloud}. The generative model relies on prompt phrasing, this may have introduced variability in the results, not only by the manual prompting but also because of utilizing a zero-shot prompt without thorough testing or evaluation of the outputs. Future studies may benefit from a more systematic testing of prompts and the stability through different analyses on the same input. 
+
+\medskip
 Using both descriptive statistics and visual analyses to calculate the differences, the system overall seemed to show some levels of agreement for certain emotions.
 In figure~\ref{fig:rq2_sent_grouped_bar}, the results of the entire dataset divided between the positive and negative recordings were presented and the results highlighted some key differences in the interpretation of the emotional content between NLP Cloud and Hume AI. NLP Cloud appeared to better capture the contextual nuances, as scores for the positive clips had higher scores for joy and surprise, while negative recordings had a higher score for anger and sadness. 
 Hume on the other hand, showed potentially misleading results. A significantly higher emotion score for anger and a somewhat higher score for sadness and fear in the positive recordings, while the score for joy appeared significantly higher for the negative recordings. This may be due to some signals being misinterpreted when speaking of both positive and negative topics. For example, some participants might have talked about the negative topics in an ironic tone, with sarcasm, or expressed nervous laughter. This could be hard for a speech-based model to differentiate and pick up on without the textual context.
